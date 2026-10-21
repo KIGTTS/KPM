@@ -1,0 +1,9 @@
+{
+  "path": "android/KIGTTSNEXT-api14-20261021-98b3b5662595.apk",
+  "sha256": "98b3b56625954b9850d2518abcff406fe64f060c7c97899368d4dfb19897a8fa",
+  "bytes": 7839978,
+  "apiVersion": 14,
+  "version": "0.1.0-preview",
+  "developmentSigning": true,
+  "sourceCommit": "705f453c5b1ddce697b6e38f62e272b62d51f984"
+}

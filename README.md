@@ -6,7 +6,7 @@ KPM（KIGTTS Package Manager）的独立包源网页与 GitHub Pages 模板。�
 
 ## 创建自己的包源
 
-1. 点击 **Use this template** 创建仓库。修改 `source.json`：`upstream` 留空，`catalogPath` 指向自己的目录，`sourceUrl` 填 `https://你的帐号.github.io/仓库名/index.json`，同时修改发布者及仓库地址。没有安卓下载元数据时将 `downloadMetadata` 留空。
+1. 点击 **Use this template** 创建仓库。修改 `source.json`：`upstream` 留空，`catalogPath` 指向自己的目录，`sourceUrl` 填 `https://你的帐号.github.io/仓库名/index.json`，同时修改发布者及仓库地址，`expectedSourceId` 设为自己的源 ID。没有安卓下载元数据时将 `downloadMetadata` 与 `downloadMetadataPath` 留空。
 2. 以 `examples/empty-catalog.json` 为起点，按 `schema/catalog.schema.json` 填写真实包。空示例故意不放虚假的下载或签名。用 KIGTTS 构建工具生成签名包，填写最终 ZIP 的 SHA-256、字节数、清单中的 API/版本，以及公钥 DER 的 SHA-256。所有镜像必须提供相同字节。
 3. 在仓库 Settings → Pages 将 Source 设为 **GitHub Actions**。推送到 main 或手动运行工作流。工作流每6小时同步一次上游目录；自托管目录修改则随提交构建。
 4. 手机点击网页的“添加到 KPM”，电脑可扫码或复制地址。软件会要求确认来源，网页不会自动信任或安装包。
@@ -60,3 +60,5 @@ PowerShell 7、UTF-8 无 BOM。构建器、目录合同、网页模块独立维�
 本项目原创实现采用 MIT；只参考 [Poiyomi VPM 源网页](https://poiyomi.github.io/vpm/) 的添加源引导思路，没有复制其代码或素材。KPM 不解析 VPM/Unity 包。
 
 本地维护的 marked（MIT）、DOMPurify（Apache-2.0 或 MPL-2.0）版本与哈希见 `web/vendor/manifest.json`，许可原文位于相同目录。Material Symbols 使用 Google Apache-2.0 图标，固定源提交及许可见 `web/vendor/Material-Symbols-LICENSE.txt`。二维码由 qrcode 生成。
+
+构建时上游网络临时不可达，将使用显式配置的 `catalogPath` 快照并在网页标明“已保存目录”；`expectedSourceId` 防止误用其它源的快照。官方示例快照只包含已公开且完成哈希验证的目录和APK元数据，不包含包本体。自建源需替换这些路径和源ID。图标的Apache-2.0固定提交SVG已预置在web/symbols，新声明图标仍按相同固定版本获取。

@@ -1,8 +1,10 @@
 {
   "upstream": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/index.json?view=false",
-  "catalogPath": "examples/empty-catalog.json",
+  "catalogPath": "examples/official-catalog.json",
   "sourceUrl": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/index.json?view=false",
   "publisher": "LHTSTUDIO",
   "repository": "https://github.com/LHT02/KPM",
-  "downloadMetadata": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/android/release.json?view=false"
+  "downloadMetadata": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/android/release.json?view=false",
+  "expectedSourceId": "kigtts.official",
+  "downloadMetadataPath": "examples/official-android.json"
 }

@@ -86,17 +86,25 @@ def bitmap_suffix(data):
 
 def build(config, output):
     source_url = https(config["sourceUrl"])
+    saved = False
+    path = (ROOT / config["catalogPath"]).resolve()
+    if not path.is_relative_to(ROOT):
+        raise ValueError("Local catalog must remain inside this project")
     if config.get("upstream"):
-        raw = fetch(fresh(config["upstream"]), 4 * 1024 * 1024)
+        try:
+            raw = fetch(fresh(config["upstream"]), 4 * 1024 * 1024)
+        except requests.RequestException:
+            raw = path.read_bytes()
+            saved = True
+            print("Upstream temporarily unavailable; using the explicitly configured catalog snapshot", flush=True)
     else:
-        path = (ROOT / config["catalogPath"]).resolve()
-        if not path.is_relative_to(ROOT):
-            raise ValueError("Local catalog must remain inside this project")
         raw = path.read_bytes()
     if len(raw) > 4 * 1024 * 1024:
         raise ValueError("Catalog exceeds 4 MiB")
     catalog = json.loads(raw)
     validate(catalog)
+    if config.get("expectedSourceId") and config["expectedSourceId"] != catalog["id"]:
+        raise ValueError("Catalog source ID differs from the configured source")
     output.mkdir(parents=True, exist_ok=True)
     shutil.copytree(ROOT / "web", output, dirs_exist_ok=True)
     shutil.copytree(ROOT / "schema", output / "schema", dirs_exist_ok=True)
@@ -127,18 +135,29 @@ def build(config, output):
         if not re.fullmatch(r"[a-z0-9_]{1,80}", name):
             raise ValueError("Invalid symbol name")
         target = cache / (name + ".svg")
+        if (output / "symbols" / (name + ".svg")).is_file():
+            continue
         if not target.is_file():
             target.write_bytes(fetch(f"https://cdn.jsdelivr.net/gh/google/material-design-icons@{SYMBOL_COMMIT}/symbols/web/{name}/materialsymbolsrounded/{name}_24px.svg", 65536))
         shutil.copyfile(target, output / "symbols" / (name + ".svg"))
     download = ""
     if config.get("downloadMetadata"):
-        metadata = json.loads(fetch(fresh(config["downloadMetadata"]), 65536))
+        try:
+            metadata = json.loads(fetch(fresh(config["downloadMetadata"]), 65536))
+        except requests.RequestException:
+            fallback = config.get("downloadMetadataPath")
+            if not fallback:
+                raise
+            local = (ROOT / fallback).resolve()
+            if not local.is_relative_to(ROOT):
+                raise ValueError("Download metadata must remain inside this project")
+            metadata = json.loads(local.read_text(encoding="utf-8"))
         base = config["downloadMetadata"].split("android/release.json")[0]
         path = metadata["path"]
         if not re.fullmatch(r"android/[a-zA-Z0-9._-]+\.apk", path):
             raise ValueError("Unexpected Android artifact path")
         download = https(urljoin(base, path)) + "?view=false"
-    site = dict(catalog=catalog, art=art, sourceUrl=source_url, publisher=config.get("publisher", ""),
+    site = dict(catalog=catalog, art=art, sourceUrl=source_url, publisher=config.get("publisher", ""), savedCatalog=saved,
                 repository=https(config["repository"]), downloadURL=download)
     (output / "site.json").write_text(json.dumps(site, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=5, border=2)
