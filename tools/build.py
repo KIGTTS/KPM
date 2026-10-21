@@ -143,6 +143,8 @@ def build(config, output):
     download = ""
     if config.get("downloadMetadata"):
         try:
+            if saved and config.get("downloadMetadataPath"):
+                raise requests.ConnectionError("Use the matching saved download metadata")
             metadata = json.loads(fetch(fresh(config["downloadMetadata"]), 65536))
         except requests.RequestException:
             fallback = config.get("downloadMetadataPath")

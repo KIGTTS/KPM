@@ -3,8 +3,11 @@ import json
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
+from tempfile import TemporaryDirectory
+import requests
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
-from build import validate, https, bitmap_suffix
+from build import validate, https, bitmap_suffix, build, ROOT
 
 
 class CatalogTest(unittest.TestCase):
@@ -27,6 +30,16 @@ class CatalogTest(unittest.TestCase):
     def test_svg_is_not_trusted_as_catalog_artwork(self):
         with self.assertRaises(ValueError): bitmap_suffix(b"<svg onload=alert(1)>")
         self.assertEqual(".png", bitmap_suffix(b"\x89PNG\r\n\x1a\n"))
+
+    def test_declared_snapshot_keeps_site_available_but_never_switches_source_identity(self):
+        config = json.loads((ROOT / "source.json").read_text(encoding="utf-8"))
+        with TemporaryDirectory() as folder, patch("build.fetch", side_effect=requests.ConnectionError("offline")):
+            build(config, Path(folder))
+            site = json.loads((Path(folder) / "site.json").read_text(encoding="utf-8"))
+            self.assertTrue(site["savedCatalog"])
+            self.assertEqual("kigtts.official", site["catalog"]["id"])
+            self.assertIn("KIGTTSNEXT-api14", site["downloadURL"])
+            with self.assertRaises(ValueError): build(dict(config, expectedSourceId="different.source"), Path(folder))
 
 
 if __name__ == "__main__": unittest.main()
