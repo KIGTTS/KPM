@@ -1,0 +1,347 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lht02.github.io/KPM/schema/catalog.schema.json",
+  "title": "KPM package source schema 1",
+  "description": "Machine-readable source contract. SHA-256 and publisher are integrity assertions, never an instruction to silently trust or install.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "packages"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Optional JSON editor validation link; ignored by the client."
+    },
+    "schemaVersion": {
+      "const": 1,
+      "description": "Catalog format version, not plugin API version."
+    },
+    "id": {
+      "$ref": "#/$defs/id",
+      "description": "Stable source identity. Changing it at an existing URL requires user reapproval."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "description": "Human-readable source name."
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 1000,
+      "default": "",
+      "description": "Short source introduction."
+    },
+    "homepage": {
+      "$ref": "#/$defs/optionalHttps",
+      "description": "Optional source homepage."
+    },
+    "updatedAt": {
+      "type": "string",
+      "default": "",
+      "description": "Advisory update timestamp, recommended ISO 8601 UTC; not trusted freshness or a signature."
+    },
+    "packages": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "$ref": "#/$defs/package"
+      },
+      "description": "Multiple packages. IDs must be unique in this source."
+    },
+    "icon": {
+      "$ref": "#/$defs/icon"
+    },
+    "readme": {
+      "type": "string",
+      "maxLength": 32000,
+      "default": ""
+    },
+    "assets": {
+      "type": "object",
+      "maxProperties": 128,
+      "propertyNames": {
+        "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/image"
+      },
+      "default": {}
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9.-]{0,63}$"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "https": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048,
+      "pattern": "^https://",
+      "description": "Absolute HTTPS URL without credentials or fragment. Redirects must stay HTTPS."
+    },
+    "optionalHttps": {
+      "anyOf": [
+        {
+          "const": ""
+        },
+        {
+          "$ref": "#/$defs/https"
+        }
+      ],
+      "default": ""
+    },
+    "semver": {
+      "type": "string",
+      "maxLength": 64,
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?(\\+[0-9A-Za-z.-]+)?$",
+      "description": "SemVer 2.0.0 (no leading zeros). Build metadata is ignored for precedence."
+    },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "summary",
+        "releases"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id",
+          "description": "Must match the signed package manifest id. Same ID uses the same signing publisher across versions and sources."
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40,
+          "default": "扩展"
+        },
+        "tags": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "default": []
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "default": "MIT",
+          "description": "Use the package's actual license/SPDX identifier. Do not relabel GPL packages MIT."
+        },
+        "homepage": {
+          "$ref": "#/$defs/optionalHttps"
+        },
+        "releases": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/release"
+          },
+          "description": "Keep historical releases. Version strings and versionCode values must each be unique."
+        },
+        "icon": {
+          "$ref": "#/$defs/icon"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 32000,
+          "default": ""
+        },
+        "thumbnails": {
+          "type": "array",
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "default": []
+        }
+      }
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "versionCode",
+        "format",
+        "sha256",
+        "bytes",
+        "expectedPublisher",
+        "mirrors"
+      ],
+      "properties": {
+        "version": {
+          "$ref": "#/$defs/semver"
+        },
+        "versionCode": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Matches the signed manifest versionCode. Increase for ordinary updates; explicit earlier versions use reviewed version replacement."
+        },
+        "format": {
+          "enum": [
+            "NATIVE",
+            "LUA"
+          ],
+          "description": "NATIVE = signed .kigplugin Android DEX; LUA = signed source archive .kiglua delivered to independent runtime.lua after verification."
+        },
+        "sha256": {
+          "$ref": "#/$defs/hash",
+          "description": "SHA-256 of exact downloadable archive bytes, lower-case hexadecimal. Every mirror serves identical bytes."
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 268435456,
+          "description": "Exact archive byte count, not unpacked size."
+        },
+        "expectedPublisher": {
+          "$ref": "#/$defs/hash",
+          "description": "SHA-256 of signature/public.der (DER SubjectPublicKeyInfo RSA key), not a publisher name or certificate text."
+        },
+        "apiVersion": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 9,
+          "description": "Exact KIGTTS plugin SDK API version. API14 host accepts API9–14 packages."
+        },
+        "minSdk": {
+          "type": "integer",
+          "minimum": 26,
+          "maximum": 99,
+          "default": 26,
+          "description": "Minimum Android SDK. Must match signed manifest metadata."
+        },
+        "abis": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "enum": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ]
+          },
+          "default": [],
+          "description": "Empty = no native ABI restriction; must match the signed manifest."
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 2000,
+          "default": ""
+        },
+        "dependencies": {
+          "type": "object",
+          "maxProperties": 32,
+          "propertyNames": {
+            "$ref": "#/$defs/id"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "default": {},
+          "description": "Package ID -> supported SemVer range: exact, comparisons, ^, ~, x/*, hyphen and ||. LUA must include runtime.lua. If signed manifest has dependencies they must match exactly."
+        },
+        "mirrors": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "$ref": "#/$defs/mirror"
+          },
+          "description": "Ordered fallback downloads, not independent package versions. URL values must be unique."
+        }
+      }
+    },
+    "mirror": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "url"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "url": {
+          "$ref": "#/$defs/https"
+        }
+      }
+    },
+    "icon": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "symbol": {
+          "type": "string",
+          "pattern": "^[a-z0-9_]{1,80}$"
+        },
+        "image": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{0,63}$"
+        }
+      }
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "sha256",
+        "bytes"
+      ],
+      "properties": {
+        "url": {
+          "$ref": "#/$defs/https"
+        },
+        "sha256": {
+          "$ref": "#/$defs/hash"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2097152
+        },
+        "alt": {
+          "type": "string",
+          "maxLength": 160,
+          "default": ""
+        }
+      }
+    }
+  }
+}

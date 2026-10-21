@@ -1,0 +1,7 @@
+dist/
+.cache/
+output/
+__pycache__/
+PROJECT.md
+
+.playwright-cli/

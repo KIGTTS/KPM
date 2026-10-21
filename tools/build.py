@@ -1,0 +1,156 @@
+"""Build a self-contained GitHub Pages site from a KPM schema-1 catalog."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import re
+import shutil
+import time
+import requests
+from urllib.parse import urlsplit, urljoin, quote
+
+import jsonschema
+import qrcode
+
+ROOT = Path(__file__).resolve().parent.parent
+SYMBOL_COMMIT = "49d4db35df873165d6bd6ba09b063c7dafbac2f4"
+
+
+def https(value):
+    url = urlsplit(value)
+    if url.scheme != "https" or not url.hostname or url.username or url.password or url.fragment or len(value) > 2048:
+        raise ValueError("Expected an HTTPS URL without credentials or fragment")
+    return value
+
+
+def fetch(url, maximum):
+    for _ in range(6):
+        https(url)
+        with requests.get(url, headers={"User-Agent": "KPM-static-builder/1.0"},
+                          timeout=(20, 60), allow_redirects=False, stream=True) as response:
+            if response.status_code in (301, 302, 303, 307, 308):
+                url = urljoin(url, response.headers["Location"])
+                continue
+            response.raise_for_status()
+            chunks = []; size = 0
+            for block in response.iter_content(65536):
+                size += len(block)
+                if size > maximum: raise ValueError("Download exceeded its byte limit")
+                chunks.append(block)
+            return b"".join(chunks)
+    raise ValueError("Too many HTTPS redirects")
+
+
+def fresh(url):
+    return url + ("&" if "?" in url else "?") + "kpm_build=" + str(time.time_ns())
+
+
+def validate(catalog):
+    schema = json.loads((ROOT / "schema/catalog.schema.json").read_text(encoding="utf-8"))
+    jsonschema.Draft202012Validator(schema).validate(catalog)
+    assets = catalog.get("assets", {})
+    if sum(image["bytes"] for image in assets.values()) > 16 * 1024 * 1024:
+        raise ValueError("Artwork exceeds 16 MiB")
+    def icon(value):
+        if value.get("image") and value["image"] not in assets:
+            raise ValueError("Icon references an unregistered asset")
+    icon(catalog.get("icon", {}))
+    ids = set()
+    for item in catalog["packages"]:
+        if item["id"] in ids:
+            raise ValueError("Duplicate package ID")
+        ids.add(item["id"])
+        icon(item.get("icon", {}))
+        if any(asset not in assets for asset in item.get("thumbnails", [])):
+            raise ValueError("Thumbnail references an unregistered asset")
+        if len({x["version"] for x in item["releases"]}) != len(item["releases"]) or len({x["versionCode"] for x in item["releases"]}) != len(item["releases"]):
+            raise ValueError("Duplicate package version")
+        for release in item["releases"]:
+            for mirror in release["mirrors"]:
+                https(mirror["url"])
+            if release["format"] == "LUA" and "runtime.lua" not in release.get("dependencies", {}):
+                raise ValueError("Lua requires runtime.lua")
+    for image in assets.values():
+        https(image["url"])
+
+
+def bitmap_suffix(data):
+    if data.startswith(b"\x89PNG\r\n\x1a\n"):
+        return ".png"
+    if data.startswith(b"\xff\xd8\xff"):
+        return ".jpg"
+    if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
+        return ".webp"
+    raise ValueError("Only PNG, JPEG and WebP artwork is supported")
+
+
+def build(config, output):
+    source_url = https(config["sourceUrl"])
+    if config.get("upstream"):
+        raw = fetch(fresh(config["upstream"]), 4 * 1024 * 1024)
+    else:
+        path = (ROOT / config["catalogPath"]).resolve()
+        if not path.is_relative_to(ROOT):
+            raise ValueError("Local catalog must remain inside this project")
+        raw = path.read_bytes()
+    if len(raw) > 4 * 1024 * 1024:
+        raise ValueError("Catalog exceeds 4 MiB")
+    catalog = json.loads(raw)
+    validate(catalog)
+    output.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(ROOT / "web", output, dirs_exist_ok=True)
+    shutil.copytree(ROOT / "schema", output / "schema", dirs_exist_ok=True)
+    (output / ".nojekyll").write_text("", encoding="utf-8")
+    (output / "index.json").write_bytes(raw)
+    art = {}
+    cache = ROOT / ".cache"
+    cache.mkdir(exist_ok=True)
+    for asset_id, image in catalog.get("assets", {}).items():
+        target = cache / image["sha256"]
+        data = target.read_bytes() if target.is_file() else b""
+        if len(data) != image["bytes"] or hashlib.sha256(data).hexdigest() != image["sha256"]:
+            data = fetch(image["url"], image["bytes"])
+        if len(data) != image["bytes"] or hashlib.sha256(data).hexdigest() != image["sha256"]:
+            raise ValueError("Artwork size/hash mismatch: " + asset_id)
+        suffix = bitmap_suffix(data)
+        target.write_bytes(data)
+        path = "art/" + image["sha256"] + suffix
+        (output / "art").mkdir(exist_ok=True)
+        (output / path).write_bytes(data)
+        art[asset_id] = path
+    symbols = {"extension", "inventory_2", "contrast", "add_link", "arrow_outward", "content_copy", "search", "close", "arrow_forward"}
+    for value in [catalog, *catalog["packages"]]:
+        if value.get("icon", {}).get("symbol"):
+            symbols.add(value["icon"]["symbol"])
+    (output / "symbols").mkdir(exist_ok=True)
+    for name in symbols:
+        if not re.fullmatch(r"[a-z0-9_]{1,80}", name):
+            raise ValueError("Invalid symbol name")
+        target = cache / (name + ".svg")
+        if not target.is_file():
+            target.write_bytes(fetch(f"https://cdn.jsdelivr.net/gh/google/material-design-icons@{SYMBOL_COMMIT}/symbols/web/{name}/materialsymbolsrounded/{name}_24px.svg", 65536))
+        shutil.copyfile(target, output / "symbols" / (name + ".svg"))
+    download = ""
+    if config.get("downloadMetadata"):
+        metadata = json.loads(fetch(fresh(config["downloadMetadata"]), 65536))
+        base = config["downloadMetadata"].split("android/release.json")[0]
+        path = metadata["path"]
+        if not re.fullmatch(r"android/[a-zA-Z0-9._-]+\.apk", path):
+            raise ValueError("Unexpected Android artifact path")
+        download = https(urljoin(base, path)) + "?view=false"
+    site = dict(catalog=catalog, art=art, sourceUrl=source_url, publisher=config.get("publisher", ""),
+                repository=https(config["repository"]), downloadURL=download)
+    (output / "site.json").write_text(json.dumps(site, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=5, border=2)
+    qr.add_data("kigtts://source/add?url=" + quote(source_url, safe=""))
+    qr.make(fit=True)
+    qr.make_image(fill_color="#123d40", back_color="white").save(output / "add-source.png")
+    print(f"Built {len(catalog['packages'])} packages, {len(art)} images -> {output}")
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--config", default="source.json")
+    parser.add_argument("--output", default="dist")
+    args = parser.parse_args()
+    build(json.loads((ROOT / args.config).read_text(encoding="utf-8")), (ROOT / args.output).resolve())

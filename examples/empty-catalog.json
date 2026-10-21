@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "example.source",
+  "name": "我的 KPM 插件源",
+  "description": "在这里介绍你的插件源。",
+  "readme": "## 欢迎\n\n添加这个源后，可以在 KIGTTS 插件商店中查看和安装插件。",
+  "icon": { "symbol": "inventory_2" },
+  "assets": {},
+  "packages": []
+}
