@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "id": "kigtts.official",
   "name": "KIGTTS 官方插件源",
-  "description": "官方签名插件；不含用户数据、密钥或语音模型。",
+  "description": "扩展朗读、聆听和创作体验，让常用工具触手可及。",
   "homepage": "https://lht02.github.io/KPM/",
   "icon": {
     "symbol": "inventory_2"
   },
   "assets": {},
-  "readme": "## KPM 官方插件源\n\n在这里浏览音频服务、AI助手和开发工具。按用途选择插件，并在安装前查看权限、版本和前置依赖。\n\n- 语音模型需另外导入。\n- UI调试为独立可选插件。\n- [源代码与构建说明](https://github.com/LHT02/KIGTTSNEXT)",
-  "updatedAt": "2026-10-21T19:25:36.7342713+00:00",
+  "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
+  "updatedAt": "2026-10-22T04:09:08.2818269+00:00",
   "packages": [
     {
       "id": "debug.ui",
       "name": "界面调试插件",
-      "summary": "独立可选的界面探针，用于检查按钮、分组及布局。",
+      "summary": "检查按钮、分组和页面布局，帮助完善插件界面。",
       "category": "开发",
       "license": "MIT",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/ui-debug",
       "icon": {
         "symbol": "bug_report"
       },
-      "description": "## 界面调试\n\n按需安装的界面探针，配置保存在插件自己的目录。主程序不再内建这组测试入口。",
+      "description": "## 界面调试\n\n为插件开发者提供可调整的界面样例，方便检查按钮、分组与布局在不同页面中的表现。",
       "tags": [
-        "官方"
+        "开发工具"
       ],
       "releases": [
         {
@@ -35,14 +35,14 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/debug.ui-0.1.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/debug.ui-0.1.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 14,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API14或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "提供按钮、分组与布局的调试入口。",
           "dependencies": {}
         }
       ]
@@ -50,16 +50,16 @@
     {
       "id": "engine.piper",
       "name": "Piper 语音引擎",
-      "summary": "Piper离线语音合成，模型需另行导入，仅arm64设备。",
+      "summary": "把文字读成语音，搭配喜欢的音色用于日常朗读。",
       "category": "音频",
       "license": "GPL-3.0-only",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/piper-tts",
       "icon": {
         "symbol": "voice_chat"
       },
-      "description": "Piper离线语音合成，模型需另行导入，仅arm64设备。",
+      "description": "## Piper 语音引擎\n\n为语音合成服务提供朗读声音，搭配音色模型使用，可按自己的喜好选择声音。",
       "tags": [
-        "官方"
+        "语音合成"
       ],
       "releases": [
         {
@@ -71,8 +71,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -88,16 +88,16 @@
     {
       "id": "engine.sensevoice",
       "name": "SenseVoice 语音识别",
-      "summary": "SenseVoice离线语音识别，模型需另行导入。",
+      "summary": "识别语音并转换成文字，适合日常交流与听读。",
       "category": "音频",
       "license": "GPL-3.0-only",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/sensevoice-asr",
       "icon": {
         "symbol": "mic"
       },
-      "description": "SenseVoice离线语音识别，模型需另行导入。",
+      "description": "## SenseVoice 语音识别\n\n为语音识别服务提供另一种识别方式，将语音转换为文字，方便交流与阅读。",
       "tags": [
-        "官方"
+        "语音识别"
       ],
       "releases": [
         {
@@ -109,8 +109,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.sensevoice-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.sensevoice-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -129,16 +129,16 @@
     {
       "id": "engine.streaming-asr",
       "name": "流式语音识别",
-      "summary": "流式语音识别引擎，模型需另行导入。",
+      "summary": "边说边转成文字，适合连续聆听与长时间语音输入。",
       "category": "音频",
       "license": "MIT",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/streaming-asr",
       "icon": {
         "symbol": "graphic_eq"
       },
-      "description": "流式语音识别引擎，模型需另行导入。",
+      "description": "## 流式语音识别\n\n让说话过程中的文字逐步呈现，可搭配语音识别服务用于聆听字幕与连续语音输入。",
       "tags": [
-        "官方"
+        "语音识别"
       ],
       "releases": [
         {
@@ -150,8 +150,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -170,16 +170,16 @@
     {
       "id": "runtime.lua",
       "name": "插件编辑器",
-      "summary": "多项目Lua插件编辑、调试、打包和独立权限管理。",
+      "summary": "管理多个插件项目，编辑文件、调试运行，并打包分享作品。",
       "category": "开发",
       "license": "MIT",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/lua-runtime",
       "icon": {
         "symbol": "code"
       },
-      "description": "多项目Lua插件编辑、调试、打包和独立权限管理。",
+      "description": "## 插件编辑器\n\n从一个小工具开始，逐步做成自己的插件。\n\n支持多项目与文件管理、Lua 编辑、运行调试及打包分享，也可以接入 AI 协助创作。",
       "tags": [
-        "官方"
+        "开发工具"
       ],
       "releases": [
         {
@@ -191,8 +191,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/runtime.lua-0.9.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/runtime.lua-0.9.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,
@@ -206,16 +206,16 @@
     {
       "id": "service.speech-recognition",
       "name": "语音识别服务",
-      "summary": "统一管理聆听字幕与语音输入。",
+      "summary": "把听到的话变成字幕或输入文字，支持连续聆听。",
       "category": "音频",
       "license": "MIT",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/recognition-service",
       "icon": {
         "symbol": "hearing"
       },
-      "description": "统一管理聆听字幕与语音输入。",
+      "description": "## 语音识别服务\n\n在交流时查看聆听字幕，或直接用语音输入文字。支持持续识别、自动分句与长段内容的连续拼接。",
       "tags": [
-        "官方"
+        "语音识别"
       ],
       "releases": [
         {
@@ -227,8 +227,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-recognition-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-recognition-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -242,16 +242,16 @@
     {
       "id": "service.speech-synthesis",
       "name": "语音合成服务",
-      "summary": "统一语音合成服务，内含系统TTS保底。",
+      "summary": "选择喜欢的朗读声音，调整语速，让文字开口说话。",
       "category": "音频",
       "license": "GPL-3.0-only",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/speech-service",
       "icon": {
         "symbol": "record_voice_over"
       },
-      "description": "统一语音合成服务，内含系统TTS保底。",
+      "description": "## 语音合成服务\n\n集中管理朗读声音与语音引擎，按自己的习惯调整朗读体验。支持系统语音与已安装的其它语音引擎。",
       "tags": [
-        "官方"
+        "语音合成"
       ],
       "releases": [
         {
@@ -263,8 +263,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-synthesis-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-synthesis-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -278,16 +278,16 @@
     {
       "id": "tools.cloud-agent",
       "name": "云端助手",
-      "summary": "多会话AI助手，支持图片、工具执行、长任务与可加载历史。",
+      "summary": "和 AI 聊天、看图、找资料，也能协助制作快捷文本与插件。",
       "category": "扩展",
       "license": "MIT",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/cloud-agent",
       "icon": {
         "symbol": "smart_toy"
       },
-      "description": "## AI 助手\n\n支持多个供应商与模型、图片输入、流式对话和并行会话。\n\n- 可加载更早的会话记录。\n- 按需授权应用工具、网页验收与 Lua 调试。\n- 密钥仅由用户在本机配置。",
+      "description": "## AI 助手\n\n把聊天、查找资料和动手创作放在一起。可以发送图片、切换模型，也可以同时处理多个会话。\n\n- 制作带图片的快捷文本或互动网页。\n- 整理常用内容，让 AI 帮忙完成日常操作。\n- 随时回看历史消息，继续之前的话题。",
       "tags": [
-        "官方"
+        "AI"
       ],
       "releases": [
         {
@@ -299,14 +299,14 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.13.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.13.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 14,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API14或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "修复加载更早消息不生效，改善长会话的阅读与使用体验。",
           "dependencies": {}
         },
         {
@@ -318,8 +318,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.6.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.6.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 13,
@@ -337,8 +337,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.5.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.5.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 13,
@@ -356,8 +356,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.3.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.3.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 12,
@@ -375,8 +375,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.4.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.4.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 12,
@@ -394,8 +394,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,
@@ -413,8 +413,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,
@@ -428,16 +428,16 @@
     {
       "id": "tools.native-builder",
       "name": "原生构建扩展",
-      "summary": "可选原生插件构建扩展，不是Lua项目的必需依赖。",
+      "summary": "为插件编辑器扩展构建能力，制作功能更丰富的插件。",
       "category": "开发",
       "license": "MIT",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/native-builder",
       "icon": {
         "symbol": "build"
       },
-      "description": "可选原生插件构建扩展，不是Lua项目的必需依赖。",
+      "description": "## 原生构建扩展\n\n为需要更多原生功能的插件项目提供构建工具，可与插件编辑器配合使用。",
       "tags": [
-        "官方"
+        "开发工具"
       ],
       "releases": [
         {
@@ -449,8 +449,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.native-builder-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.native-builder-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -464,16 +464,16 @@
     {
       "id": "tools.package-store",
       "name": "插件商店",
-      "summary": "浏览插件、查看介绍与预览，管理版本及自动解析前置依赖。",
+      "summary": "发现实用插件，查看介绍、选择版本，轻松安装和更新。",
       "category": "扩展",
       "license": "MIT",
       "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/package-store",
       "icon": {
         "symbol": "storefront"
       },
-      "description": "## 插件商店\n\n基于 **KPM** 的插件浏览与安装入口，无推荐排名。支持多个源、版本选择、依赖规划和镜像下载。\n\n源可注册 Material Symbols、校验图片、Markdown 介绍及预览缩略图。",
+      "description": "## 插件商店\n\n按用途浏览自己需要的工具，先看介绍与预览，再决定安装什么。\n\n支持添加不同的插件来源、查看历史版本，并在安装时一并准备所需组件。",
       "tags": [
-        "官方"
+        "工具"
       ],
       "releases": [
         {
@@ -485,14 +485,14 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 14,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API14或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "加大插件图标并展示简短介绍，完善详情和预览体验。",
           "dependencies": {}
         },
         {
@@ -504,8 +504,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.3.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.3.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 12,
@@ -523,8 +523,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,
@@ -542,8 +542,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,

@@ -62,3 +62,7 @@ PowerShell 7、UTF-8 无 BOM。构建器、目录合同、网页模块独立维�
 本地维护的 marked（MIT）、DOMPurify（Apache-2.0 或 MPL-2.0）版本与哈希见 `web/vendor/manifest.json`，许可原文位于相同目录。Material Symbols 使用 Google Apache-2.0 图标，固定源提交及许可见 `web/vendor/Material-Symbols-LICENSE.txt`。二维码由 qrcode 生成。
 
 构建时上游网络临时不可达，将使用显式配置的 `catalogPath` 快照并在网页标明“已保存目录”；`expectedSourceId` 防止误用其它源的快照。官方示例快照只包含已公开且完成哈希验证的目录和APK元数据，不包含包本体。自建源需替换这些路径和源ID。图标的Apache-2.0固定提交SVG已预置在web/symbols，新声明图标仍按相同固定版本获取。
+
+## 介绍文案
+
+插件介绍面向实际使用者，写用途和使用体验，不塞入接口、存储、上传策略等工程说明。权限用途在插件清单permissionPurposes声明，由插件权限页单独展示。category/tags只写AI、语音识别、语音合成、开发工具等分类，不用功能句子作标签，不给每个标题重复添加副标题。

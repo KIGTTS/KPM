@@ -8,20 +8,20 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-src 'none'">
   <title>KPM · 插件源</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="symbols/inventory_2.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/kpm-icon.svg" type="image/svg+xml">
   <script type="module" src="app.js"></script>
 </head>
 <body>
   <header class="topbar shell">
-    <a class="brand" href="./" aria-label="KPM 首页"><span class="brand-mark">K</span><span>KPM<span class="brand-sub">KIGTTS Package Manager</span></span></a>
+    <a class="brand" href="./" aria-label="KPM 首页"><span class="brand-logo" role="img" aria-label="KIGTTS Package Manager"></span></a>
     <nav aria-label="页面导航"><button class="text-button" id="guide-open">添加指引</button><a class="text-button" id="source-code" href="https://github.com/LHT02/KPM">模板与源码 <span aria-hidden="true">↗</span></a><button class="icon-button" id="theme" aria-label="切换亮暗主题" title="切换亮暗主题"><span class="symbol" data-symbol="contrast"></span></button></nav>
   </header>
   <main class="shell">
     <section class="hero" aria-labelledby="source-name">
-      <div class="intro"><p class="eyebrow"><span class="status-dot"></span> KIGTTS 插件生态</p><div class="source-heading"><div id="source-icon" class="source-avatar"></div><h1 id="source-name">正在读取插件源</h1></div><div class="markdown source-description" id="source-description"></div><p class="publisher" id="publisher"></p><div class="hero-pills"><span>一个源，多个插件</span><span>版本与依赖自动检查</span></div></div>
+      <div class="intro"><div class="source-heading"><div id="source-icon" class="source-avatar"></div><h1 id="source-name">正在读取插件源</h1></div><div class="markdown source-description" id="source-description"></div><p class="publisher" id="publisher"></p></div>
       <aside class="add-card" aria-label="添加插件源"><div class="add-heading"><span class="symbol" data-symbol="add_link"></span><span>把这个源带到 KIGTTS</span></div><a class="primary-button" id="add-source" href="#">添加到 KPM <span class="symbol" data-symbol="arrow_outward"></span></a><div class="source-address"><code id="source-url">正在读取地址…</code><button class="icon-button" id="copy-source" aria-label="复制源地址" title="复制源地址"><span class="symbol" data-symbol="content_copy"></span></button></div><div class="scan-row"><img src="add-source.png" alt="手机扫码添加这个插件源" width="128" height="128"><p>电脑上浏览？<br><strong>手机扫码添加</strong><br><button class="inline-button" id="manual-open">手动添加指引</button></p></div><p class="fallback">还没有安装软件？<a id="download-app" href="https://github.com/LHT02/KIGTTSNEXT">下载 KIGTTS</a></p></aside>
     </section>
-    <section class="catalog" aria-labelledby="catalog-title"><div class="catalog-heading"><div><p class="eyebrow">探索更多可能</p><h2 id="catalog-title">发现插件 <span class="count" id="count">—</span></h2></div><label class="search"><span class="symbol" data-symbol="search"></span><input id="search" type="search" placeholder="搜索插件、功能或标签" aria-label="搜索插件"></label></div><div id="categories" class="categories" aria-label="插件分类"></div><div id="packages" class="package-grid" aria-live="polite"><p class="empty">正在读取插件目录…</p></div></section>
+    <section class="catalog" aria-labelledby="catalog-title"><div class="catalog-heading"><div><h2 id="catalog-title">发现插件 <span class="count" id="count">—</span></h2></div><label class="search"><span class="symbol" data-symbol="search"></span><input id="search" type="search" placeholder="搜索插件、功能或标签" aria-label="搜索插件"></label></div><div id="categories" class="categories" aria-label="插件分类"></div><div id="packages" class="package-grid" aria-live="polite"><p class="empty">正在读取插件目录…</p></div></section>
     <section class="source-readme markdown" id="source-readme" aria-label="插件源介绍"></section>
   </main>
   <footer class="shell"><span><strong>KPM</strong> · 让灵感成为日常工具</span><a href="https://github.com/LHT02/KPM/generate">使用这个模板创建包源 ↗</a></footer>
