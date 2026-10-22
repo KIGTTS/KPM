@@ -27,7 +27,9 @@ try {
   $('source-icon').replaceChildren(icon(catalog.icon || { symbol: 'inventory_2' }, site));
   $('source-description').replaceChildren(markdown(catalog.description, site));
   $('source-readme').replaceChildren(...(catalog.readme ? [markdown(catalog.readme, site)] : []));
-  $('publisher').textContent = `由 ${site.publisher || catalog.name} 维护 · ${catalog.packages.length} 个插件` + (site.savedCatalog ? ' · 已保存目录' : '');
+  const updated = new Date(catalog.updatedAt);
+  $('publisher').textContent = site.publisher || catalog.name;
+  if (!Number.isNaN(updated.getTime())) $('publisher').textContent += ` · 更新于 ${updated.toLocaleDateString('zh-CN')}`;
   $('count').textContent = catalog.packages.length;
   const sourceURL = safeURL(site.sourceUrl);
   if (!sourceURL.startsWith('https://')) throw new Error('源地址需为 HTTPS');
