@@ -9,7 +9,7 @@
   },
   "assets": {},
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-22T04:09:08.2818269+00:00",
+  "updatedAt": "2026-10-22T06:33:53.0573256+00:00",
   "packages": [
     {
       "id": "debug.ui",
@@ -17,7 +17,7 @@
       "summary": "检查按钮、分组和页面布局，帮助完善插件界面。",
       "category": "开发",
       "license": "MIT",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/ui-debug",
+      "homepage": "https://github.com/KIGTTS/plugin-ui-debug",
       "icon": {
         "symbol": "bug_report"
       },
@@ -43,7 +43,9 @@
           "minSdk": 26,
           "abis": [],
           "notes": "提供按钮、分组与布局的调试入口。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [],
+          "permissionPurposes": {}
         }
       ]
     },
@@ -53,7 +55,7 @@
       "summary": "把文字读成语音，搭配喜欢的音色用于日常朗读。",
       "category": "音频",
       "license": "GPL-3.0-only",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/piper-tts",
+      "homepage": "https://github.com/KIGTTS/plugin-piper-tts",
       "icon": {
         "symbol": "voice_chat"
       },
@@ -81,7 +83,12 @@
             "arm64-v8a"
           ],
           "notes": "兼容API9–13宿主；无需重新导入已有模型。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "tts",
+            "voice-packs"
+          ],
+          "permissionPurposes": {}
         }
       ]
     },
@@ -91,7 +98,7 @@
       "summary": "识别语音并转换成文字，适合日常交流与听读。",
       "category": "音频",
       "license": "GPL-3.0-only",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/sensevoice-asr",
+      "homepage": "https://github.com/KIGTTS/plugin-sensevoice-asr",
       "icon": {
         "symbol": "mic"
       },
@@ -122,7 +129,14 @@
             "x86_64"
           ],
           "notes": "兼容API9–13宿主；无需重新导入已有模型。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "asr-batch",
+            "asr-segmented",
+            "network",
+            "resources"
+          ],
+          "permissionPurposes": {}
         }
       ]
     },
@@ -132,7 +146,7 @@
       "summary": "边说边转成文字，适合连续聆听与长时间语音输入。",
       "category": "音频",
       "license": "MIT",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/streaming-asr",
+      "homepage": "https://github.com/KIGTTS/plugin-streaming-asr",
       "icon": {
         "symbol": "graphic_eq"
       },
@@ -163,7 +177,14 @@
             "x86_64"
           ],
           "notes": "兼容API9–13宿主；无需重新导入已有模型。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "asr-batch",
+            "asr-incremental",
+            "network",
+            "resources"
+          ],
+          "permissionPurposes": {}
         }
       ]
     },
@@ -173,7 +194,7 @@
       "summary": "管理多个插件项目，编辑文件、调试运行，并打包分享作品。",
       "category": "开发",
       "license": "MIT",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/lua-runtime",
+      "homepage": "https://github.com/KIGTTS/plugin-lua-runtime",
       "icon": {
         "symbol": "code"
       },
@@ -199,7 +220,22 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "resources",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按用户任务调整应用设置、提交字幕及调试用户授权的Lua插件。",
+            "quick-text-read": "读取用户指定的快捷文本、分组及页面文件以编辑和验收。",
+            "quick-text-write": "创建、编辑、导入导出用户授权的快捷文本与页面。",
+            "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
+            "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
+          }
         }
       ]
     },
@@ -209,7 +245,7 @@
       "summary": "把听到的话变成字幕或输入文字，支持连续聆听。",
       "category": "音频",
       "license": "MIT",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/recognition-service",
+      "homepage": "https://github.com/KIGTTS/plugin-recognition-service",
       "icon": {
         "symbol": "hearing"
       },
@@ -235,7 +271,15 @@
           "minSdk": 26,
           "abis": [],
           "notes": "兼容API9–13宿主；无需重新导入已有模型。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "asr-service",
+            "asr-batch",
+            "asr-segmented",
+            "asr-incremental",
+            "resources"
+          ],
+          "permissionPurposes": {}
         }
       ]
     },
@@ -245,7 +289,7 @@
       "summary": "选择喜欢的朗读声音，调整语速，让文字开口说话。",
       "category": "音频",
       "license": "GPL-3.0-only",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/speech-service",
+      "homepage": "https://github.com/KIGTTS/plugin-speech-service",
       "icon": {
         "symbol": "record_voice_over"
       },
@@ -271,7 +315,12 @@
           "minSdk": 26,
           "abis": [],
           "notes": "兼容API9–13宿主；无需重新导入已有模型。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "tts",
+            "speech-service"
+          ],
+          "permissionPurposes": {}
         }
       ]
     },
@@ -281,7 +330,7 @@
       "summary": "和 AI 聊天、看图、找资料，也能协助制作快捷文本与插件。",
       "category": "扩展",
       "license": "MIT",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/cloud-agent",
+      "homepage": "https://github.com/KIGTTS/plugin-cloud-agent",
       "icon": {
         "symbol": "smart_toy"
       },
@@ -307,7 +356,23 @@
           "minSdk": 26,
           "abis": [],
           "notes": "修复加载更早消息不生效，改善长会话的阅读与使用体验。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "network": "连接用户配置的AI供应商获取模型、发送对话及用户选择的图片，按任务搜索网页和公开图片、下载图片及页面素材。",
+            "app-control": "按用户任务调整应用设置、提交字幕及调试用户授权的Lua插件。",
+            "quick-text-read": "读取用户指定的快捷文本、分组及页面文件以编辑和验收。",
+            "quick-text-write": "创建、编辑、导入导出用户授权的快捷文本与页面。",
+            "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
+            "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
+          }
         },
         {
           "version": "0.9.6",
@@ -326,7 +391,23 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API13或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "network": "连接用户配置的AI供应商获取模型、发送对话及用户选择的图片，按任务搜索网页和公开图片、下载图片及页面素材。",
+            "app-control": "按用户任务调整应用设置、提交字幕及调试用户授权的Lua插件。",
+            "quick-text-read": "读取用户指定的快捷文本、分组及页面文件以编辑和验收。",
+            "quick-text-write": "创建、编辑、导入导出用户授权的快捷文本与页面。",
+            "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
+            "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
+          }
         },
         {
           "version": "0.9.5",
@@ -345,7 +426,23 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API13或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "network": "连接用户配置的AI供应商获取模型、发送对话及用户选择的图片，按任务检索网页与下载页面素材。",
+            "app-control": "按用户任务调整应用设置、提交字幕及调试用户授权的Lua插件。",
+            "quick-text-read": "读取用户指定的快捷文本、分组及页面文件以编辑和验收。",
+            "quick-text-write": "创建、编辑、导入导出用户授权的快捷文本与页面。",
+            "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
+            "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
+          }
         },
         {
           "version": "0.9.3",
@@ -364,7 +461,23 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API12或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "network": "连接用户配置的AI供应商获取模型、发送对话及用户选择的图片，按任务检索网页与下载页面素材。",
+            "app-control": "按用户任务调整应用设置、提交字幕及调试用户授权的Lua插件。",
+            "quick-text-read": "读取用户指定的快捷文本、分组及页面文件以编辑和验收。",
+            "quick-text-write": "创建、编辑、导入导出用户授权的快捷文本与页面。",
+            "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
+            "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
+          }
         },
         {
           "version": "0.9.4",
@@ -383,7 +496,23 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API12或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "network": "连接用户配置的AI供应商获取模型、发送对话及用户选择的图片，按任务检索网页与下载页面素材。",
+            "app-control": "按用户任务调整应用设置、提交字幕及调试用户授权的Lua插件。",
+            "quick-text-read": "读取用户指定的快捷文本、分组及页面文件以编辑和验收。",
+            "quick-text-write": "创建、编辑、导入导出用户授权的快捷文本与页面。",
+            "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
+            "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
+          }
         },
         {
           "version": "0.9.2",
@@ -402,7 +531,23 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "network": "连接用户配置的AI供应商获取模型、发送对话及用户选择的图片，按任务检索网页与下载页面素材。",
+            "app-control": "按用户任务调整应用设置、提交字幕及调试用户授权的Lua插件。",
+            "quick-text-read": "读取用户指定的快捷文本、分组及页面文件以编辑和验收。",
+            "quick-text-write": "创建、编辑、导入导出用户授权的快捷文本与页面。",
+            "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
+            "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
+          }
         },
         {
           "version": "0.9.1",
@@ -421,7 +566,23 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "network": "连接用户配置的AI供应商获取模型、发送对话及用户选择的图片，按任务检索网页与下载页面素材。",
+            "app-control": "按用户任务调整应用设置、提交字幕及调试用户授权的Lua插件。",
+            "quick-text-read": "读取用户指定的快捷文本、分组及页面文件以编辑和验收。",
+            "quick-text-write": "创建、编辑、导入导出用户授权的快捷文本与页面。",
+            "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
+            "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
+          }
         }
       ]
     },
@@ -431,7 +592,7 @@
       "summary": "为插件编辑器扩展构建能力，制作功能更丰富的插件。",
       "category": "开发",
       "license": "MIT",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/native-builder",
+      "homepage": "https://github.com/KIGTTS/plugin-native-builder",
       "icon": {
         "symbol": "build"
       },
@@ -457,7 +618,12 @@
           "minSdk": 26,
           "abis": [],
           "notes": "兼容API9–13宿主；无需重新导入已有模型。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "resources",
+            "app-control"
+          ],
+          "permissionPurposes": {}
         }
       ]
     },
@@ -467,7 +633,7 @@
       "summary": "发现实用插件，查看介绍、选择版本，轻松安装和更新。",
       "category": "扩展",
       "license": "MIT",
-      "homepage": "https://github.com/LHT02/KIGTTSNEXT/tree/main/engine-plugins/package-store",
+      "homepage": "https://github.com/KIGTTS/plugin-package-store",
       "icon": {
         "symbol": "storefront"
       },
@@ -476,6 +642,33 @@
         "工具"
       ],
       "releases": [
+        {
+          "version": "0.10.1",
+          "versionCode": 9,
+          "format": "NATIVE",
+          "sha256": "650cb239185c6df7375124238677411599012c0ca36f043875d460e4ba9f506b",
+          "bytes": 129775,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.1.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 15,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "每次进入自动更新目录；详情显示插件图标与可折叠的权限说明。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "获取用户添加的包源清单并通过HTTPS和受限CDN跳转下载已选插件。",
+            "app-control": "核实插件安装状态并将用户确认的安装计划提交宿主审核。"
+          }
+        },
         {
           "version": "0.10.0",
           "versionCode": 8,
@@ -493,7 +686,15 @@
           "minSdk": 26,
           "abis": [],
           "notes": "加大插件图标并展示简短介绍，完善详情和预览体验。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "获取用户添加的包源清单并通过HTTPS和受限CDN跳转下载已选插件。",
+            "app-control": "核实插件安装状态并将用户确认的安装计划提交宿主审核。"
+          }
         },
         {
           "version": "0.9.3",
@@ -512,7 +713,15 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API12或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "获取用户添加的包源清单并通过HTTPS和受限CDN跳转下载已选插件。",
+            "app-control": "核实插件安装状态并将用户确认的安装计划提交宿主审核。"
+          }
         },
         {
           "version": "0.9.2",
@@ -531,7 +740,15 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "获取用户添加的包源清单并通过HTTPS和受限CDN跳转下载已选插件。",
+            "app-control": "核实插件安装状态并将用户确认的安装计划提交宿主审核。"
+          }
         },
         {
           "version": "0.9.1",
@@ -550,7 +767,12 @@
           "minSdk": 26,
           "abis": [],
           "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
-          "dependencies": {}
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {}
         }
       ]
     }

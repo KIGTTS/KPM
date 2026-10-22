@@ -49,7 +49,8 @@ class CatalogTest(unittest.TestCase):
             site = json.loads((Path(folder) / "site.json").read_text(encoding="utf-8"))
             self.assertTrue(site["savedCatalog"])
             self.assertEqual("kigtts.official", site["catalog"]["id"])
-            self.assertIn("KIGTTSNEXT-api14", site["downloadURL"])
+            metadata = json.loads((ROOT / config["downloadMetadataPath"]).read_text(encoding="utf-8"))
+            self.assertIn(metadata["path"], site["downloadURL"])
             with self.assertRaises(ValueError): build(dict(config, expectedSourceId="different.source"), Path(folder))
 
     def test_stale_branch_response_does_not_replace_a_newer_matching_catalog(self):
@@ -67,7 +68,8 @@ class CatalogTest(unittest.TestCase):
         with TemporaryDirectory() as folder, patch("build.fetch", side_effect=AssertionError("network used")):
             build(config, Path(folder), offline=True)
             site = json.loads((Path(folder) / "site.json").read_text(encoding="utf-8"))
-            self.assertIn("KIGTTSNEXT-api14", site["downloadURL"])
+            metadata = json.loads((ROOT / config["downloadMetadataPath"]).read_text(encoding="utf-8"))
+            self.assertIn(metadata["path"], site["downloadURL"])
             self.assertTrue((Path(folder) / "fonts/google.woff2").is_file())
             self.assertTrue((Path(folder) / "fonts/SourceHanSans-LICENSE.txt").is_file())
             self.assertTrue((Path(folder) / "LICENSE").is_file())
