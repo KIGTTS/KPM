@@ -25,11 +25,11 @@ export function showDetail(item, site, addURL) {
     for (const value of [`API ${release.apiVersion || 9}+`, `Android ${release.minSdk || 26}+`, release.format]) info.append(node('span', '', value));
     const compatibility = node('details');
     compatibility.append(node('summary', '', '兼容性'), info);
-    details.append(summary, markdown(release.notes || '暂无版本说明。', site), compatibility);
+    details.append(summary, markdown(release.notes || '发布者尚未填写更新说明。', site), compatibility);
     if (Object.keys(release.dependencies || {}).length) {
       const list = node('ul');
       for (const [id, range] of Object.entries(release.dependencies)) list.append(node('li', '', `${id} · ${range}`));
-      details.append(node('h4', '', '前置依赖'), list);
+      details.append(node('h4', '', '所需插件'), list);
     }
     body.append(details);
   }

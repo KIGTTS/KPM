@@ -37,7 +37,7 @@ try {
   $('source-url').textContent = sourceURL; $('manual-url').textContent = sourceURL;
   $('add-source').href = addURL;
   $('source-code').href = safeURL(site.repository) || 'https://github.com/LHT02/KPM';
-  $('download-app').href = safeURL(site.downloadURL) || 'https://github.com/LHT02/KIGTTSNEXT';
+  $('download-app').href = safeURL(site.downloadURL) || 'https://github.com/KIGTTS/KIGTTSNEXT';
   $('copy-source').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(sourceURL); toast('源地址已复制'); }
     catch { $('guide').showModal(); const selection = getSelection(); const range = document.createRange(); range.selectNodeContents($('manual-url')); selection.removeAllRanges(); selection.addRange(range); toast('请复制已选中的源地址'); }
@@ -66,8 +66,8 @@ try {
   render();
 } catch (error) {
   $('source-name').textContent = '暂时无法读取插件源';
-  $('packages').replaceChildren(node('p', 'empty', '请稍后刷新页面，或从源码页面获取源地址并在 KIGTTS 中手动添加。'));
-  $('source-description').textContent = '页面没有完整加载，请检查网络连接后重试。';
+  $('packages').replaceChildren(node('p', 'empty', '请检查网络连接，然后刷新页面重试。'));
+  $('source-description').textContent = '暂时无法加载插件目录。';
   $('add-source').removeAttribute('href'); $('add-source').setAttribute('aria-disabled', 'true');
   console.error('KPM catalog load failed', error);
 }

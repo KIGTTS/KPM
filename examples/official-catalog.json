@@ -9,7 +9,7 @@
   },
   "assets": {},
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-22T16:21:11.3647514+00:00",
+  "updatedAt": "2026-10-22T18:55:28.1631800+00:00",
   "packages": [
     {
       "id": "backup.kigusay",
@@ -43,7 +43,7 @@
           "apiVersion": 16,
           "minSdk": 26,
           "abis": [],
-          "notes": "全新导入导出指引，首次导入先说明所需权限，支持图片、音频和视频。",
+          "notes": "导入前可查看操作指引，支持一并转移图片、音频和视频。",
           "dependencies": {},
           "permissions": [
             "quick-text-read",
@@ -70,7 +70,7 @@
           "apiVersion": 16,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API16或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "quick-text-read",
@@ -138,6 +138,27 @@
       ],
       "releases": [
         {
+          "version": "0.1.3",
+          "versionCode": 4,
+          "format": "NATIVE",
+          "sha256": "21319667478d89bfea052242351dac9ccd9480a6c048261d5963901fe638d2fb",
+          "bytes": 35430,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.3.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 19,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "支持更大的字幕字号，并改善大字灯珠显示效果。",
+          "dependencies": {},
+          "permissions": [],
+          "permissionPurposes": {}
+        },
+        {
           "version": "0.1.2",
           "versionCode": 3,
           "format": "NATIVE",
@@ -195,7 +216,7 @@
           "apiVersion": 17,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API17或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [],
           "permissionPurposes": {}
@@ -205,18 +226,46 @@
     {
       "id": "engine.piper",
       "name": "Piper 语音引擎",
-      "summary": "把文字读成语音，搭配喜欢的音色用于日常朗读。",
+      "summary": "为日常朗读添加更多声音。",
       "category": "音频",
       "license": "GPL-3.0-only",
       "homepage": "https://github.com/KIGTTS/plugin-piper-tts",
       "icon": {
         "symbol": "voice_chat"
       },
-      "description": "## Piper 语音引擎\n\n为语音合成服务提供朗读声音，搭配音色模型使用，可按自己的喜好选择声音。",
+      "description": "## Piper 语音引擎\n\n导入喜欢的 Piper 语音包，在语音合成设置中选择声音，调整音量、音色和朗读节奏。需要搭配语音合成服务使用。",
       "tags": [
         "语音合成"
       ],
       "releases": [
+        {
+          "version": "0.8.2",
+          "versionCode": 10,
+          "format": "NATIVE",
+          "sha256": "d18b18f543e2ae90589c16fabf325e1b452dcc2286f3c8b00331b0b93388794a",
+          "bytes": 24860873,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.2.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 21,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a"
+          ],
+          "notes": "更新使用说明，方便查找声音管理与设备兼容信息。",
+          "dependencies": {
+            "service.speech-synthesis": "^0.8.1"
+          },
+          "permissions": [
+            "tts",
+            "voice-packs"
+          ],
+          "permissionPurposes": {}
+        },
         {
           "version": "0.8.1",
           "versionCode": 9,
@@ -263,7 +312,7 @@
           "abis": [
             "arm64-v8a"
           ],
-          "notes": "兼容API9–13宿主；无需重新导入已有模型。",
+          "notes": "暂无更新说明。",
           "dependencies": {
             "service.speech-synthesis": "^0.8.0"
           },
@@ -291,6 +340,39 @@
       ],
       "releases": [
         {
+          "version": "0.8.1",
+          "versionCode": 9,
+          "format": "NATIVE",
+          "sha256": "3e2c4ea09822537c831d0d4385c8d7c8b53b216c9baeea3989f9e50313f94cd7",
+          "bytes": 58403858,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.sensevoice-0.8.1.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 14,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86",
+            "x86_64"
+          ],
+          "notes": "简化识别设置与资源提示，更清楚地说明录音和连续聆听的使用方式。",
+          "dependencies": {
+            "service.speech-recognition": "^0.8.0"
+          },
+          "permissions": [
+            "asr-batch",
+            "asr-segmented",
+            "network",
+            "resources"
+          ],
+          "permissionPurposes": {}
+        },
+        {
           "version": "0.8.0",
           "versionCode": 8,
           "format": "NATIVE",
@@ -311,7 +393,7 @@
             "x86",
             "x86_64"
           ],
-          "notes": "兼容API9–13宿主；无需重新导入已有模型。",
+          "notes": "暂无更新说明。",
           "dependencies": {
             "service.speech-recognition": "^0.8.0"
           },
@@ -341,6 +423,39 @@
       ],
       "releases": [
         {
+          "version": "0.8.1",
+          "versionCode": 9,
+          "format": "NATIVE",
+          "sha256": "3f0cb455ea1f6c932fbee77a83e96302dae92f9a7fae42e4923f960a1080b188",
+          "bytes": 59540393,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.1.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 14,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86",
+            "x86_64"
+          ],
+          "notes": "优化识别包与语言设置的说明。",
+          "dependencies": {
+            "service.speech-recognition": "^0.8.0"
+          },
+          "permissions": [
+            "asr-batch",
+            "asr-incremental",
+            "network",
+            "resources"
+          ],
+          "permissionPurposes": {}
+        },
+        {
           "version": "0.8.0",
           "versionCode": 8,
           "format": "NATIVE",
@@ -361,7 +476,7 @@
             "x86",
             "x86_64"
           ],
-          "notes": "兼容API9–13宿主；无需重新导入已有模型。",
+          "notes": "暂无更新说明。",
           "dependencies": {
             "service.speech-recognition": "^0.8.0"
           },
@@ -434,6 +549,40 @@
       ],
       "releases": [
         {
+          "version": "0.9.2",
+          "versionCode": 6,
+          "format": "NATIVE",
+          "sha256": "9edc542eebda92fbf07fd91b25995ed70d69b5e7e07222ae54df5de34b0ee4ca",
+          "bytes": 261461,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/runtime.lua-0.9.2.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 14,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "完善权限用途说明。",
+          "dependencies": {},
+          "permissions": [
+            "resources",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。"
+          }
+        },
+        {
           "version": "0.9.1",
           "versionCode": 5,
           "format": "NATIVE",
@@ -449,7 +598,7 @@
           "apiVersion": 11,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "resources",
@@ -500,7 +649,7 @@
           "apiVersion": 9,
           "minSdk": 26,
           "abis": [],
-          "notes": "兼容API9–13宿主；无需重新导入已有模型。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "asr-service",
@@ -544,7 +693,7 @@
           "apiVersion": 21,
           "minSdk": 26,
           "abis": [],
-          "notes": "系统声音跟随设备默认；语速与语音包参数以滑条卡片调整。",
+          "notes": "使用系统默认声音，也可分别调整语音包的音量、音色和节奏。",
           "dependencies": {},
           "permissions": [
             "tts",
@@ -568,7 +717,7 @@
           "apiVersion": 9,
           "minSdk": 26,
           "abis": [],
-          "notes": "兼容API9–13宿主；无需重新导入已有模型。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "tts",
@@ -580,7 +729,7 @@
     },
     {
       "id": "tools.cloud-agent",
-      "name": "云端助手",
+      "name": "AI 助手",
       "summary": "和 AI 聊天、看图、找资料，也能协助制作快捷文本与插件。",
       "category": "扩展",
       "license": "MIT",
@@ -593,6 +742,43 @@
         "AI"
       ],
       "releases": [
+        {
+          "version": "0.9.16",
+          "versionCode": 20,
+          "format": "NATIVE",
+          "sha256": "b858011b2c7f30e018551247ad042d1e76ec556e61fbcdf7a50b7fac84fcfed0",
+          "bytes": 281116,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.16.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 21,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "优化助手设置与操作提示，权限用途更清楚。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
         {
           "version": "0.9.15",
           "versionCode": 19,
@@ -718,7 +904,7 @@
           "apiVersion": 13,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API13或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "network",
@@ -753,7 +939,7 @@
           "apiVersion": 13,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API13或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "network",
@@ -788,7 +974,7 @@
           "apiVersion": 12,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API12或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "network",
@@ -823,7 +1009,7 @@
           "apiVersion": 12,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API12或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "network",
@@ -858,7 +1044,7 @@
           "apiVersion": 11,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "network",
@@ -893,7 +1079,7 @@
           "apiVersion": 11,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "network",
@@ -945,7 +1131,7 @@
           "apiVersion": 9,
           "minSdk": 26,
           "abis": [],
-          "notes": "兼容API9–13宿主；无需重新导入已有模型。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "resources",
@@ -958,18 +1144,45 @@
     {
       "id": "tools.package-store",
       "name": "插件商店",
-      "summary": "发现实用插件，查看介绍、选择版本，轻松安装和更新。",
+      "summary": "浏览、安装和更新你需要的插件。",
       "category": "扩展",
       "license": "MIT",
       "homepage": "https://github.com/KIGTTS/plugin-package-store",
       "icon": {
         "symbol": "storefront"
       },
-      "description": "## 插件商店\n\n按用途浏览自己需要的工具，先看介绍与预览，再决定安装什么。\n\n支持添加不同的插件来源、查看历史版本，并在安装时一并准备所需组件。",
+      "description": "## 插件商店\n\n按用途浏览插件，查看介绍与预览，再决定安装什么。\n\n支持添加插件来源、选择历史版本，以及一并安装所需插件。",
       "tags": [
         "工具"
       ],
       "releases": [
+        {
+          "version": "0.11.0",
+          "versionCode": 12,
+          "format": "NATIVE",
+          "sha256": "1ac0c3b301d3378aa5109c6e28fd5f65bfd19daf612ba5ef8bb99d71dbf953fd",
+          "bytes": 147028,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.11.0.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 23,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "在插件条目右侧查看下载进度；新增下载管理，修复安装后仍停留在旧计划的问题，并改进重复添加源的提示。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "更新你添加的插件目录，并下载所选插件和预览图片。",
+            "app-control": "检查已安装的插件，并在你确认后打开插件安装页面。"
+          }
+        },
         {
           "version": "0.10.3",
           "versionCode": 11,
@@ -1094,7 +1307,7 @@
           "apiVersion": 12,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API12或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "network",
@@ -1121,7 +1334,7 @@
           "apiVersion": 11,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "network",
@@ -1148,7 +1361,7 @@
           "apiVersion": 11,
           "minSdk": 26,
           "abis": [],
-          "notes": "需API11或更新兼容宿主；更新保留原配置与启停状态。",
+          "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [
             "network",
