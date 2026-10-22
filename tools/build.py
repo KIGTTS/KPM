@@ -66,6 +66,8 @@ def validate(catalog):
         if len({x["version"] for x in item["releases"]}) != len(item["releases"]) or len({x["versionCode"] for x in item["releases"]}) != len(item["releases"]):
             raise ValueError("Duplicate package version")
         for release in item["releases"]:
+            if set(release.get("permissionPurposes", {})) - set(release.get("permissions", [])):
+                raise ValueError("Permission purposes must refer to declared permissions")
             for mirror in release["mirrors"]:
                 https(mirror["url"])
             if release["format"] == "LUA" and "runtime.lua" not in release.get("dependencies", {}):

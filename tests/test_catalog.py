@@ -27,6 +27,17 @@ class CatalogTest(unittest.TestCase):
         for value in ["http://example.com", "https://user:password@example.com", "https://example.com/#fragment"]:
             with self.assertRaises(ValueError): https(value)
 
+    def test_release_permissions_allow_legacy_unknown_and_require_declared_purposes(self):
+        catalog = json.loads((ROOT / "examples/official-catalog.json").read_text(encoding="utf-8"))
+        release = catalog["packages"][0]["releases"][0]
+        release.pop("permissions", None)
+        release.pop("permissionPurposes", None)
+        validate(catalog)
+        release.update(permissions=["network"], permissionPurposes={"network": "更新插件目录"})
+        validate(catalog)
+        release["permissionPurposes"]["camera"] = "拍摄照片"
+        with self.assertRaises(ValueError): validate(catalog)
+
     def test_svg_is_not_trusted_as_catalog_artwork(self):
         with self.assertRaises(ValueError): bitmap_suffix(b"<svg onload=alert(1)>")
         self.assertEqual(".png", bitmap_suffix(b"\x89PNG\r\n\x1a\n"))
