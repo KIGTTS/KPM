@@ -15,13 +15,17 @@ export function showDetail(item, site, addURL) {
   if (gallery.children.length) body.append(gallery);
   const meta = node('div', 'release-meta');
   for (const text of [item.license, item.id]) if (text) meta.append(node('span', '', text));
-  body.append(meta, node('h3', 'release-heading', '版本与更新'));
+  const more = node('details'), moreTitle = node('summary', '', '更多信息');
+  more.append(moreTitle, meta);
+  body.append(more, node('h3', 'release-heading', '版本与更新'));
   for (const [index, release] of [...item.releases].sort(compareVersions).entries()) {
     const details = node('details'), summary = node('summary', '', `v${release.version}`);
     if (index === 0) details.open = true;
     const info = node('div', 'release-meta');
     for (const value of [`API ${release.apiVersion || 9}+`, `Android ${release.minSdk || 26}+`, release.format]) info.append(node('span', '', value));
-    details.append(summary, info, markdown(release.notes || '暂无版本说明。', site));
+    const compatibility = node('details');
+    compatibility.append(node('summary', '', '兼容性'), info);
+    details.append(summary, markdown(release.notes || '暂无版本说明。', site), compatibility);
     if (Object.keys(release.dependencies || {}).length) {
       const list = node('ul');
       for (const [id, range] of Object.entries(release.dependencies)) list.append(node('li', '', `${id} · ${range}`));

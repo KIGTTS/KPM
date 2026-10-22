@@ -84,13 +84,13 @@ def bitmap_suffix(data):
     raise ValueError("Only PNG, JPEG and WebP artwork is supported")
 
 
-def build(config, output):
+def build(config, output, offline=False):
     source_url = https(config["sourceUrl"])
     saved = False
     path = (ROOT / config["catalogPath"]).resolve()
     if not path.is_relative_to(ROOT):
         raise ValueError("Local catalog must remain inside this project")
-    if config.get("upstream"):
+    if config.get("upstream") and not offline:
         try:
             raw = fetch(fresh(config["upstream"]), 4 * 1024 * 1024)
         except requests.RequestException:
@@ -99,15 +99,26 @@ def build(config, output):
             print("Upstream temporarily unavailable; using the explicitly configured catalog snapshot", flush=True)
     else:
         raw = path.read_bytes()
+        saved = bool(config.get("upstream"))
     if len(raw) > 4 * 1024 * 1024:
         raise ValueError("Catalog exceeds 4 MiB")
     catalog = json.loads(raw)
     validate(catalog)
+    # A mutable branch URL can briefly lag behind a just-published, verified snapshot.
+    if config.get("upstream") and path.is_file():
+        snapshot = json.loads(path.read_text(encoding="utf-8"))
+        if snapshot.get("id") == catalog["id"] and snapshot.get("updatedAt", "") > catalog.get("updatedAt", ""):
+            validate(snapshot)
+            catalog = snapshot
+            raw = path.read_bytes()
+            saved = True
     if config.get("expectedSourceId") and config["expectedSourceId"] != catalog["id"]:
         raise ValueError("Catalog source ID differs from the configured source")
     output.mkdir(parents=True, exist_ok=True)
     shutil.copytree(ROOT / "web", output, dirs_exist_ok=True)
     shutil.copytree(ROOT / "schema", output / "schema", dirs_exist_ok=True)
+    for name in ("LICENSE", "DEPLOY.md"):
+        shutil.copyfile(ROOT / name, output / name)
     (output / ".nojekyll").write_text("", encoding="utf-8")
     (output / "index.json").write_bytes(raw)
     art = {}
@@ -117,6 +128,7 @@ def build(config, output):
         target = cache / image["sha256"]
         data = target.read_bytes() if target.is_file() else b""
         if len(data) != image["bytes"] or hashlib.sha256(data).hexdigest() != image["sha256"]:
+            if offline: raise FileNotFoundError("Artwork is not cached; run an online build first")
             data = fetch(image["url"], image["bytes"])
         if len(data) != image["bytes"] or hashlib.sha256(data).hexdigest() != image["sha256"]:
             raise ValueError("Artwork size/hash mismatch: " + asset_id)
@@ -138,12 +150,13 @@ def build(config, output):
         if (output / "symbols" / (name + ".svg")).is_file():
             continue
         if not target.is_file():
+            if offline: raise FileNotFoundError("Symbol is not cached; run an online build first")
             target.write_bytes(fetch(f"https://cdn.jsdelivr.net/gh/google/material-design-icons@{SYMBOL_COMMIT}/symbols/web/{name}/materialsymbolsrounded/{name}_24px.svg", 65536))
         shutil.copyfile(target, output / "symbols" / (name + ".svg"))
     download = ""
     if config.get("downloadMetadata"):
         try:
-            if saved and config.get("downloadMetadataPath"):
+            if (saved or offline) and config.get("downloadMetadataPath"):
                 raise requests.ConnectionError("Use the matching saved download metadata")
             metadata = json.loads(fetch(fresh(config["downloadMetadata"]), 65536))
         except requests.RequestException:
@@ -173,5 +186,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", default="source.json")
     parser.add_argument("--output", default="dist")
+    parser.add_argument("--offline", action="store_true", help="Use configured snapshots and local cached artwork only")
     args = parser.parse_args()
-    build(json.loads((ROOT / args.config).read_text(encoding="utf-8")), (ROOT / args.output).resolve())
+    build(json.loads((ROOT / args.config).read_text(encoding="utf-8")), (ROOT / args.output).resolve(), args.offline)

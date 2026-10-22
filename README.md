@@ -66,3 +66,11 @@ PowerShell 7、UTF-8 无 BOM。构建器、目录合同、网页模块独立维�
 ## 介绍文案
 
 插件介绍面向实际使用者，写用途和使用体验，不塞入接口、存储、上传策略等工程说明。权限用途在插件清单permissionPurposes声明，由插件权限页单独展示。category/tags只写AI、语音识别、语音合成、开发工具等分类，不用功能句子作标签，不给每个标题重复添加副标题。
+
+## 字体与部署
+
+英文使用自托管Google Sans，中文使用Adobe思源黑体CN字形；两者采用OFL。思源Web子集遵守保留名条款，内部名为KPM Han。常用界面文字优先小文件，其余按Unicode分片按需加载；字体、Material图标和脚本均不依赖运行时CDN。来源、固定版本、摘要和完整许可证见web/fonts。
+
+需重生成字体时，先按web/fonts/manifest.json中的固定来源准备.cache/fonts输入，再安装requirements-fonts.txt并运行python tools/prepare-fonts.py。正常网页构建只复制已经准备好的字体，不需要下载或安装字体构建工具。
+
+完整静态包可部署到国内或海外的任意HTTPS静态托管，见DEPLOY.md；GitHub Pages仍保留。实际地区可达性取决于域名与托管网络，网页资源自包含不等于提供了国内镜像。

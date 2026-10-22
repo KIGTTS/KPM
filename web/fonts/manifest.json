@@ -1,0 +1,62 @@
+{
+  "google.ttf": {
+    "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/googlesans/GoogleSans%5BGRAD%2Copsz%2Cwght%5D.ttf",
+    "sha256": "d0a87d835a944b8b40d0e82a5651bb59ab97b936a2aeed5946eb57e7b2a3a90a"
+  },
+  "google-italic.ttf": {
+    "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/googlesans/GoogleSans-Italic%5BGRAD%2Copsz%2Cwght%5D.ttf",
+    "sha256": "b6662abd2131cad1b248750149a7f2b644f871ebcc9af7fe4cd1135cd290b6d1"
+  },
+  "GoogleSans-OFL.txt": {
+    "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/googlesans/OFL.txt",
+    "sha256": "2b75ef20f13d83a7514aee452c4782c20cdc9ff2dee17600f44d37a06d4fb958"
+  },
+  "GoogleSans-TRADEMARKS.md": {
+    "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/googlesans/TRADEMARKS.md",
+    "sha256": "215bc8c1ce46d1b81531f33ebb5af201e7a5da76b8f3ae4c705336fd70fc89e1"
+  },
+  "han.ttf": {
+    "url": "https://raw.githubusercontent.com/adobe-fonts/source-han-sans/a4f7cf94edfb9d7ffbdfc4841de276358bd7e0f2/Variable/TTF/Subset/SourceHanSansCN-VF.ttf",
+    "sha256": "25a01e41b5cc99893eb35a6cd2cc7611841dc19eb03cbaf7f0c1de8210f2ba0b"
+  },
+  "SourceHanSans-LICENSE.txt": {
+    "url": "https://raw.githubusercontent.com/adobe-fonts/source-han-sans/a4f7cf94edfb9d7ffbdfc4841de276358bd7e0f2/LICENSE.txt",
+    "sha256": "fcac737e761ec63dbfbdce11030a1780161920d80315edba9c8beff1c2bac5a2"
+  },
+  "webfonts": {
+    "google-italic.woff2": "1ba57a61e13d4d38d279b3d1c61b9c416730f2b7eb62bc204d1c3411eaf8e980",
+    "google.woff2": "60b20d3ce7a1b29bc48e81992f3b48be6a5b801fe4df1d00eaffa17dee172fc0",
+    "han-01.woff2": "c156ce715f87697ed09fc2602820f5f2c4cc528ea268f1e1ca06a098f3ca80b6",
+    "han-02.woff2": "e74dc94aff52699c8e596c400eab312470778d87b6cdce874b5c79bce60c94d5",
+    "han-03.woff2": "05c44be70866ed433fb446f6b1e2476bbdbd52362413eaee38c80d7825dd1cd5",
+    "han-04.woff2": "9f94e793e20156a1240ea8f672a71661062d829ca8c2a221a61c4e76a4fef722",
+    "han-05.woff2": "22660c142d48d50cc44d11d6d69106d893dc6753d1d4476ffe78575caf55f96e",
+    "han-06.woff2": "b59c369d39073466d080dc1aaf3cdfd3ad40f3ec3216dde64267b4f0d8b6a50e",
+    "han-07.woff2": "387ba1b363c053814a473dfbeb0b52befed443ca8cafd260e9215ac92f91ce50",
+    "han-08.woff2": "af63ed6d4e4c6f2bf460e4d2bc33626bf114b3a3b32fa20b735a21cbcb4c90a8",
+    "han-09.woff2": "84f23309afbd3247298deae49bc9e0f60f5149d9f929f5cfa4b456d85ef97588",
+    "han-10.woff2": "ba77038fd981e63a64881c29b9b4c8afc50c674cec4a07ac50dcba7a45766bbf",
+    "han-11.woff2": "f27bcc4a6924be4863fc5dbd7a99afcec2046f0b2b7f80a5c4d5db2af90d0090",
+    "han-12.woff2": "726f345ae3f35c6af2c7490acb20abd17d8611a34db65debf02492a279078706",
+    "han-13.woff2": "36c1976087e9f2b4e20fb0f7c9f2784f39cd9a02a1bfb9c57242f6803a73a577",
+    "han-14.woff2": "dec0a8a8db34c57865f1d1cff9983b5dd9ec0f01e8c75a60e8fd2701eacd6480",
+    "han-15.woff2": "d9dc7a452ae75ea3666ca99c88ab23ec71a03d2528c899dee6c45f215693182d",
+    "han-16.woff2": "0524c0395ff89344469d7b5ca907f74bab67eac67434550a148c6ac0a7d0f7b1",
+    "han-17.woff2": "e5a02bd079d10a8c37103fb103a71892d0c00769d5db8b895cbf0b31b0c70596",
+    "han-18.woff2": "af1b3baa1dabc665cde906567bdb57aba90a8fd95941b7aeb935af55420d0296",
+    "han-19.woff2": "0ada35fba2deb1dedad21351ec3b3bac14bbeda7b07dca3d5f868bebec01152e",
+    "han-20.woff2": "4bf0bf0ba71a1d78e211b9e5ce20fc255b7d2fc6cbfcf703cdec42ef965f1030",
+    "han-21.woff2": "5b5836be0ff8bac7b0c017270f6062f75c606ace5d0458861af38b2a9568c742",
+    "han-22.woff2": "41217ac4d562284b64e77c5033a4f793dd303c2af46b431d6b3e9fe779a40daa",
+    "han-23.woff2": "584929762c4014eae23b13de223b8822fdd1bbe54da640c85525f68293fbd35c",
+    "han-24.woff2": "84fd7d49d98b8c9b1292a48a018a4777c0ceb6f8a269bba4e2f5d6339efc4743",
+    "han-25.woff2": "d1755a7ba9b3f4700117cf9560b7157194ed28705ea4be92cec7a01074b9c6a3",
+    "han-26.woff2": "398fa8e687df1b2d9b0f525d639ec9cacc5309e2670d92c88ae98dabafbb1f7b",
+    "han-27.woff2": "76f75ec4cf3a42645e3f93f08fc475b56046bc2ea515d693784e6815a9b7361f",
+    "han-28.woff2": "a0c83ee549d1b51b59a751d466511c3459b29a0ba7c69db6d15a418dafa488f4",
+    "han-29.woff2": "5c87ec47ee06cedfe877fbc52912d0331f5fd7fb9f92e7711b2772bae034e23e",
+    "han-30.woff2": "48a7a0aef77a626bdc83ce80ae38b79b735fd6a9684ace1c807891febf4060de",
+    "han-ui.woff2": "6624982335eae24395401087974ad34af1e92d7eeec608ef119ff8d16eb6349b"
+  },
+  "notes": "Google Sans: opsz=18, GRAD=0, variable weight. Source Han Sans CN: Unicode subsets, internal derivative family KPM Han. Glyph outlines preserved; hinting removed."
+}
