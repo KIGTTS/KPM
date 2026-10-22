@@ -9,7 +9,7 @@
   },
   "assets": {},
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-22T06:33:53.0573256+00:00",
+  "updatedAt": "2026-10-22T07:28:52.1427251+00:00",
   "packages": [
     {
       "id": "debug.ui",
@@ -83,7 +83,9 @@
             "arm64-v8a"
           ],
           "notes": "兼容API9–13宿主；无需重新导入已有模型。",
-          "dependencies": {},
+          "dependencies": {
+            "service.speech-synthesis": "^0.8.0"
+          },
           "permissions": [
             "tts",
             "voice-packs"
@@ -129,7 +131,9 @@
             "x86_64"
           ],
           "notes": "兼容API9–13宿主；无需重新导入已有模型。",
-          "dependencies": {},
+          "dependencies": {
+            "service.speech-recognition": "^0.8.0"
+          },
           "permissions": [
             "asr-batch",
             "asr-segmented",
@@ -177,7 +181,9 @@
             "x86_64"
           ],
           "notes": "兼容API9–13宿主；无需重新导入已有模型。",
-          "dependencies": {},
+          "dependencies": {
+            "service.speech-recognition": "^0.8.0"
+          },
           "permissions": [
             "asr-batch",
             "asr-incremental",
