@@ -83,7 +83,11 @@ def bitmap_suffix(data):
         return ".jpg"
     if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
         return ".webp"
-    raise ValueError("Only PNG, JPEG and WebP artwork is supported")
+    if data.lstrip(b"\xef\xbb\xbf \r\n\t").startswith((b"<svg", b"<?xml", b"<!--")):
+        from artwork import validate_svg
+        validate_svg(data)
+        return ".svg"
+    raise ValueError("Only PNG, JPEG, WebP and static SVG artwork is supported")
 
 
 def build(config, output, offline=False):
@@ -126,7 +130,7 @@ def build(config, output, offline=False):
         shutil.copyfile(ROOT / name, output / name)
     (output / ".nojekyll").write_text("", encoding="utf-8")
     (output / "index.json").write_bytes(raw)
-    art = {}
+    art = {}; monochrome_art = []
     cache = ROOT / ".cache"
     cache.mkdir(exist_ok=True)
     for asset_id, image in catalog.get("assets", {}).items():
@@ -138,6 +142,9 @@ def build(config, output, offline=False):
         if len(data) != image["bytes"] or hashlib.sha256(data).hexdigest() != image["sha256"]:
             raise ValueError("Artwork size/hash mismatch: " + asset_id)
         suffix = bitmap_suffix(data)
+        if suffix == ".svg":
+            from artwork import white_line_svg
+            if white_line_svg(data): monochrome_art.append(asset_id)
         target.write_bytes(data)
         path = "art/" + image["sha256"] + suffix
         (output / "art").mkdir(exist_ok=True)
@@ -177,7 +184,7 @@ def build(config, output, offline=False):
         if not re.fullmatch(r"android/[a-zA-Z0-9._-]+\.apk", path):
             raise ValueError("Unexpected Android artifact path")
         download = https(urljoin(base, path)) + "?view=false"
-    site = dict(catalog=catalog, art=art, sourceUrl=source_url, publisher=config.get("publisher", ""), savedCatalog=saved,
+    site = dict(catalog=catalog, art=art, monochromeArt=monochrome_art, sourceUrl=source_url, publisher=config.get("publisher", ""), savedCatalog=saved,
                 repository=https(config["repository"]), downloadURL=download)
     (output / "site.json").write_text(json.dumps(site, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=5, border=2)

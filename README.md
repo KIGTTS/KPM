@@ -34,7 +34,7 @@ KPM（KIGTTS Package Manager）的独立包源网页与 GitHub Pages 模板。�
 
 这段是字段说明，发布前必须替换真实地址、哈希和字节数。包使用 `description` 放完整 Markdown，`summary` 放简短介绍，`thumbnails` 放素材 ID 数组。Markdown 图片写成 `![说明](asset:app-icon)`。`icon.image` 优先，`icon.symbol` 回退，符号名称使用 Material Symbols 的 `snake_case`。无图标也允许。
 
-最多128张注册图，每张2MiB、合计16MiB，PNG/JPEG/WebP；每包最多8张预览图。构建时校验哈希，网页只加载本地构建产物。未注册的外部 Markdown 图片显示链接，不自动追踪请求；HTML 视为文字，另经 DOMPurify 净化。包完整性仍由软件验签，不依赖网页展示。
+最多128张注册图，每张2MiB、合计16MiB，支持PNG/JPEG/WebP和静态SVG（SVG上限512KiB，不含脚本、外部资源或实体）；每包最多8张预览图。构建时校验哈希，网页加载本地构建产物。图标可以选择Material Symbol、注册图片或留空。未注册的外部Markdown图片显示为链接。
 
 ## 本地开发
 

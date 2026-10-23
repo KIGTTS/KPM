@@ -21,6 +21,11 @@ export function symbol(name) {
 export function icon(value, site) {
   const path = site.art?.[value?.image];
   if (path) {
+    if (site.monochromeArt?.includes(value.image)) {
+      const mask = node('span', 'symbol artwork-mask');
+      mask.style.maskImage = `url("${path}")`; mask.setAttribute('aria-hidden', 'true');
+      return mask;
+    }
     const img = node('img'); img.src = path; img.alt = ''; img.loading = 'lazy';
     img.addEventListener('error', () => img.replaceWith(symbol(value?.symbol || 'extension')), { once: true });
     return img;

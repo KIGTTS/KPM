@@ -1,9 +1,9 @@
 {
-  "path": "android/KIGTTSNEXT-api24-20261023-dc049a71d7c4.apk",
-  "sha256": "dc049a71d7c4c112fc79c95ce3ee40f4c51e01fd306e0b80b94b8d273db18110",
-  "bytes": 8090028,
+  "path": "android/KIGTTSNEXT-api24-20261023-01d6e85485ac.apk",
+  "sha256": "01d6e85485ac5008e6cec89431213f83e3fe5ba162e6f3287ee37ad0c17cb863",
+  "bytes": 8106468,
   "apiVersion": 24,
   "version": "0.1.0-preview",
   "developmentSigning": true,
-  "sourceCommit": "b1d338d8fd5bf0ae0a711f92e5f20f4002c33c06"
+  "sourceCommit": "2d5ebc093ffc88e4121dcc0214f7f81664e39e5b"
 }

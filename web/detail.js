@@ -23,13 +23,20 @@ export function showDetail(item, site, sourceURL) {
     const details = node('details'), summary = node('summary', '', `v${release.version}`);
     if (index === 0) details.open = true;
     const info = node('div', 'release-meta');
-    for (const value of [`API ${release.apiVersion || 9}+`, `Android ${release.minSdk || 26}+`, release.format]) info.append(node('span', '', value));
+    const androidVersions = {26:'8.0',27:'8.1',28:'9',29:'10',30:'11',31:'12',32:'12L',33:'13',34:'14',35:'15',36:'16'};
+    const sdk = release.minSdk || 26;
+    const android = androidVersions[sdk] ? `Android ${androidVersions[sdk]} 及以上` : `Android API ${sdk} 及以上`;
+    const format = {NATIVE:'原生插件',LUA:'Lua 插件'}[release.format] || release.format;
+    for (const value of [`插件 API ${release.apiVersion || 9}+`, android, format].filter(Boolean)) info.append(node('span', '', value));
     const compatibility = node('details');
     compatibility.append(node('summary', '', '兼容性'), info);
-    details.append(summary, markdown(release.notes || '发布者尚未填写更新说明。', site), compatibility);
+    details.append(summary, markdown(release.notes || '暂无更新说明。', site), compatibility);
     if (Object.keys(release.dependencies || {}).length) {
       const list = node('ul');
-      for (const [id, range] of Object.entries(release.dependencies)) list.append(node('li', '', `${id} · ${range}`));
+      for (const [id, range] of Object.entries(release.dependencies)) {
+        const name = site.catalog.packages.find(pkg => pkg.id === id)?.name || id;
+        list.append(node('li', '', `${name} · ${range}`));
+      }
       details.append(node('h4', '', '所需插件'), list);
     }
     body.append(details);
