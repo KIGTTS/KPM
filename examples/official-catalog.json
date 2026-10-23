@@ -9,14 +9,14 @@
   },
   "assets": {
     "kpm-source": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-71aeb98df34a.svg?view=false",
       "bytes": 1951,
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-0986a27e84bd.svg?view=false",
-      "sha256": "0986a27e84bd727c2d440d0717fa4cabc26e929a36cc313cfe060dfe18c5acb9",
+      "sha256": "71aeb98df34a3ec7b1c521a047495bf361ea95b0c6f36c2e3cf59e988a6f9add",
       "alt": "KPM 官方插件源"
     }
   },
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-23T20:59:32.4576007+00:00",
+  "updatedAt": "2026-10-23T22:21:00.3862009+00:00",
   "packages": [
     {
       "id": "backup.kigusay",
@@ -816,6 +816,43 @@
       ],
       "releases": [
         {
+          "version": "0.9.17",
+          "versionCode": 21,
+          "format": "NATIVE",
+          "sha256": "d1a1ddfd7b39584e8594daa7af34367d5b0abd9171e03b452cd50fa0f8dc9ddf",
+          "bytes": 283949,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.17.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "任务完成、出错和等待审核时显示不同颜色的圆点提醒。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
+        {
           "version": "0.9.16",
           "versionCode": 20,
           "format": "NATIVE",
@@ -1229,6 +1266,33 @@
         "工具"
       ],
       "releases": [
+        {
+          "version": "0.14.0",
+          "versionCode": 18,
+          "format": "NATIVE",
+          "sha256": "5da6cdf09c9e75115302eb70a0c8246fb433e1223e1bfa6aa0acfedb3641224f",
+          "bytes": 154861,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.14.0.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "所有插件入口直达完整列表；我的插件显示更新数量提醒。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "更新你添加的插件目录，并下载所选插件和预览图片。",
+            "app-control": "检查已安装的插件，并在你确认后打开插件安装页面。"
+          }
+        },
         {
           "version": "0.13.0",
           "versionCode": 16,
