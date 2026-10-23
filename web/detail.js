@@ -1,9 +1,11 @@
-import { node, markdown, compareVersions, safeURL, symbol } from './data.js';
+import { node, markdown, compareVersions, safeURL, symbol, icon } from './data.js';
 import { sourceLink } from './source-link.js';
 
 export function showDetail(item, site, sourceURL) {
   document.getElementById('detail-category').textContent = item.category || '扩展';
   document.getElementById('detail-name').textContent = item.name;
+  document.getElementById('detail-icon').replaceChildren(icon(item.icon || {symbol:'extension'}, site));
+  document.getElementById('detail-summary').textContent = item.summary || '';
   const body = document.getElementById('detail-body');
   body.replaceChildren(markdown(item.description || item.summary, site));
   const gallery = node('div', 'gallery');
@@ -45,4 +47,5 @@ export function showDetail(item, site, sourceURL) {
   if (homepage) { const link = node('a', 'text-button', '项目主页 ↗'); link.href = homepage; body.append(link); }
   document.getElementById('detail-add').href = sourceLink(sourceURL, item.id);
   document.getElementById('detail').showModal();
+  body.scrollTop = 0;
 }

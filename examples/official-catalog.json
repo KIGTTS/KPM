@@ -9,14 +9,14 @@
   },
   "assets": {
     "kpm-source": {
-      "bytes": 2064,
-      "alt": "KPM 官方插件源",
-      "sha256": "d06be8d3c0abbda9c11e0346338259ac9e9697ec788029c27c879f0a63f28626",
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-d06be8d3c0ab.svg?view=false"
+      "bytes": 1951,
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-0986a27e84bd.svg?view=false",
+      "sha256": "0986a27e84bd727c2d440d0717fa4cabc26e929a36cc313cfe060dfe18c5acb9",
+      "alt": "KPM 官方插件源"
     }
   },
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-23T18:20:25.7619454+00:00",
+  "updatedAt": "2026-10-23T20:59:32.4576007+00:00",
   "packages": [
     {
       "id": "backup.kigusay",
@@ -144,6 +144,27 @@
         "显示样式"
       ],
       "releases": [
+        {
+          "version": "0.1.8",
+          "versionCode": 9,
+          "format": "NATIVE",
+          "sha256": "f0a46d8a9412fa0422d30c85b4a9ebc438b0464adf6451e7442a3d2fe408f272",
+          "bytes": 36709,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.8.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 25,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "最大字号贴近按钮安全区；全屏黑色外围、闲置按钮淡化，改善小字号缩放流畅度。",
+          "dependencies": {},
+          "permissions": [],
+          "permissionPurposes": {}
+        },
         {
           "version": "0.1.4",
           "versionCode": 5,
@@ -1208,6 +1229,33 @@
         "工具"
       ],
       "releases": [
+        {
+          "version": "0.13.0",
+          "versionCode": 16,
+          "format": "NATIVE",
+          "sha256": "49bd99bf3d6f8f5d94ac61ad61decd52443b731ce02d89697b0b0b5651687818",
+          "bytes": 154570,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.13.0.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 25,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "首页保留分类入口和插件列表，滚动自动加载更多，平板使用双列布局。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "更新你添加的插件目录，并下载所选插件和预览图片。",
+            "app-control": "检查已安装的插件，并在你确认后打开插件安装页面。"
+          }
+        },
         {
           "version": "0.12.0",
           "versionCode": 15,
