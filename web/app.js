@@ -12,7 +12,14 @@ document.querySelectorAll('[data-symbol]').forEach(element => element.style.mask
 for (const button of document.querySelectorAll('.close-dialog')) button.addEventListener('click', () => button.closest('dialog').close());
 for (const dialog of document.querySelectorAll('dialog')) dialog.addEventListener('click', event => { if (event.target === dialog && (event.clientX < dialog.getBoundingClientRect().left || event.clientX > dialog.getBoundingClientRect().right || event.clientY < dialog.getBoundingClientRect().top || event.clientY > dialog.getBoundingClientRect().bottom)) dialog.close(); });
 for (const id of ['guide-open', 'manual-open']) $(id).addEventListener('click', () => $('guide').showModal());
-if (location.hash === '#add-guide') $('guide').showModal();
+function openFallbackGuide() {
+  if (location.hash !== '#add-guide' || $('guide').open) return;
+  const other = document.querySelector('dialog[open]:not(#guide)');
+  if (other) { other.addEventListener('close', () => $('guide').showModal(), {once:true}); other.close(); }
+  else $('guide').showModal();
+}
+addEventListener('hashchange', openFallbackGuide);
+openFallbackGuide();
 try { const theme = localStorage.getItem('kpm-theme'); if (['light', 'dark'].includes(theme)) document.documentElement.dataset.theme = theme; } catch {}
 $('theme').addEventListener('click', () => {
   const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme:dark)').matches;
@@ -38,6 +45,7 @@ try {
   const addURL = sourceLink(sourceURL);
   $('source-url').textContent = sourceURL; $('manual-url').textContent = sourceURL;
   $('add-source').href = addURL;
+  $('add-source').removeAttribute('aria-disabled');
   $('source-code').href = safeURL(site.repository) || 'https://github.com/KIGTTS/KPM';
   $('download-app').href = safeURL(site.downloadURL) || 'https://github.com/KIGTTS/KIGTTSNEXT';
   $('copy-source').addEventListener('click', async () => {

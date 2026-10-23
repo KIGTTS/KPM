@@ -2,6 +2,7 @@
 :root{--motion-spatial:cubic-bezier(.2,.8,.2,1);--motion-effects:cubic-bezier(.2,0,0,1)}
 .primary-button,.icon-button,.text-button,.category,.package-card{transition:background-color 180ms var(--motion-effects),color 180ms var(--motion-effects),border-color 180ms var(--motion-effects),border-radius 260ms var(--motion-spatial),transform 260ms var(--motion-spatial);position:relative}
 .primary-button{min-height:56px;border-radius:28px;gap:12px}
+.primary-button[aria-disabled=true]{pointer-events:none;opacity:.5}
 .primary-button:hover{filter:none;transform:none;background:color-mix(in srgb,var(--primary) 92%,var(--on-primary))}
 .primary-button:active,.primary-button.is-pressed{border-radius:16px;transform:scale(.97)}
 .icon-button{width:48px;height:48px;min-width:48px}
