@@ -2,7 +2,7 @@
 
 KPM（KIGTTS Package Manager）的独立包源网页与 GitHub Pages 模板。一个目录同时驱动网页和安卓插件商店，支持多个包、历史版本、依赖、镜像、Material Symbols、校验图片和 Markdown 介绍。没有推荐或排名。
 
-[官方源网页](https://lht02.github.io/KPM/) · [使用模板](https://github.com/LHT02/KPM/generate) · [安卓软件源码](https://github.com/LHT02/KIGTTSNEXT)
+[官方源网页](https://kigtts.github.io/KPM/) · [使用模板](https://github.com/KIGTTS/KPM/generate) · [安卓软件源码](https://github.com/KIGTTS/KIGTTSNEXT)
 
 ## 创建自己的包源
 

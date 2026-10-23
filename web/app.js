@@ -36,7 +36,7 @@ try {
   const addURL = `kigtts://source/add?url=${encodeURIComponent(sourceURL)}`;
   $('source-url').textContent = sourceURL; $('manual-url').textContent = sourceURL;
   $('add-source').href = addURL;
-  $('source-code').href = safeURL(site.repository) || 'https://github.com/LHT02/KPM';
+  $('source-code').href = safeURL(site.repository) || 'https://github.com/KIGTTS/KPM';
   $('download-app').href = safeURL(site.downloadURL) || 'https://github.com/KIGTTS/KIGTTSNEXT';
   $('copy-source').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(sourceURL); toast('源地址已复制'); }
