@@ -1,6 +1,7 @@
 import { node, markdown, compareVersions, safeURL, symbol } from './data.js';
+import { sourceLink } from './source-link.js';
 
-export function showDetail(item, site, addURL) {
+export function showDetail(item, site, sourceURL) {
   document.getElementById('detail-category').textContent = item.category || '扩展';
   document.getElementById('detail-name').textContent = item.name;
   const body = document.getElementById('detail-body');
@@ -35,6 +36,6 @@ export function showDetail(item, site, addURL) {
   }
   const homepage = safeURL(item.homepage);
   if (homepage) { const link = node('a', 'text-button', '项目主页 ↗'); link.href = homepage; body.append(link); }
-  document.getElementById('detail-add').href = addURL;
+  document.getElementById('detail-add').href = sourceLink(sourceURL, item.id);
   document.getElementById('detail').showModal();
 }

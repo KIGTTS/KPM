@@ -1,6 +1,6 @@
 // Android browsers can fall back to the guide without showing an unknown-scheme page.
-export function sourceLink(sourceURL) {
-  const query = `url=${encodeURIComponent(sourceURL)}`;
+export function sourceLink(sourceURL, packageId) {
+  const query = `url=${encodeURIComponent(sourceURL)}` + (packageId ? `&package=${encodeURIComponent(packageId)}` : '');
   const android = navigator.userAgentData?.platform === 'Android' || /Android/i.test(navigator.userAgent);
   // Edge handles the scheme through its own confirmation UI. Its intent handler
   // can choose the browser fallback even when the app is installed.

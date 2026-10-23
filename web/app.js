@@ -60,7 +60,7 @@ try {
       const top = node('div', 'package-top'), avatar = node('span', 'package-icon'); avatar.append(icon(item.icon, site));
       top.append(avatar, node('span', 'version', `v${latest(item)?.version || '—'}`));
       const bottom = node('div', 'package-bottom'); bottom.append(node('span', '', item.category || '扩展'), symbol('arrow_forward'));
-      card.append(top, node('h3', '', item.name), node('p', 'package-summary', item.summary || ''), bottom); card.addEventListener('click', () => showDetail(item, site, addURL));
+      card.append(top, node('h3', '', item.name), node('p', 'package-summary', item.summary || ''), bottom); card.addEventListener('click', () => showDetail(item, site, sourceURL));
       return card;
     });
     $('packages').replaceChildren(...(cards.length ? cards : [node('p', 'empty', catalog.packages.length ? '没有匹配的插件，试试其它关键词。' : '这个源还没有插件，稍后再来看看。')]));

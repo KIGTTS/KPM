@@ -22,5 +22,12 @@ dialog[open]{animation:none}dialog::backdrop{background:#0006;backdrop-filter:no
 .dialog-heading .icon-button{background:var(--accent)}.detail-actions{position:sticky;bottom:-28px;background:var(--surface);padding-block:16px;margin-top:24px}
 .toast{background:var(--accent);color:var(--text);border-radius:12px;transition:opacity 160ms var(--motion-effects),transform 260ms var(--motion-spatial)}
 footer strong{font-weight:600;letter-spacing:.01em}
+summary{list-style:none;display:flex;align-items:center;gap:10px;min-height:24px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:'';width:7px;height:7px;flex-shrink:0;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform 240ms var(--motion-effects)}
+details[open]>summary::before{transform:rotate(45deg)}
+details[data-expanded=false]>summary::before{transform:rotate(-45deg)}
+.disclosure-content{display:flow-root;min-width:0}
+.disclosure-panel.is-animating{overflow:clip;will-change:height}
 @media(max-width:640px){.topbar{gap:8px;flex-wrap:wrap;padding-block:8px}.topbar nav{gap:4px}.text-button{padding:10px 12px}.brand-logo{width:112px;height:52px}.categories{flex-wrap:nowrap;overflow-x:auto;padding-block:4px;margin-inline:-4px;padding-inline:4px}.category{white-space:nowrap;flex-shrink:0}.package-card{border-radius:20px}.detail-actions{bottom:-22px}.topbar nav .text-button{font-size:12px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

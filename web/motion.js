@@ -1,4 +1,5 @@
 // Spatial spring motion is independent of layout; interrupted animations cancel.
+import './disclosure-motion.js';
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const active = new WeakMap();
 function animate(element, frames, duration = 320) {
