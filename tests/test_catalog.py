@@ -8,6 +8,7 @@ from tempfile import TemporaryDirectory
 import requests
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))
 from build import validate, https, bitmap_suffix, build, ROOT
+from build_fixture import cached_source
 
 
 class CatalogTest(unittest.TestCase):
@@ -44,7 +45,7 @@ class CatalogTest(unittest.TestCase):
 
     def test_declared_snapshot_keeps_site_available_but_never_switches_source_identity(self):
         config = json.loads((ROOT / "source.json").read_text(encoding="utf-8"))
-        with TemporaryDirectory() as folder, patch("build.fetch", side_effect=requests.ConnectionError("offline")):
+        with cached_source(ROOT), TemporaryDirectory() as folder, patch("build.fetch", side_effect=requests.ConnectionError("offline")):
             build(config, Path(folder))
             site = json.loads((Path(folder) / "site.json").read_text(encoding="utf-8"))
             self.assertTrue(site["savedCatalog"])
@@ -57,7 +58,7 @@ class CatalogTest(unittest.TestCase):
         config = json.loads((ROOT / "source.json").read_text(encoding="utf-8"))
         old = json.loads((ROOT / config["catalogPath"]).read_text(encoding="utf-8"))
         old["updatedAt"] = "2000-01-01T00:00:00Z"
-        with TemporaryDirectory() as folder, patch("build.fetch", return_value=json.dumps(old).encode()):
+        with cached_source(ROOT), TemporaryDirectory() as folder, patch("build.fetch", return_value=json.dumps(old).encode()):
             build(config, Path(folder))
             site = json.loads((Path(folder) / "site.json").read_text(encoding="utf-8"))
             self.assertTrue(site["savedCatalog"])
@@ -65,7 +66,7 @@ class CatalogTest(unittest.TestCase):
 
     def test_offline_bundle_uses_no_network_and_keeps_android_link_and_licenses(self):
         config = json.loads((ROOT / "source.json").read_text(encoding="utf-8"))
-        with TemporaryDirectory() as folder, patch("build.fetch", side_effect=AssertionError("network used")):
+        with cached_source(ROOT), TemporaryDirectory() as folder, patch("build.fetch", side_effect=AssertionError("network used")):
             build(config, Path(folder), offline=True)
             site = json.loads((Path(folder) / "site.json").read_text(encoding="utf-8"))
             metadata = json.loads((ROOT / config["downloadMetadataPath"]).read_text(encoding="utf-8"))
