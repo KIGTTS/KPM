@@ -3,7 +3,7 @@
   "id": "kigtts.official",
   "name": "KIGTTS 官方插件源",
   "description": "扩展朗读、聆听和创作体验，让常用工具触手可及。",
-  "homepage": "https://lht02.github.io/KPM/",
+  "homepage": "https://kigtts.github.io/KPM/",
   "icon": {
     "symbol": "inventory_2"
   },
