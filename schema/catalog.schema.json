@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://lht02.github.io/KPM/schema/catalog.schema.json",
+  "$id": "https://kigtts.github.io/KPM/schema/catalog.schema.json",
   "title": "KPM package source schema 1",
   "description": "Machine-readable source contract. SHA-256 and publisher are integrity assertions, never an instruction to silently trust or install.",
   "type": "object",

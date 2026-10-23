@@ -19,7 +19,7 @@ $('theme').addEventListener('click', () => {
 });
 
 try {
-  const response = await fetch('site.json');
+  const response = await fetch('site.json', { cache: 'no-cache' });
   if (!response.ok) throw new Error('目录暂不可用');
   const site = await response.json(), catalog = site.catalog;
   document.title = `${catalog.name} · KPM`;

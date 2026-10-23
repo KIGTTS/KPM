@@ -118,6 +118,9 @@ def build(config, output, offline=False):
         raise ValueError("Catalog source ID differs from the configured source")
     output.mkdir(parents=True, exist_ok=True)
     shutil.copytree(ROOT / "web", output, dirs_exist_ok=True)
+    # Keep static hosting caches useful without mixing controls from two releases.
+    from web_assets import version_assets
+    version_assets(output)
     shutil.copytree(ROOT / "schema", output / "schema", dirs_exist_ok=True)
     for name in ("LICENSE", "DEPLOY.md"):
         shutil.copyfile(ROOT / name, output / name)
