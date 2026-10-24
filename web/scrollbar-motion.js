@@ -1,11 +1,10 @@
-// Show custom scrollbars only while a region is actively being used.
+// Each scrollable region fades independently, including the document viewport.
 const timers = new WeakMap();
 const watched = new WeakSet();
-
-function markScrollable(element) {
+function watch(element, viewport = false) {
   if (watched.has(element)) return;
   const style = getComputedStyle(element);
-  if (!/(auto|scroll|overlay)/.test(style.overflowX + style.overflowY)) return;
+  if (!viewport && !/(auto|scroll|overlay)/.test(style.overflowX + style.overflowY)) return;
   watched.add(element);
   element.classList.add('scroll-watch');
   const reveal = () => {
@@ -13,13 +12,16 @@ function markScrollable(element) {
     clearTimeout(timers.get(element));
     timers.set(element, setTimeout(() => element.classList.remove('is-scrolling'), 700));
   };
-  element.addEventListener('scroll', reveal, {passive: true});
+  (viewport ? document : element).addEventListener('scroll', reveal, {passive: true});
   element.addEventListener('focusin', reveal);
 }
-
-function scan() {
-  document.querySelectorAll('*').forEach(markScrollable);
+function scan(root) {
+  if (root.nodeType !== Node.ELEMENT_NODE) return;
+  watch(root);
+  root.querySelectorAll('*').forEach(element => watch(element));
 }
-
-scan();
-new MutationObserver(scan).observe(document.documentElement, {childList: true, subtree: true});
+watch(document.scrollingElement, true);
+scan(document.body);
+new MutationObserver(records => {
+  for (const record of records) record.addedNodes.forEach(scan);
+}).observe(document.body, {childList: true, subtree: true});
