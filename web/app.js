@@ -1,6 +1,7 @@
 import { node, icon, latest, markdown, safeURL, symbol } from './data.js';
 import { showDetail } from './detail.js';
 import { sourceLink } from './source-link.js';
+import './scrollbar-motion.js';
 
 const $ = id => document.getElementById(id);
 let toastTimer;
