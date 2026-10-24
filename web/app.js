@@ -53,10 +53,11 @@ try {
     try { await navigator.clipboard.writeText(sourceURL); toast('源地址已复制'); }
     catch { $('guide').showModal(); const selection = getSelection(); const range = document.createRange(); range.selectNodeContents($('manual-url')); selection.removeAllRanges(); selection.addRange(range); toast('请复制已选中的源地址'); }
   });
-  let category = '', query = '';
+  let category = '', query = '', visibleLimit = 24;
+  let loadObserver;
   function render() {
     const entries = [...catalog.packages].filter(item => (!category || item.category === category) && `${item.name} ${item.summary} ${(item.tags || []).join(' ')}`.toLowerCase().includes(query)).sort((a, b) => (a.category || '').localeCompare(b.category || '', 'zh') || a.name.localeCompare(b.name, 'zh') || a.id.localeCompare(b.id));
-    const cards = entries.map(item => {
+    const cards = entries.slice(0, visibleLimit).map(item => {
       const card = node('button', 'package-card'); card.type = 'button'; card.setAttribute('aria-label', `查看 ${item.name}`);
       const top = node('div', 'package-top'), avatar = node('span', 'package-icon'); avatar.append(icon(item.icon, site));
       top.append(avatar, node('span', 'version', `v${latest(item)?.version || '—'}`));
@@ -64,16 +65,29 @@ try {
       card.append(top, node('h3', '', item.name), node('p', 'package-summary', item.summary || ''), bottom); card.addEventListener('click', () => showDetail(item, site, sourceURL));
       return card;
     });
-    $('packages').replaceChildren(...(cards.length ? cards : [node('p', 'empty', catalog.packages.length ? '没有匹配的插件，试试其它关键词。' : '这个源还没有插件，稍后再来看看。')]));
+    if (loadObserver) loadObserver.disconnect();
+    const sentinel = node('div', 'catalog-load-sentinel');
+    sentinel.setAttribute('aria-hidden', 'true');
+    if (cards.length) {
+      $('packages').replaceChildren(...cards);
+      if (visibleLimit < entries.length) $('packages').append(sentinel);
+      loadObserver = new IntersectionObserver(changes => {
+        if (changes.some(change => change.isIntersecting) && visibleLimit < entries.length) {
+          visibleLimit += 24;
+          render();
+        }
+      }, { rootMargin: '360px' });
+      if (visibleLimit < entries.length) loadObserver.observe(sentinel);
+    } else $('packages').replaceChildren(node('p', 'empty', catalog.packages.length ? '没有匹配的插件，试试其它关键词。' : '这个源还没有插件，稍后再来看看。'));
     $('count').textContent = query || category ? `${entries.length} / ${catalog.packages.length}` : catalog.packages.length;
   }
   const categories = [['', '全部'], ...[...new Set(catalog.packages.map(x => x.category || '扩展'))].sort().map(x => [x, x])];
   $('categories').replaceChildren(...categories.map(([value, title]) => {
     const button = node('button', 'category', title); button.setAttribute('aria-pressed', !value);
-    button.addEventListener('click', () => { category = value; $('categories').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b === button)); render(); });
+    button.addEventListener('click', () => { category = value; visibleLimit = 24; $('categories').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b === button)); render(); });
     return button;
   }));
-  $('search').addEventListener('input', event => { query = event.target.value.trim().toLowerCase(); render(); });
+  $('search').addEventListener('input', event => { query = event.target.value.trim().toLowerCase(); visibleLimit = 24; render(); });
   render();
 } catch (error) {
   $('source-name').textContent = '暂时无法读取插件源';
