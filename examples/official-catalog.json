@@ -9,14 +9,14 @@
   },
   "assets": {
     "kpm-source": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-71aeb98df34a.svg?view=false",
-      "bytes": 1951,
       "sha256": "71aeb98df34a3ec7b1c521a047495bf361ea95b0c6f36c2e3cf59e988a6f9add",
-      "alt": "KPM 官方插件源"
+      "bytes": 1951,
+      "alt": "KPM 官方插件源",
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-71aeb98df34a.svg?view=false"
     }
   },
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-23T22:21:00.3862009+00:00",
+  "updatedAt": "2026-10-24T14:47:34.9574776+00:00",
   "packages": [
     {
       "id": "backup.kigusay",
@@ -43,8 +43,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/backup.kigusay-0.1.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/backup.kigusay-0.1.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 16,
@@ -70,8 +70,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/backup.kigusay-0.1.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/backup.kigusay-0.1.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 16,
@@ -114,8 +114,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/debug.ui-0.1.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/debug.ui-0.1.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 14,
@@ -153,8 +153,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.8.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.8.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 25,
@@ -174,8 +174,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.4.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.4.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 19,
@@ -195,8 +195,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.3.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.3.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 19,
@@ -216,8 +216,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 19,
@@ -237,8 +237,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 18,
@@ -258,8 +258,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/display.led-0.1.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 17,
@@ -268,6 +268,94 @@
           "notes": "暂无更新说明。",
           "dependencies": {},
           "permissions": [],
+          "permissionPurposes": {}
+        }
+      ]
+    },
+    {
+      "id": "engine.cloud-asr",
+      "name": "云端语音识别",
+      "summary": "连接熟悉的云端服务，把语音转换成文字。",
+      "category": "音频",
+      "license": "MIT",
+      "homepage": "https://github.com/KIGTTS/plugin-cloud-asr",
+      "icon": {
+        "symbol": "cloud"
+      },
+      "description": "## 云端语音识别\n\n添加腾讯云、阿里云、Azure、百度云或讯飞的识别接口，在聆听字幕中选择使用。可以为不同服务分别保存配置。",
+      "tags": [
+        "语音识别"
+      ],
+      "releases": [
+        {
+          "version": "0.1.0",
+          "versionCode": 1,
+          "format": "NATIVE",
+          "sha256": "677e43a16d2d6733f19b5335bf848a8bd4cadbf8d1907825201e77d96a24e19a",
+          "bytes": 39592,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.cloud-asr-0.1.0.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "支持五家云端服务，可分别添加和管理识别接口。",
+          "dependencies": {
+            "service.speech-recognition": "^0.8.0"
+          },
+          "permissions": [
+            "asr-batch",
+            "asr-segmented",
+            "network"
+          ],
+          "permissionPurposes": {}
+        }
+      ]
+    },
+    {
+      "id": "engine.cloud-tts",
+      "name": "云端语音合成",
+      "summary": "选用云端声音，让文字读出喜欢的音色。",
+      "category": "音频",
+      "license": "GPL-3.0-only",
+      "homepage": "https://github.com/KIGTTS/plugin-cloud-tts",
+      "icon": {
+        "symbol": "record_voice_over"
+      },
+      "description": "## 云端语音合成\n\n连接腾讯云、阿里云、Azure、百度云或讯飞，按需添加预设声音和克隆声音。添加后的声音会出现在语音包列表，方便选择和管理。",
+      "tags": [
+        "语音合成"
+      ],
+      "releases": [
+        {
+          "version": "0.1.0",
+          "versionCode": 1,
+          "format": "NATIVE",
+          "sha256": "58ae0ee2dffa4d7e959f523b9226408c7ca6157408353b75832d7bee11a610a6",
+          "bytes": 116618,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.cloud-tts-0.1.0.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "支持五家云端服务，分开管理预设声音与克隆声音，按需添加语音包。",
+          "dependencies": {
+            "service.speech-synthesis": "^0.8.2"
+          },
+          "permissions": [
+            "tts",
+            "network",
+            "voice-packs"
+          ],
           "permissionPurposes": {}
         }
       ]
@@ -296,8 +384,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 21,
@@ -324,8 +412,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 21,
@@ -352,8 +440,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -397,8 +485,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.sensevoice-0.8.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.sensevoice-0.8.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 14,
@@ -430,8 +518,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.sensevoice-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.sensevoice-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -480,8 +568,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 14,
@@ -513,8 +601,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -549,12 +637,37 @@
       "icon": {
         "symbol": "gesture"
       },
-      "description": "## 手势触发\n\n为 M、W、Z、闪电、沙漏和折钩选择已有的快捷文本，在大字幕上画出手势即可发送。\n\n每种手势可以单独开启和调整；删除词条后会自动清空绑定。",
+      "description": "## 手势触发\n\n为常用手势选择已有的快捷文本，在字幕板上画出手势即可发送。每种手势可以单独开启和调整。",
       "tags": [
         "快捷文本",
         "手势"
       ],
       "releases": [
+        {
+          "version": "0.1.2",
+          "versionCode": 3,
+          "format": "NATIVE",
+          "sha256": "515af76377277f84ad8e56c04af89483b7cb3b3608a4ff098fe1f245f4aef4e3",
+          "bytes": 43541,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/input.quick-gestures-0.1.2.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "改用通用快捷文本选择器，改善选择流畅度并修复加载问题。",
+          "dependencies": {},
+          "permissions": [
+            "quick-text-read"
+          ],
+          "permissionPurposes": {
+            "quick-text-read": "选择并发送手势绑定的已有快捷文本；词条删除后清空对应绑定。"
+          }
+        },
         {
           "version": "0.1.0",
           "versionCode": 1,
@@ -564,8 +677,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/input.quick-gestures-0.1.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/input.quick-gestures-0.1.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 18,
@@ -606,8 +719,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/runtime.lua-0.9.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/runtime.lua-0.9.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 14,
@@ -640,8 +753,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/runtime.lua-0.9.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/runtime.lua-0.9.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,
@@ -691,8 +804,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-recognition-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-recognition-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -735,8 +848,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-synthesis-0.8.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-synthesis-0.8.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 24,
@@ -759,8 +872,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-synthesis-0.8.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-synthesis-0.8.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 21,
@@ -783,8 +896,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-synthesis-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-synthesis-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -816,6 +929,43 @@
       ],
       "releases": [
         {
+          "version": "0.9.20",
+          "versionCode": 24,
+          "format": "NATIVE",
+          "sha256": "54fef8b9be2a409822c2a852c689201c329ca1b61dfdfe97ac7c8e9f88a4b570",
+          "bytes": 296571,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.20.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "重新整理供应商与模型选择，新增多种接口格式，改善模型配置与提示。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
+        {
           "version": "0.9.17",
           "versionCode": 21,
           "format": "NATIVE",
@@ -824,8 +974,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.17.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.17.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 26,
@@ -861,8 +1011,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.16.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.16.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 21,
@@ -898,8 +1048,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.15.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.15.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 21,
@@ -935,8 +1085,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.14.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.14.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 20,
@@ -972,8 +1122,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.13.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.13.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 14,
@@ -1007,8 +1157,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.6.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.6.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 13,
@@ -1042,8 +1192,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.5.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.5.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 13,
@@ -1077,8 +1227,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.3.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.3.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 12,
@@ -1112,8 +1262,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.4.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.4.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 12,
@@ -1147,8 +1297,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,
@@ -1182,8 +1332,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,
@@ -1206,6 +1356,43 @@
             "quick-text-write": "创建、编辑、导入导出用户授权的快捷文本与页面。",
             "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
             "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
+          }
+        },
+        {
+          "version": "0.9.19",
+          "versionCode": 23,
+          "format": "NATIVE",
+          "sha256": "7483e820776891ee291c218149092d8a525ac5e7b8022a0ca4368b48da34d674",
+          "bytes": 285483,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.19.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "支持可点击选项消息，修复新版会话兼容性。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
           }
         }
       ]
@@ -1234,8 +1421,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.native-builder-0.8.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.native-builder-0.8.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 9,
@@ -1267,6 +1454,33 @@
       ],
       "releases": [
         {
+          "version": "0.14.2",
+          "versionCode": 20,
+          "format": "NATIVE",
+          "sha256": "614321dc273cabd491556d0f550e9c0887a6499e2e8adbacf7441f6e5f9c2725",
+          "bytes": 155145,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.14.2.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "分类按钮增加图标；我的插件按更新与下载状态切换图标。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "更新你添加的插件目录，并下载所选插件和预览图片。",
+            "app-control": "检查已安装的插件，并在你确认后打开插件安装页面。"
+          }
+        },
+        {
           "version": "0.14.0",
           "versionCode": 18,
           "format": "NATIVE",
@@ -1275,8 +1489,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.14.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.14.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 26,
@@ -1302,8 +1516,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.13.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.13.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 25,
@@ -1329,8 +1543,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.12.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.12.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 24,
@@ -1356,8 +1570,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.11.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.11.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 24,
@@ -1383,8 +1597,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.11.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.11.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 24,
@@ -1410,8 +1624,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.11.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.11.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 23,
@@ -1437,8 +1651,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.3.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.3.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 16,
@@ -1464,8 +1678,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 16,
@@ -1491,8 +1705,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 15,
@@ -1518,8 +1732,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.0.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.10.0.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 14,
@@ -1545,8 +1759,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.3.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.3.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 12,
@@ -1572,8 +1786,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.2.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.2.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,
@@ -1599,8 +1813,8 @@
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "name": "魔搭官方源",
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.1.kigplugin?view=false"
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.9.1.kigplugin?view=false",
+              "name": "魔搭官方源"
             }
           ],
           "apiVersion": 11,
