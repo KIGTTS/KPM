@@ -1,5 +1,6 @@
 import { node, markdown, compareVersions, safeURL, symbol, icon } from './data.js';
 import { sourceLink } from './source-link.js';
+import { createPreviewGallery } from './preview-gallery.js';
 
 export function showDetail(item, site, sourceURL) {
   document.getElementById('detail-category').textContent = item.category || '扩展';
@@ -7,20 +8,10 @@ export function showDetail(item, site, sourceURL) {
   document.getElementById('detail-icon').replaceChildren(icon(item.icon || {symbol:'extension'}, site));
   document.getElementById('detail-summary').textContent = item.summary || '';
   const body = document.getElementById('detail-body');
+  body.querySelector('.preview-gallery')?.dispose();
   body.replaceChildren(markdown(item.description || item.summary, site));
-  const gallery = node('div', 'gallery');
-  for (const id of item.thumbnails || []) {
-    if (!site.art?.[id]) continue;
-    const figure = node('figure'), image = node('img'), alt = site.catalog.assets?.[id]?.alt || '';
-    image.src = site.art[id]; image.alt = alt; image.loading = 'lazy';
-    const size = site.catalog.assets?.[id];
-    if (size?.width && size?.height) { image.width = size.width; image.height = size.height; }
-    image.addEventListener('click', () => { image.classList.toggle('expanded-preview'); });
-    image.tabIndex = 0; image.setAttribute('role', 'button'); image.setAttribute('aria-label', alt || '放大预览');
-    image.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); image.click(); } });
-    figure.append(image, node('figcaption', '', alt)); gallery.append(figure);
-  }
-  if (gallery.children.length) body.append(gallery);
+  const gallery = createPreviewGallery(item, site);
+  if (gallery) body.append(gallery);
   const meta = node('div', 'release-meta');
   for (const text of [item.license, item.id]) if (text) meta.append(node('span', '', text));
   const more = node('details'), moreTitle = node('summary', '', '更多信息');

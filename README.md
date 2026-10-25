@@ -89,4 +89,6 @@ python tools/build.py --config examples/resource-source.json --output dist/resou
 
 在 `source.json` 设置 `"themeColor": "#038387"`。网页使用 Material 官方 Color Utilities 自动生成亮暗色板和 MD 颜色角色，资源全部自托管。重建颜色库：`npm ci --prefix tools/theme` 后运行 `npm run --prefix tools/theme build`。
 
-预览图在 `assets` 注册，并由 `thumbnails` 引用；可填原始像素 `width` 与 `height`（同时提供），不限制尺寸比例，横屏、竖屏、方形与长图均保持原比例。单图最多 8 MiB，源内图片合计 64 MiB。点击预览可放大，再次点击收起。
+预览图在 `assets` 注册，并由 `thumbnails` 引用；可填原始像素 `width` 与 `height`（同时提供），不限制素材比例。单图最多 8 MiB，源内图片合计 64 MiB。
+
+详情中的缩略图统一高度，展示比例上限为2:1，更宽的图片居中裁剪。支持触摸滑动、平滑滚轮与悬停左右箭头，不显示图片名称和横向滚动条。点击后进入半透明暗底的全屏图库，完整显示原图；支持滚轮、左右键、手机滑动和Escape关闭，返回后保留原来的位置。暗底与箭头均有淡入淡出，并遵循系统减弱动效设置。

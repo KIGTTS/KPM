@@ -1,0 +1,33 @@
+.preview-gallery{position:relative;min-width:0;margin:16px 0 8px;--gallery-height:clamp(200px,30dvh,320px)}
+.gallery-track{display:flex;position:relative;align-items:center;gap:12px;overflow-x:auto;padding:8px 0 12px;scroll-snap-type:x proximity;overscroll-behavior-x:contain;scrollbar-width:none;outline-offset:4px;scroll-behavior:smooth}
+.gallery-track::-webkit-scrollbar{display:none}
+.gallery-track,.viewer-track,dialog.image-viewer{scrollbar-gutter:auto;scrollbar-width:none}
+.gallery-track.wheel-scrolling{scroll-snap-type:none}
+.preview-figure{flex:0 0 auto;width:calc(var(--gallery-height) * min(var(--preview-ratio,1.5),2));height:var(--gallery-height);margin:0;scroll-snap-align:start}
+.preview-image{display:block;width:100%;padding:0;background:var(--surface);border:0;border-radius:18px;overflow:hidden;cursor:zoom-in}
+.preview-image{height:100%}
+.preview-image img{display:block;width:100%;height:100%;object-fit:cover}
+.preview-arrow,.viewer-arrow{display:grid;place-items:center;position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;border-radius:50%;padding:10px;background:var(--primary);color:var(--on-primary);box-shadow:0 3px 12px #0003;opacity:0;pointer-events:none;transition:opacity .16s,background .16s;z-index:1}
+.preview-arrow.previous,.viewer-arrow.previous{left:8px}.preview-arrow:not(.previous),.viewer-arrow:not(.previous){right:8px}
+.previous .symbol{transform:rotate(180deg)}
+.preview-gallery:hover .preview-arrow:not(:disabled),.preview-gallery:focus-within .preview-arrow:not(:disabled){opacity:1;pointer-events:auto}
+.preview-arrow:disabled,.viewer-arrow:disabled{opacity:0;pointer-events:none}
+dialog.image-viewer[open]{display:grid;grid-template-rows:auto minmax(0,1fr);position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:#F5F8F8;overflow:hidden;box-shadow:none;animation:viewer-enter .18s ease-out}
+.image-viewer::backdrop{background:#070B0DC7;backdrop-filter:none;animation:viewer-enter .18s ease-out}
+.image-viewer.is-closing::backdrop{animation:viewer-exit .15s ease-out forwards}
+.viewer-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:8px max(18px,env(safe-area-inset-right)) 8px max(22px,env(safe-area-inset-left));padding-top:max(8px,env(safe-area-inset-top))}
+.viewer-counter{font-size:14px;font-variant-numeric:tabular-nums;color:#D7E2E2}
+.viewer-close{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;padding:12px;border:0;border-radius:50%;background:transparent;color:inherit}
+.viewer-close:hover{background:#FFFFFF18}.viewer-close:focus-visible,.viewer-arrow:focus-visible{outline:2px solid #B2E8E6;outline-offset:3px}
+.viewer-stage{position:relative;min-height:0;min-width:0;padding-bottom:max(18px,env(safe-area-inset-bottom))}
+.viewer-track{display:flex;width:100%;height:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior:contain;scrollbar-width:none;touch-action:pan-x pinch-zoom}
+.viewer-track::-webkit-scrollbar{display:none}
+.viewer-slide{flex:0 0 100%;width:100%;height:100%;display:grid;place-items:center;min-width:0;padding:8px max(18px,env(safe-area-inset-right)) 8px max(18px,env(safe-area-inset-left));scroll-snap-align:center;scroll-snap-stop:always;box-sizing:border-box}
+.viewer-slide img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;min-height:0;object-fit:contain;user-select:none}
+.viewer-arrow{background:#293233DD;color:#FFFFFF;box-shadow:none;width:48px;height:48px}
+.image-viewer:hover .viewer-arrow:not(:disabled),.image-viewer:focus-within .viewer-arrow:not(:disabled){opacity:1;pointer-events:auto}
+.viewer-error{color:#D7E2E2}
+@media(hover:none){.viewer-arrow:not(:disabled){opacity:1;pointer-events:auto}}
+@media(prefers-reduced-motion:reduce){.preview-arrow,.viewer-arrow{transition:none}.gallery-track{scroll-behavior:auto}dialog.image-viewer[open],.image-viewer::backdrop,.image-viewer.is-closing::backdrop{animation:none}}
+@keyframes viewer-enter{from{opacity:0}to{opacity:1}}
+@keyframes viewer-exit{from{opacity:1}to{opacity:0}}
