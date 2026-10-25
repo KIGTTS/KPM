@@ -1,0 +1,4 @@
+.mouse-scrollable,.mouse-scrollable .preview-image,.mouse-scrollable .category{cursor:grab}
+.is-mouse-dragging{scroll-snap-type:none!important;scroll-behavior:auto!important;user-select:none;-webkit-user-select:none}
+.is-mouse-dragging,.is-mouse-dragging *{cursor:grabbing!important;user-select:none;-webkit-user-select:none}
+.mouse-scrollable img{-webkit-user-drag:none}

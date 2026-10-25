@@ -1,6 +1,7 @@
 import { node, symbol } from './data.js';
 import { openPreview } from './preview-viewer.js';
 import { loadingImage } from './media-loading.js';
+import { mouseDragScroll } from './drag-scroll.js';
 
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 export function previewButton(label, previous = false) {
@@ -54,6 +55,7 @@ export function createPreviewGallery(item, site) {
   let wheelTarget = 0, lastWheel = 0, wheelTimer;
   track.addEventListener('wheel', event => {
     if (event.ctrlKey) return;
+    if (track.classList.contains('is-mouse-dragging')) { event.preventDefault(); return; }
     const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
     const amount = delta * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? track.clientWidth : 1);
     if (!amount || amount < 0 && track.scrollLeft <= 0 || amount > 0 && track.scrollLeft >= track.scrollWidth - track.clientWidth - 1) return;
@@ -67,9 +69,12 @@ export function createPreviewGallery(item, site) {
     wheelTimer = setTimeout(() => track.classList.remove('wheel-scrolling'), 500);
   }, {passive:false});
   track.addEventListener('scroll', update, {passive:true});
+  const stopDragging = mouseDragScroll(track, {onStart:() => {
+    clearTimeout(wheelTimer); track.classList.remove('wheel-scrolling'); lastWheel = 0;
+  }});
   // The gallery can be removed when another plugin is opened.
   const observer = new ResizeObserver(update); observer.observe(track);
-  gallery.dispose = () => { observer.disconnect(); clearTimeout(wheelTimer); };
+  gallery.dispose = () => { stopDragging(); observer.disconnect(); clearTimeout(wheelTimer); };
   update();
   return gallery;
 }

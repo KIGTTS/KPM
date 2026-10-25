@@ -5,9 +5,11 @@ import './scrollbar-motion.js';
 import { configureTheme, DEFAULT_SEED } from './theme.js';
 import { hydrateMedia } from './media-loading.js';
 import { catalogMotion } from './catalog-motion.js';
+import { mouseDragScroll } from './drag-scroll.js';
 
 const $ = id => document.getElementById(id);
 const listMotion = catalogMotion($('packages'));
+mouseDragScroll($('categories'));
 let toastTimer;
 function toast(message) {
   clearTimeout(toastTimer); $('toast').textContent = message; $('toast').classList.add('visible');

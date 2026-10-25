@@ -1,5 +1,6 @@
 import { node, symbol } from './data.js';
 import { loadingImage } from './media-loading.js';
+import { mouseDragScroll } from './drag-scroll.js';
 
 let active;
 export function openPreview(entries, initial, opener) {
@@ -38,7 +39,7 @@ export function openPreview(entries, initial, opener) {
       behavior:instant || matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
   };
   const finish = () => {
-    observer.disconnect(); viewer.remove(); active = null;
+    stopDragging(); observer.disconnect(); viewer.remove(); active = null;
     document.body.style.overflow = overflow;
     if (opener.isConnected) opener.focus({preventScroll:true});
   };
@@ -60,6 +61,7 @@ export function openPreview(entries, initial, opener) {
     move(event.key === 'Home' ? 0 : event.key === 'End' ? entries.length - 1 : index + (event.key === 'ArrowLeft' ? -1 : 1));
   });
   viewer.addEventListener('wheel', event => {
+    if (track.classList.contains('is-mouse-dragging')) { event.preventDefault(); return; }
     if (event.ctrlKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
     event.preventDefault();
     const now = performance.now();
@@ -69,5 +71,6 @@ export function openPreview(entries, initial, opener) {
     move(index + Math.sign(wheelTotal)); wheelAt = now; wheelTotal = 0;
   }, {passive:false});
   const observer = new ResizeObserver(() => move(index, true));
+  const stopDragging = mouseDragScroll(track, {onEnd:() => move(Math.round(track.scrollLeft / (track.clientWidth || 1)))});
   active = viewer; viewer.showModal(); move(initial, true); update(); observer.observe(track); close.focus();
 }
