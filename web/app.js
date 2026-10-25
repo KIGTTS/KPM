@@ -2,15 +2,18 @@ import { node, icon, latest, markdown, safeURL, symbol } from './data.js';
 import { showDetail } from './detail.js';
 import { sourceLink } from './source-link.js';
 import './scrollbar-motion.js';
-import { configureTheme } from './theme.js';
+import { configureTheme, DEFAULT_SEED } from './theme.js';
+import { hydrateMedia } from './media-loading.js';
+import { catalogMotion } from './catalog-motion.js';
 
 const $ = id => document.getElementById(id);
+const listMotion = catalogMotion($('packages'));
 let toastTimer;
 function toast(message) {
   clearTimeout(toastTimer); $('toast').textContent = message; $('toast').classList.add('visible');
   toastTimer = setTimeout(() => $('toast').classList.remove('visible'), 2400);
 }
-document.querySelectorAll('[data-symbol]').forEach(element => element.style.maskImage = `url("symbols/${element.dataset.symbol}.svg")`);
+hydrateMedia();
 for (const button of document.querySelectorAll('.close-dialog')) button.addEventListener('click', () => button.closest('dialog').close());
 for (const dialog of document.querySelectorAll('dialog')) dialog.addEventListener('click', event => { if (event.target === dialog && (event.clientX < dialog.getBoundingClientRect().left || event.clientX > dialog.getBoundingClientRect().right || event.clientY < dialog.getBoundingClientRect().top || event.clientY > dialog.getBoundingClientRect().bottom)) dialog.close(); });
 for (const id of ['guide-open', 'manual-open']) $(id).addEventListener('click', () => $('guide').showModal());
@@ -33,7 +36,7 @@ try {
   const response = await fetch('site.json', { cache: 'no-cache' });
   if (!response.ok) throw new Error('目录暂不可用');
   const site = await response.json(), catalog = site.catalog;
-  configureTheme(site.themeColor || '#038387');
+  configureTheme(site.themeColor || DEFAULT_SEED);
   if (catalog.kind === 'RESOURCES') {
     document.getElementById('catalog-title').firstChild.textContent = '资源列表 ';
     document.querySelector('.add-heading span:last-child').textContent = '添加这个源';
@@ -69,9 +72,9 @@ try {
   catalog.packages.forEach(item => { if (item.resourceType) item.category = resourceLabels[item.resourceType]; });
   let category = '', query = '', visibleLimit = 24;
   let loadObserver;
-  function render() {
+  function render(append = false) {
     const entries = [...catalog.packages].filter(item => (!category || item.category === category) && `${item.name} ${item.summary} ${(item.tags || []).join(' ')}`.toLowerCase().includes(query)).sort((a, b) => (a.category || '').localeCompare(b.category || '', 'zh') || a.name.localeCompare(b.name, 'zh') || a.id.localeCompare(b.id));
-    const cards = entries.slice(0, visibleLimit).map(item => {
+    const cards = entries.slice(append ? visibleLimit - 24 : 0, visibleLimit).map(item => {
       const card = node('button', 'package-card'); card.type = 'button'; card.setAttribute('aria-label', `查看 ${item.name}`);
       const top = node('div', 'package-top'), avatar = node('span', 'package-icon'); avatar.append(icon(item.icon, site));
       top.append(avatar, node('span', 'version', `v${latest(item)?.version || '—'}`));
@@ -82,17 +85,22 @@ try {
     if (loadObserver) loadObserver.disconnect();
     const sentinel = node('div', 'catalog-load-sentinel');
     sentinel.setAttribute('aria-hidden', 'true');
+    $('packages').querySelector('.catalog-load-sentinel')?.remove();
     if (cards.length) {
-      $('packages').replaceChildren(...cards);
+      if (append) listMotion.append(cards); else listMotion.replace(cards);
       if (visibleLimit < entries.length) $('packages').append(sentinel);
       loadObserver = new IntersectionObserver(changes => {
         if (changes.some(change => change.isIntersecting) && visibleLimit < entries.length) {
           visibleLimit += 24;
-          render();
+          render(true);
         }
       }, { rootMargin: '360px' });
       if (visibleLimit < entries.length) loadObserver.observe(sentinel);
-    } else $('packages').replaceChildren(node('p', 'empty', catalog.packages.length ? '没有匹配的内容，试试其它关键词。' : '这个源还没有内容，稍后再来看看。'));
+    } else {
+      listMotion.clear();
+      $('packages').replaceChildren(node('p', 'empty', catalog.packages.length ? '没有匹配的内容，试试其它关键词。' : '这个源还没有内容，稍后再来看看。'));
+    }
+    $('packages').setAttribute('aria-busy', 'false');
     $('count').textContent = query || category ? `${entries.length} / ${catalog.packages.length}` : catalog.packages.length;
   }
   const categories = [['', '全部'], ...[...new Set(catalog.packages.map(x => x.category || '扩展'))].sort().map(x => [x, x])];
@@ -104,6 +112,7 @@ try {
   $('search').addEventListener('input', event => { query = event.target.value.trim().toLowerCase(); visibleLimit = 24; render(); });
   render();
 } catch (error) {
+  listMotion.clear(); $('packages').setAttribute('aria-busy', 'false');
   $('source-name').textContent = '暂时无法读取插件源';
   $('packages').replaceChildren(node('p', 'empty', '请检查网络连接，然后刷新页面重试。'));
   $('source-description').textContent = '暂时无法加载插件目录。';

@@ -1,17 +1,19 @@
-import { argbFromHex, hexFromArgb, themeFromSourceColor } from './vendor/material-colors.js';
+import { argbFromHex, hexFromArgb, Hct, SchemeTonalSpot, MaterialDynamicColors } from './vendor/material-colors.js';
 
-const cssName = key => key.replace(/[A-Z]/g, c => '-' + c.toLowerCase());
-export function themeTokens(seed = '#038387') {
+export const DEFAULT_SEED = '#00696e';
+const roles = new MaterialDynamicColors();
+export function themeTokens(seed = DEFAULT_SEED) {
   if (!/^#[0-9a-fA-F]{6}$/.test(seed)) throw new Error('themeColor must be #RRGGBB');
-  const theme = themeFromSourceColor(argbFromHex(seed));
   return Object.fromEntries(['light', 'dark'].map(mode => {
-    const dark = mode === 'dark', scheme = theme.schemes[mode].toJSON();
-    const colors = Object.fromEntries(Object.entries(scheme).map(([key, value]) => ['--md-sys-color-' + cssName(key), hexFromArgb(value)]));
-    const tone = (palette, value) => hexFromArgb(theme.palettes[palette].tone(value));
-    return [mode, {...colors, '--bg': tone('neutral', dark ? 6 : 98), '--surface': tone('neutral', dark ? 12 : 94),
-      '--card': tone('neutral', dark ? 10 : 100), '--primary': hexFromArgb(scheme.primary), '--on-primary': hexFromArgb(scheme.onPrimary),
-      '--accent': hexFromArgb(scheme.primaryContainer), '--text': hexFromArgb(scheme.onSurface), '--muted': hexFromArgb(scheme.onSurfaceVariant),
-      '--line': tone('neutralVariant', dark ? 30 : 80), '--shadow': `0 12px 40px ${tone('neutral', dark ? 0 : 20)}18`}];
+    // Match Android's default theme, including the 2025 phone color specification.
+    const scheme = new SchemeTonalSpot(Hct.fromInt(argbFromHex(seed)), mode === 'dark', 0, '2025', 'phone');
+    const colors = Object.fromEntries([...roles.allColors, roles.surfaceVariant(), roles.shadow(), roles.scrim(), roles.surfaceTint()]
+      .map(role => ['--md-sys-color-' + role.name.replaceAll('_', '-'), hexFromArgb(role.getArgb(scheme))]));
+    const color = name => colors['--md-sys-color-' + name];
+    return [mode, {...colors, '--bg': color('background'), '--surface': color('surface-container'),
+      '--card': color('surface-container-low'), '--primary': color('primary'), '--on-primary': color('on-primary'),
+      '--accent': color('primary-container'), '--text': color('on-surface'), '--muted': color('on-surface-variant'),
+      '--line': color('outline-variant'), '--shadow': `0 12px 40px ${color('shadow')}18`}];
   }));
 }
 

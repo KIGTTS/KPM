@@ -1,4 +1,5 @@
 import { node, symbol } from './data.js';
+import { loadingImage } from './media-loading.js';
 
 let active;
 export function openPreview(entries, initial, opener) {
@@ -14,10 +15,7 @@ export function openPreview(entries, initial, opener) {
   entries.forEach(entry => {
     const slide = node('div', 'viewer-slide'), image = node('img');
     image.src = entry.src; image.alt = entry.alt; image.draggable = false;
-    image.decoding = 'async'; slide.append(image); track.append(slide);
-    image.addEventListener('error', () => {
-      slide.replaceChildren(node('p', 'viewer-error', '图片暂时无法加载'));
-    }, {once:true});
+    image.decoding = 'async'; slide.append(loadingImage(image)); track.append(slide);
   });
   const arrow = (label, back) => {
     const button = node('button', `viewer-arrow${back ? ' previous' : ''}`);

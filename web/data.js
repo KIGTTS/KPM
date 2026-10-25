@@ -1,5 +1,6 @@
 import { marked } from './vendor/marked.esm.js';
 import DOMPurify from './vendor/purify.es.js';
+import { loadMask, loadingImage } from './media-loading.js';
 
 export const node = (tag, className, text) => {
   const element = document.createElement(tag);
@@ -14,21 +15,21 @@ export const safeURL = value => {
 export function symbol(name) {
   const icon = node('span', 'symbol');
   const safe = /^[a-z0-9_]{1,80}$/.test(name) ? name : 'extension';
-  icon.style.maskImage = `url("symbols/${safe}.svg")`;
   icon.setAttribute('aria-hidden', 'true');
-  return icon;
+  return loadMask(icon, `symbols/${safe}.svg`);
 }
 export function icon(value, site) {
   const path = site.art?.[value?.image];
   if (path) {
     if (site.monochromeArt?.includes(value.image)) {
       const mask = node('span', 'symbol artwork-mask');
-      mask.style.maskImage = `url("${path}")`; mask.setAttribute('aria-hidden', 'true');
-      return mask;
+      mask.setAttribute('aria-hidden', 'true');
+      return loadMask(mask, path);
     }
     const img = node('img'); img.src = path; img.alt = ''; img.loading = 'lazy';
-    img.addEventListener('error', () => img.replaceWith(symbol(value?.symbol || 'extension')), { once: true });
-    return img;
+    const frame = loadingImage(img, {errorText:''});
+    img.addEventListener('error', () => frame.replaceWith(symbol(value?.symbol || 'extension')), { once: true });
+    return frame;
   }
   return symbol(value?.symbol || 'extension');
 }
@@ -62,5 +63,11 @@ export function markdown(text, site) {
     ALLOWED_ATTR: ['href','src','alt','title','rel','loading','start','type','disabled','checked','align']
   });
   target.querySelectorAll('input').forEach(input => { if (input.type !== 'checkbox') input.remove(); else input.disabled = true; });
+  target.querySelectorAll('img').forEach(image => {
+    const asset = Object.entries(site.art || {}).find(([, path]) => image.getAttribute('src') === path)?.[0];
+    const size = site.catalog.assets?.[asset];
+    const placeholder = document.createElement('span'); image.replaceWith(placeholder);
+    placeholder.replaceWith(loadingImage(image, {ratio:size?.width && size?.height ? size.width / size.height : undefined}));
+  });
   return target;
 }

@@ -34,10 +34,3 @@ for (const dialog of document.querySelectorAll('dialog')) {
     if (dialog.open && !closing) animate(dialog, [{opacity:0,transform:'translateY(24px) scale(.96)'},{opacity:1,transform:'translateY(-2px) scale(1.005)',offset:.75},{opacity:1,transform:'none'}]);
   }).observe(dialog, {attributes:true,attributeFilter:['open']});
 }
-const grid = document.getElementById('packages');
-new MutationObserver(() => {
-  [...grid.children].slice(0,18).forEach((card,index) => {
-    if (reduced.matches) return;
-    card.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'none'}], {duration:240,delay:Math.min(index*18,108),easing:'cubic-bezier(.2,0,0,1)',fill:'backwards'});
-  });
-}).observe(grid,{childList:true});

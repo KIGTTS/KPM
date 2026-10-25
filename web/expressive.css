@@ -13,8 +13,6 @@
 .category[aria-pressed=true]{background:var(--accent);border-radius:14px;color:var(--primary)}
 .category:active,.category.is-pressed{border-radius:12px;transform:scale(.95)}
 .package-card{border:0;background:var(--surface);border-radius:24px}
-.package-card{animation:package-enter 220ms var(--motion-spatial) both}
-@keyframes package-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .catalog-load-sentinel{grid-column:1/-1;min-height:32px}
 .package-card:hover{transform:none;box-shadow:none;background:color-mix(in srgb,var(--surface) 92%,var(--primary))}
 .package-card:active,.package-card.is-pressed{border-radius:16px;transform:scale(.98);background:var(--accent)}

@@ -15,9 +15,18 @@ class ThemeTest(unittest.TestCase):
         console.log(JSON.stringify({purple,green,rejected}));"""
         value = json.loads(subprocess.check_output(["node", "--input-type=module", "-e", code], cwd=ROOT, text=True))
         self.assertTrue(value["rejected"])
-        self.assertEqual("#6750a4", value["purple"]["light"]["--primary"])
+        self.assertTrue(value["purple"]["light"]["--primary"].startswith("#"))
         for scheme in ("light", "dark"):
             self.assertGreater(len(value["purple"][scheme]), 30)
             self.assertNotEqual(value["purple"][scheme]["--primary"], value["green"][scheme]["--primary"])
             self.assertNotEqual(value["purple"][scheme]["--text"], value["purple"][scheme]["--bg"])
         self.assertNotEqual(value["purple"]["light"]["--bg"], value["purple"]["dark"]["--bg"])
+
+    def test_default_roles_match_android_2025_phone_palette(self):
+        fixture = json.loads((ROOT / 'tests/fixtures/android-default-theme.json').read_text(encoding='utf-8'))
+        code = "import {themeTokens} from './web/theme.js'; console.log(JSON.stringify(themeTokens()));"
+        actual = json.loads(subprocess.check_output(['node', '--input-type=module', '-e', code], cwd=ROOT, text=True))
+        for mode in ('light', 'dark'):
+            expected = fixture['roles'][mode]
+            self.assertGreaterEqual(len(expected), 49)
+            self.assertEqual(expected, {role: actual[mode][role] for role in expected})

@@ -1,5 +1,6 @@
 import { node, symbol } from './data.js';
 import { openPreview } from './preview-viewer.js';
+import { loadingImage } from './media-loading.js';
 
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 export function previewButton(label, previous = false) {
@@ -28,7 +29,7 @@ export function createPreviewGallery(item, site) {
     image.addEventListener('load', () => {
       if (image.naturalHeight) figure.style.setProperty('--preview-ratio', image.naturalWidth / image.naturalHeight);
     }, {once:true});
-    button.append(image); button.addEventListener('click', () => openPreview(entries, index, button));
+    button.append(loadingImage(image)); button.addEventListener('click', () => openPreview(entries, index, button));
     figure.append(button); track.append(figure);
     return figure;
   });

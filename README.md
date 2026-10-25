@@ -87,8 +87,10 @@ python tools/build.py --config examples/resource-source.json --output dist/resou
 
 目录使用 `schemaVersion: 2`、`kind: RESOURCES`，包项用 `resourceType` 指定快捷文本、照片集、滤镜、语音包、相框或贴纸包。它们添加到各自资料库，支持重复导入，不进入插件卸载管理。
 
-在 `source.json` 设置 `"themeColor": "#038387"`。网页使用 Material 官方 Color Utilities 自动生成亮暗色板和 MD 颜色角色，资源全部自托管。重建颜色库：`npm ci --prefix tools/theme` 后运行 `npm run --prefix tools/theme build`。
+在 `source.json` 设置 `"themeColor": "#038387"` 可自定义主题色；不指定时使用与安卓默认一致的 `#00696e`。网页使用 Material 官方 Color Utilities 的 Tonal Spot、2025 phone 规范和默认对比度生成亮暗色板，颜色角色与安卓保持一致。资源全部自托管。重建颜色库：`npm ci --prefix tools/theme` 后运行 `npm run --prefix tools/theme build`，并更新 `web/vendor/manifest.json` 的构建产物哈希。
 
 预览图在 `assets` 注册，并由 `thumbnails` 引用；可填原始像素 `width` 与 `height`（同时提供），不限制素材比例。单图最多 8 MiB，源内图片合计 64 MiB。
 
 详情中的缩略图统一高度，展示比例上限为2:1，更宽的图片居中裁剪。支持触摸滑动、平滑滚轮与悬停左右箭头，不显示图片名称和横向滚动条。点击后进入半透明暗底的全屏图库，完整显示原图；支持滚轮、左右键、手机滑动和Escape关闭，返回后保留原来的位置。暗底与箭头均有淡入淡出，并遵循系统减弱动效设置。
+
+图片和图标加载时显示随主题变化的占位动效，完成解码后淡入；加载失败会结束占位并显示提示或替代图标。插件列表首次读取时显示骨架，条目进入视口时渐进出现；追加下一批保留已有条目，避免反复播放入场动效。系统减弱动效开启时使用静态占位并直接显示内容。

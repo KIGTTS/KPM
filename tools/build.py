@@ -96,7 +96,7 @@ def bitmap_suffix(data):
 
 
 def build(config, output, offline=False):
-    theme_color = config.get("themeColor", "#038387")
+    theme_color = config.get("themeColor", "#00696e")
     if not re.fullmatch(r"#[0-9a-fA-F]{6}", theme_color):
         raise ValueError("themeColor must be #RRGGBB")
     source_url = https(config["sourceUrl"])

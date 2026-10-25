@@ -7,5 +7,5 @@
   "downloadMetadata": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/android/release.json?view=false",
   "expectedSourceId": "kigtts.official",
   "downloadMetadataPath": "examples/official-android.json",
-  "themeColor": "#038387"
+  "themeColor": "#00696e"
 }

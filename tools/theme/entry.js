@@ -1,1 +1,1 @@
-export { argbFromHex, hexFromArgb, themeFromSourceColor } from '@material/material-color-utilities';
+export { argbFromHex, hexFromArgb, Hct, SchemeTonalSpot, MaterialDynamicColors } from '@material/material-color-utilities';

@@ -29,7 +29,7 @@
   },
   "material-colors.js": {
     "library": "@material/material-color-utilities",
-    "sha256": "00cf77d725f3db757bca6365aef08e784c9013791631c33d7a95d4a0c7fbba97",
+    "sha256": "a93ddc1e2484934d222d2cb67df3d03070c680cc0ed400b2fe4f10fa0707f259",
     "version": "0.4.0",
     "source": "https://registry.npmjs.org/@material/material-color-utilities/-/material-color-utilities-0.4.0.tgz"
   },
