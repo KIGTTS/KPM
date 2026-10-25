@@ -1,0 +1,11 @@
+{
+  "upstream": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/index.json?view=false",
+  "catalogPath": "examples/resource-catalog.json",
+  "sourceUrl": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/index.json?view=false",
+  "publisher": "LHTSTUDIO",
+  "repository": "https://github.com/KIGTTS/KPM",
+  "downloadMetadata": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/android/release.json?view=false",
+  "expectedSourceId": "kigtts.resources",
+  "downloadMetadataPath": "examples/official-android.json",
+  "themeColor": "#038387"
+}

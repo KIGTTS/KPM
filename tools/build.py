@@ -49,14 +49,17 @@ def validate(catalog):
     schema = json.loads((ROOT / "schema/catalog.schema.json").read_text(encoding="utf-8"))
     jsonschema.Draft202012Validator(schema).validate(catalog)
     assets = catalog.get("assets", {})
-    if sum(image["bytes"] for image in assets.values()) > 16 * 1024 * 1024:
-        raise ValueError("Artwork exceeds 16 MiB")
+    if sum(image["bytes"] for image in assets.values()) > 64 * 1024 * 1024:
+        raise ValueError("Artwork exceeds 64 MiB")
     def icon(value):
         if value.get("image") and value["image"] not in assets:
             raise ValueError("Icon references an unregistered asset")
     icon(catalog.get("icon", {}))
     ids = set()
     for item in catalog["packages"]:
+        resource = item.get("resourceType") is not None
+        if catalog.get("kind") == "RESOURCES" and not resource:
+            raise ValueError("Resource sources only contain resources")
         if item["id"] in ids:
             raise ValueError("Duplicate package ID")
         ids.add(item["id"])
@@ -66,6 +69,8 @@ def validate(catalog):
         if len({x["version"] for x in item["releases"]}) != len(item["releases"]) or len({x["versionCode"] for x in item["releases"]}) != len(item["releases"]):
             raise ValueError("Duplicate package version")
         for release in item["releases"]:
+            if (release["format"] == "RESOURCE") != resource:
+                raise ValueError("Resource format and category must agree")
             if set(release.get("permissionPurposes", {})) - set(release.get("permissions", [])):
                 raise ValueError("Permission purposes must refer to declared permissions")
             for mirror in release["mirrors"]:
@@ -91,6 +96,9 @@ def bitmap_suffix(data):
 
 
 def build(config, output, offline=False):
+    theme_color = config.get("themeColor", "#038387")
+    if not re.fullmatch(r"#[0-9a-fA-F]{6}", theme_color):
+        raise ValueError("themeColor must be #RRGGBB")
     source_url = https(config["sourceUrl"])
     saved = False
     path = (ROOT / config["catalogPath"]).resolve()
@@ -184,7 +192,7 @@ def build(config, output, offline=False):
         if not re.fullmatch(r"android/[a-zA-Z0-9._-]+\.apk", path):
             raise ValueError("Unexpected Android artifact path")
         download = https(urljoin(base, path)) + "?view=false"
-    site = dict(catalog=catalog, art=art, monochromeArt=monochrome_art, sourceUrl=source_url, publisher=config.get("publisher", ""), savedCatalog=saved,
+    site = dict(catalog=catalog, art=art, monochromeArt=monochrome_art, themeColor=theme_color, sourceUrl=source_url, publisher=config.get("publisher", ""), savedCatalog=saved,
                 repository=https(config["repository"]), downloadURL=download)
     (output / "site.json").write_text(json.dumps(site, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, box_size=5, border=2)

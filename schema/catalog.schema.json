@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://kigtts.github.io/KPM/schema/catalog.schema.json",
-  "title": "KPM package source schema 1",
+  "title": "KPM package source schema 1 and 2",
   "description": "Machine-readable source contract. SHA-256 and publisher are integrity assertions, never an instruction to silently trust or install.",
   "type": "object",
   "required": [
@@ -17,8 +17,11 @@
       "description": "Optional JSON editor validation link; ignored by the client."
     },
     "schemaVersion": {
-      "const": 1,
-      "description": "Catalog format version, not plugin API version."
+      "description": "Catalog format version, not plugin API version.",
+      "enum": [
+        1,
+        2
+      ]
     },
     "id": {
       "$ref": "#/$defs/id",
@@ -71,6 +74,14 @@
         "$ref": "#/$defs/image"
       },
       "default": {}
+    },
+    "kind": {
+      "enum": [
+        "PLUGINS",
+        "RESOURCES"
+      ],
+      "default": "PLUGINS",
+      "description": "RESOURCE sources contain data imported into user libraries."
     }
   },
   "$defs": {
@@ -181,8 +192,71 @@
             "maxLength": 64
           },
           "default": []
+        },
+        "resourceType": {
+          "enum": [
+            "QUICK_TEXT",
+            "PHOTOS",
+            "FILTER",
+            "VOICE",
+            "FRAME",
+            "STICKERS"
+          ]
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "resourceType"
+            ]
+          },
+          "then": {
+            "properties": {
+              "releases": {
+                "items": {
+                  "properties": {
+                    "format": {
+                      "const": "RESOURCE"
+                    },
+                    "apiVersion": {
+                      "minimum": 29
+                    },
+                    "abis": {
+                      "maxItems": 0
+                    },
+                    "permissions": {
+                      "maxItems": 0
+                    },
+                    "permissionPurposes": {
+                      "maxProperties": 0
+                    }
+                  },
+                  "required": [
+                    "apiVersion"
+                  ]
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "releases": {
+                "items": {
+                  "properties": {
+                    "format": {
+                      "enum": [
+                        "NATIVE",
+                        "LUA"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "release": {
       "type": "object",
@@ -208,9 +282,10 @@
         "format": {
           "enum": [
             "NATIVE",
-            "LUA"
+            "LUA",
+            "RESOURCE"
           ],
-          "description": "NATIVE = signed .kigplugin Android DEX; LUA = signed source archive .kiglua delivered to independent runtime.lua after verification."
+          "description": "Signed plugin, Lua source or data-only .kigresource archive."
         },
         "sha256": {
           "$ref": "#/$defs/hash",
@@ -289,7 +364,7 @@
             "type": "string",
             "pattern": "^[a-z][a-z0-9-]{0,79}$"
           },
-          "description": "Optional per-version signed capabilities excluding ui. Omitted means unknown, [] means none; does not grant authorization."
+          "description": "Optional signed capabilities excluding ui. Omitted means unknown; [] means none. Does not grant permission."
         },
         "permissionPurposes": {
           "type": "object",
@@ -299,7 +374,7 @@
             "minLength": 1,
             "maxLength": 600
           },
-          "description": "Purposes copied from the signed manifest, keyed only by declared permissions."
+          "description": "Signed purposes keyed only by declared permissions."
         }
       }
     },
@@ -354,14 +429,82 @@
         "bytes": {
           "type": "integer",
           "minimum": 1,
-          "maximum": 2097152
+          "maximum": 8388608
         },
         "alt": {
           "type": "string",
           "maxLength": 160,
           "default": ""
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Original pixel width. No aspect-ratio restriction."
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Original pixel height. No aspect-ratio restriction."
+        }
+      },
+      "dependentRequired": {
+        "width": [
+          "height"
+        ],
+        "height": [
+          "width"
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schemaVersion": {
+            "const": 1
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "kind": {
+            "const": "PLUGINS"
+          },
+          "packages": {
+            "items": {
+              "not": {
+                "required": [
+                  "resourceType"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "kind"
+        ],
+        "properties": {
+          "kind": {
+            "const": "RESOURCES"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "packages": {
+            "items": {
+              "required": [
+                "resourceType"
+              ]
+            }
+          }
         }
       }
     }
-  }
+  ]
 }

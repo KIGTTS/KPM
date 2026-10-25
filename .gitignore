@@ -5,3 +5,4 @@ __pycache__/
 PROJECT.md
 
 .playwright-cli/
+node_modules/

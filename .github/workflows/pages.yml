@@ -20,6 +20,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
       - run: pip install -r requirements.txt
       - uses: actions/cache@v4
         with:
@@ -28,6 +31,7 @@ jobs:
           restore-keys: kpm-art-${{ hashFiles('source.json') }}-
       - run: python -m unittest discover -s tests
       - run: python tools/build.py
+      - run: python tools/build.py --config examples/resource-source.json --output dist/resources
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

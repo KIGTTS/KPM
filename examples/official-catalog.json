@@ -9,14 +9,14 @@
   },
   "assets": {
     "kpm-source": {
-      "sha256": "71aeb98df34a3ec7b1c521a047495bf361ea95b0c6f36c2e3cf59e988a6f9add",
-      "bytes": 1951,
+      "alt": "KPM 官方插件源",
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-71aeb98df34a.svg?view=false",
-      "alt": "KPM 官方插件源"
+      "bytes": 1951,
+      "sha256": "71aeb98df34a3ec7b1c521a047495bf361ea95b0c6f36c2e3cf59e988a6f9add"
     }
   },
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-24T19:05:52.5399898+00:00",
+  "updatedAt": "2026-10-25T07:31:45.6394247+00:00",
   "packages": [
     {
       "id": "backup.kigusay",
@@ -1649,6 +1649,33 @@
         "工具"
       ],
       "releases": [
+        {
+          "version": "0.15.0",
+          "versionCode": 21,
+          "format": "NATIVE",
+          "sha256": "5409bc60760f6c749a7ac96639176ebd79e299cee3ecda8f5da7eb69958dbc36",
+          "bytes": 165035,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.15.0.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 29,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "新增资源分区，可添加快捷文本、照片、滤镜、语音包、相框和贴纸；预览图片支持任意比例与放大查看。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "更新你添加的目录，并下载所选内容和预览图片。",
+            "app-control": "检查已安装的插件，并在你确认后安装插件或添加资源。"
+          }
+        },
         {
           "version": "0.14.2",
           "versionCode": 20,

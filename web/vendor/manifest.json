@@ -26,5 +26,17 @@
     "version": "3.4.17",
     "source": "https://registry.npmjs.org/dompurify/-/dompurify-3.4.17.tgz",
     "sha256": "60c5d5ccbb466de3de3ba863461a92bf134f8c156cef7992da43e0f659bc5cbd"
+  },
+  "material-colors.js": {
+    "library": "@material/material-color-utilities",
+    "sha256": "00cf77d725f3db757bca6365aef08e784c9013791631c33d7a95d4a0c7fbba97",
+    "version": "0.4.0",
+    "source": "https://registry.npmjs.org/@material/material-color-utilities/-/material-color-utilities-0.4.0.tgz"
+  },
+  "material-colors.LICENSE": {
+    "library": "@material/material-color-utilities",
+    "sha256": "8ded460ad5bd3ab9082eaa2f7502cc9bb621eaff87cecc55d823f21758707cea",
+    "version": "0.4.0",
+    "source": "https://registry.npmjs.org/@material/material-color-utilities/-/material-color-utilities-0.4.0.tgz"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "name": "kpm-theme-build",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "esbuild entry.js --bundle --format=esm --minify --legal-comments=inline --outfile=../../web/vendor/material-colors.js"},
+  "dependencies": {"@material/material-color-utilities": "0.4.0"},
+  "devDependencies": {"esbuild": "0.28.2"}
+}

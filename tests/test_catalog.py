@@ -24,6 +24,28 @@ class CatalogTest(unittest.TestCase):
         catalog["icon"]["image"] = "missing"
         with self.assertRaises(ValueError): validate(catalog)
 
+    def test_resource_source_requires_data_format_and_explicit_kind(self):
+        catalog = json.loads((ROOT / "examples/official-catalog.json").read_text(encoding="utf-8"))
+        item = copy.deepcopy(catalog["packages"][0]); item["resourceType"] = "FRAME"
+        release = item["releases"][-1]; release.update(format="RESOURCE", apiVersion=29, abis=[], permissions=[], permissionPurposes={})
+        item["releases"] = [release]
+        source = dict(schemaVersion=2, id="test.resources", name="资源", kind="RESOURCES", packages=[item])
+        # Retain registered artwork used by the chosen fixture.
+        source["assets"] = catalog.get("assets", {})
+        validate(source)
+        source["schemaVersion"] = 1
+        with self.assertRaises(Exception): validate(source)
+        source["schemaVersion"] = 2; release["format"] = "NATIVE"
+        with self.assertRaises(Exception): validate(source)
+
+    def test_preview_dimensions_accept_any_aspect_and_require_complete_pair(self):
+        value = self.catalog()
+        for width,height in ((1,100000),(100000,1),(1080,2400),(2000,2000),(32768,8192)):
+            value["assets"] = {"preview":dict(url="https://example.com/preview.png",sha256="a"*64,bytes=300,width=width,height=height)}
+            validate(value)
+        del value["assets"]["preview"]["height"]
+        with self.assertRaises(Exception):validate(value)
+
     def test_urls_reject_credentials_and_downgrades(self):
         for value in ["http://example.com", "https://user:password@example.com", "https://example.com/#fragment"]:
             with self.assertRaises(ValueError): https(value)

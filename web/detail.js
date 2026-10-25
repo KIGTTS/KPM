@@ -13,6 +13,11 @@ export function showDetail(item, site, sourceURL) {
     if (!site.art?.[id]) continue;
     const figure = node('figure'), image = node('img'), alt = site.catalog.assets?.[id]?.alt || '';
     image.src = site.art[id]; image.alt = alt; image.loading = 'lazy';
+    const size = site.catalog.assets?.[id];
+    if (size?.width && size?.height) { image.width = size.width; image.height = size.height; }
+    image.addEventListener('click', () => { image.classList.toggle('expanded-preview'); });
+    image.tabIndex = 0; image.setAttribute('role', 'button'); image.setAttribute('aria-label', alt || '放大预览');
+    image.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); image.click(); } });
     figure.append(image, node('figcaption', '', alt)); gallery.append(figure);
   }
   if (gallery.children.length) body.append(gallery);
@@ -28,8 +33,8 @@ export function showDetail(item, site, sourceURL) {
     const androidVersions = {26:'8.0',27:'8.1',28:'9',29:'10',30:'11',31:'12',32:'12L',33:'13',34:'14',35:'15',36:'16'};
     const sdk = release.minSdk || 26;
     const android = androidVersions[sdk] ? `Android ${androidVersions[sdk]} 及以上` : `Android API ${sdk} 及以上`;
-    const format = {NATIVE:'原生插件',LUA:'Lua 插件'}[release.format] || release.format;
-    for (const value of [`插件 API ${release.apiVersion || 9}+`, android, format].filter(Boolean)) info.append(node('span', '', value));
+    const format = {NATIVE:'原生插件',LUA:'Lua 插件',RESOURCE:'资源包'}[release.format] || release.format;
+    for (const value of [`KIGTTS API ${release.apiVersion || 9}+`, android, format].filter(Boolean)) info.append(node('span', '', value));
     const compatibility = node('details');
     compatibility.append(node('summary', '', '兼容性'), info);
     details.append(summary, markdown(release.notes || '暂无更新说明。', site), compatibility);

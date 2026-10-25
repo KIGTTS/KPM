@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 2,
+  "kind": "RESOURCES",
+  "id": "kigtts.resources",
+  "name": "KIGTTS 资源",
+  "description": "为字幕与照片添加新的风格。",
+  "homepage": "https://github.com/KIGTTS/KPM",
+  "updatedAt": "2026-10-25T00:00:00Z",
+  "icon": {
+    "symbol": "collections_bookmark"
+  },
+  "packages": [
+    {
+      "id": "resources.classic-frames",
+      "name": "经典相框",
+      "summary": "三种简洁的相纸配色，为照片换一种心情。",
+      "resourceType": "FRAME",
+      "category": "外观",
+      "icon": {
+        "symbol": "crop_square"
+      },
+      "license": "CC0-1.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "versionCode": 1,
+          "format": "RESOURCE",
+          "apiVersion": 29,
+          "minSdk": 26,
+          "sha256": "7dc240dcc122c743df5762afc33e2f461680fa07db76542c4a22adfb1285cab6",
+          "bytes": 1702,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "dependencies": {},
+          "mirrors": [
+            {
+              "name": "魔搭",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/resources.classic-frames-1.0.0.kigresource?view=false"
+            }
+          ],
+          "notes": "首次发布。",
+          "permissions": [],
+          "permissionPurposes": {}
+        }
+      ],
+      "thumbnails": [
+        "classic-frames"
+      ]
+    },
+    {
+      "id": "resources.soft-colors",
+      "name": "柔和色彩",
+      "summary": "轻柔的暖色调，让日常照片多一点温度。",
+      "resourceType": "FILTER",
+      "category": "外观",
+      "icon": {
+        "symbol": "filter"
+      },
+      "license": "CC0-1.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "versionCode": 1,
+          "format": "RESOURCE",
+          "apiVersion": 29,
+          "minSdk": 26,
+          "sha256": "6b9787e7da37393c7e3f8e86c4295f7ecb5de1a9b5b02a97bb096219e2a63664",
+          "bytes": 2183,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "dependencies": {},
+          "mirrors": [
+            {
+              "name": "魔搭",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/resources.soft-colors-1.0.0.kigresource?view=false"
+            }
+          ],
+          "notes": "首次发布。",
+          "permissions": [],
+          "permissionPurposes": {}
+        }
+      ],
+      "thumbnails": [
+        "soft-colors"
+      ]
+    }
+  ],
+  "assets": {
+    "classic-frames": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/artwork/classic-frames.svg",
+      "sha256": "b9403e8e4c41a2361542d262800e26cd447278650e9bb1a8381e6ad6ce8b0ef4",
+      "bytes": 1123,
+      "width": 1200,
+      "height": 800,
+      "alt": "经典相框预览"
+    },
+    "soft-colors": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/artwork/soft-colors.svg",
+      "sha256": "508ed485e3db657387800fc844a5e385fd21d3fa83c027c6325ab79e4ea9746b",
+      "bytes": 749,
+      "width": 480,
+      "height": 900,
+      "alt": "柔和色彩预览"
+    }
+  }
+}

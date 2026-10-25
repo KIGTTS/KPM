@@ -2,6 +2,7 @@ import { node, icon, latest, markdown, safeURL, symbol } from './data.js';
 import { showDetail } from './detail.js';
 import { sourceLink } from './source-link.js';
 import './scrollbar-motion.js';
+import { configureTheme } from './theme.js';
 
 const $ = id => document.getElementById(id);
 let toastTimer;
@@ -32,6 +33,17 @@ try {
   const response = await fetch('site.json', { cache: 'no-cache' });
   if (!response.ok) throw new Error('目录暂不可用');
   const site = await response.json(), catalog = site.catalog;
+  configureTheme(site.themeColor || '#038387');
+  if (catalog.kind === 'RESOURCES') {
+    document.getElementById('catalog-title').firstChild.textContent = '资源列表 ';
+    document.querySelector('.add-heading span:last-child').textContent = '添加这个源';
+    document.querySelector('.add-card').setAttribute('aria-label', '添加资源来源');
+    document.querySelector('.scan-row img').alt = '手机扫码添加这个源';
+    document.querySelector('.guide-steps li:last-child h3').textContent = '选择喜欢的内容';
+    document.querySelector('.guide-steps li:last-child p').textContent = '在商店的资源页面浏览并添加。';
+    $('search').placeholder = '搜索资源'; $('search').setAttribute('aria-label', '搜索资源');
+    $('categories').setAttribute('aria-label', '资源分类');
+  }
   document.title = `${catalog.name} · KPM`;
   $('source-name').textContent = catalog.name;
   $('source-icon').replaceChildren(icon(catalog.icon || { symbol: 'inventory_2' }, site));
@@ -53,6 +65,8 @@ try {
     try { await navigator.clipboard.writeText(sourceURL); toast('源地址已复制'); }
     catch { $('guide').showModal(); const selection = getSelection(); const range = document.createRange(); range.selectNodeContents($('manual-url')); selection.removeAllRanges(); selection.addRange(range); toast('请复制已选中的源地址'); }
   });
+  const resourceLabels = { QUICK_TEXT: '快捷文本', PHOTOS: '照片集', FILTER: '滤镜', VOICE: '语音包', FRAME: '照片边框', STICKERS: '贴纸包' };
+  catalog.packages.forEach(item => { if (item.resourceType) item.category = resourceLabels[item.resourceType]; });
   let category = '', query = '', visibleLimit = 24;
   let loadObserver;
   function render() {
@@ -78,7 +92,7 @@ try {
         }
       }, { rootMargin: '360px' });
       if (visibleLimit < entries.length) loadObserver.observe(sentinel);
-    } else $('packages').replaceChildren(node('p', 'empty', catalog.packages.length ? '没有匹配的插件，试试其它关键词。' : '这个源还没有插件，稍后再来看看。'));
+    } else $('packages').replaceChildren(node('p', 'empty', catalog.packages.length ? '没有匹配的内容，试试其它关键词。' : '这个源还没有内容，稍后再来看看。'));
     $('count').textContent = query || category ? `${entries.length} / ${catalog.packages.length}` : catalog.packages.length;
   }
   const categories = [['', '全部'], ...[...new Set(catalog.packages.map(x => x.category || '扩展'))].sort().map(x => [x, x])];
