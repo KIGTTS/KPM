@@ -107,7 +107,8 @@ def build(config, output, offline=False):
     if config.get("upstream") and not offline:
         try:
             raw = fetch(fresh(config["upstream"]), 4 * 1024 * 1024)
-        except requests.RequestException:
+            json.loads(raw)
+        except (requests.RequestException, json.JSONDecodeError, UnicodeDecodeError):
             raw = path.read_bytes()
             saved = True
             print("Upstream temporarily unavailable; using the explicitly configured catalog snapshot", flush=True)
@@ -179,7 +180,7 @@ def build(config, output, offline=False):
             if (saved or offline) and config.get("downloadMetadataPath"):
                 raise requests.ConnectionError("Use the matching saved download metadata")
             metadata = json.loads(fetch(fresh(config["downloadMetadata"]), 65536))
-        except requests.RequestException:
+        except (requests.RequestException, json.JSONDecodeError, UnicodeDecodeError):
             fallback = config.get("downloadMetadataPath")
             if not fallback:
                 raise

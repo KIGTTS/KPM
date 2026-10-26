@@ -98,6 +98,28 @@ class CatalogTest(unittest.TestCase):
             self.assertTrue(site["savedCatalog"])
             self.assertNotEqual(old["updatedAt"], site["catalog"]["updatedAt"])
 
+    def test_html_upstream_uses_validated_snapshot(self):
+        config = json.loads((ROOT / "source.json").read_text(encoding="utf-8"))
+        with cached_source(ROOT), TemporaryDirectory() as folder, patch("build.fetch", return_value=b"<!doctype html><title>Temporarily unavailable</title>"):
+            build(config, Path(folder))
+            site = json.loads((Path(folder) / "site.json").read_text(encoding="utf-8"))
+            self.assertTrue(site["savedCatalog"])
+            self.assertEqual(config["expectedSourceId"], site["catalog"]["id"])
+            with self.assertRaises(ValueError):
+                build(dict(config, expectedSourceId="different.source"), Path(folder))
+
+    def test_html_download_metadata_uses_configured_metadata(self):
+        config = json.loads((ROOT / "source.json").read_text(encoding="utf-8"))
+        def response(url, maximum):
+            return b"<html>Temporary error</html>" if "android/release.json" in url else raw
+        with cached_source(ROOT) as fixture, TemporaryDirectory() as folder, patch("build.fetch", side_effect=response):
+            raw = (fixture / config["catalogPath"]).read_bytes()
+            build(config, Path(folder))
+            site = json.loads((Path(folder) / "site.json").read_text(encoding="utf-8"))
+            metadata = json.loads((ROOT / config["downloadMetadataPath"]).read_text(encoding="utf-8"))
+            self.assertIn(metadata["path"], site["downloadURL"])
+            self.assertFalse(site["savedCatalog"])
+
     def test_offline_bundle_uses_no_network_and_keeps_android_link_and_licenses(self):
         config = json.loads((ROOT / "source.json").read_text(encoding="utf-8"))
         with cached_source(ROOT), TemporaryDirectory() as folder, patch("build.fetch", side_effect=AssertionError("network used")):

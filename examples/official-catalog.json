@@ -384,7 +384,7 @@
     }
   },
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-25T20:15:45.120813+00:00",
+  "updatedAt": "2026-10-26T07:43:15.469719+00:00",
   "packages": [
     {
       "id": "backup.kigusay",
@@ -1548,11 +1548,50 @@
       "icon": {
         "symbol": "robot_2"
       },
-      "description": "## AI 助手\n\n把聊天、查找资料和动手创作放在一起。可以发送图片、切换模型，也可以同时处理多个会话。\n\n- 制作带图片的快捷文本或互动网页。\n- 整理常用内容，让 AI 帮忙完成日常操作。\n- 随时回看历史消息，继续之前的话题。\n\n支持音频波形与节拍估计、视频采样预览、SVG与3D素材结构分析；网页跟随软件主题，调试会话可持续操作。",
+      "description": "## AI 助手\n\n把聊天、查找资料和动手创作放在一起。可以发送图片、切换模型，也可以同时处理多个会话。\n\n- 制作带图片的快捷文本或互动网页。\n- 整理常用内容，让 AI 帮忙完成日常操作。\n- 随时回看历史消息，继续之前的话题。\n\n支持音频波形与节拍估计、视频采样预览、SVG与3D素材结构分析；网页跟随软件主题，调试会话可持续操作。\n\n## 搜索与网页读取\n\n选择Bing、DeepSeek、博查、Tavily、Brave或Serper，分别配置API地址与密钥，调整结果数量和备用来源。首次验证可用的DeepSeek官方连接后，可选择将其设为默认搜索源。",
       "tags": [
         "AI"
       ],
       "releases": [
+        {
+          "version": "0.9.27",
+          "versionCode": 31,
+          "format": "NATIVE",
+          "sha256": "7541cccb6b0b16da81875b85452a86b18985a09eac498d128c2ced863819f7fc",
+          "bytes": 378277,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.27.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 31,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "可分别配置常用搜索API、默认搜索源与网页读取；首次验证DeepSeek官方连接后询问是否设为默认。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "overlay",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "overlay": "添加你确认的 AI 助手悬浮入口，并显示任务提醒。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
         {
           "version": "0.9.26",
           "versionCode": 30,
