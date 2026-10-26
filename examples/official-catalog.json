@@ -1554,6 +1554,84 @@
       ],
       "releases": [
         {
+          "version": "0.9.26",
+          "versionCode": 30,
+          "format": "NATIVE",
+          "sha256": "e1b562526eb8d89c974192752c9dc42fe0ba04433207c9fc21358f8a4b50a13d",
+          "bytes": 358314,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.26.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 31,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "支持上传、读取和保存各类文件，原样加入项目或作为资源交付；长任务保留附件引用。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "overlay",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "overlay": "添加你确认的 AI 助手悬浮入口，并显示任务提醒。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
+        {
+          "version": "0.9.25",
+          "versionCode": 29,
+          "format": "NATIVE",
+          "sha256": "9f8045fcf56baa4eabc269d84e2c69ccd67fe3b7edd86a53239bd8e85463a283",
+          "bytes": 358220,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.25.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 31,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "支持添加与保存文件、分段读取源码和数据文件，原样复制到项目，并可作为快捷文本或插件资源交付。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "overlay",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "overlay": "添加你确认的 AI 助手悬浮入口，并显示任务提醒。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
+        {
           "version": "0.9.24",
           "versionCode": 28,
           "format": "NATIVE",
