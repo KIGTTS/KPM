@@ -50,6 +50,16 @@ class CatalogTest(unittest.TestCase):
         item["releases"] = [release]
         validate(dict(schemaVersion=2, id="test.frames", name="名片边框", kind="RESOURCES", packages=[item], assets=catalog.get("assets", {})))
 
+    def test_font_resources_use_signed_data_releases(self):
+        catalog = json.loads((ROOT / "examples/official-catalog.json").read_text(encoding="utf-8"))
+        item = copy.deepcopy(catalog["packages"][0]); item["resourceType"] = "FONT"
+        release = item["releases"][-1]; release.update(format="RESOURCE", apiVersion=32, abis=[], permissions=[], permissionPurposes={})
+        item["releases"] = [release]
+        source = dict(schemaVersion=2, id="test.fonts", name="字体", kind="RESOURCES", packages=[item], assets=catalog.get("assets", {}))
+        validate(source)
+        release["format"] = "NATIVE"
+        with self.assertRaises(Exception): validate(source)
+
     def test_preview_dimensions_accept_any_aspect_and_require_complete_pair(self):
         value = self.catalog()
         for width,height in ((1,100000),(100000,1),(1080,2400),(2000,2000),(32768,8192)):

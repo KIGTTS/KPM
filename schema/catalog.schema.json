@@ -217,7 +217,8 @@
             "VOICE",
             "FRAME",
             "STICKERS",
-            "CARD_FRAME"
+            "CARD_FRAME",
+            "FONT"
           ]
         }
       },
