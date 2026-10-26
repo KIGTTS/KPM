@@ -9,7 +9,9 @@ export function showDetail(item, site, sourceURL) {
   document.getElementById('detail-summary').textContent = item.summary || '';
   const body = document.getElementById('detail-body');
   body.querySelector('.preview-gallery')?.dispose();
-  body.replaceChildren(markdown(item.description || item.summary, site));
+  body.replaceChildren(...(item.description ? [markdown(item.description, site)] : []));
+  document.querySelector('#detail .close-dialog').setAttribute('aria-label', '关闭详情');
+  body.setAttribute('aria-label', '详细信息');
   const gallery = createPreviewGallery(item, site);
   if (gallery) body.append(gallery);
   const meta = node('div', 'release-meta');
@@ -41,7 +43,7 @@ export function showDetail(item, site, sourceURL) {
   }
   const homepage = safeURL(item.homepage);
   if (homepage) { const link = node('a', 'text-button', '项目主页 ↗'); link.href = homepage; body.append(link); }
-  document.getElementById('detail-add').href = sourceLink(sourceURL, item.id);
+  document.getElementById('detail-add').href = sourceLink(sourceURL, item.id, site.catalog.linkPolicy);
   document.getElementById('detail').showModal();
   body.scrollTop = 0;
 }

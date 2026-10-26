@@ -38,6 +38,18 @@ class CatalogTest(unittest.TestCase):
         source["schemaVersion"] = 2; release["format"] = "NATIVE"
         with self.assertRaises(Exception): validate(source)
 
+    def test_card_frames_and_source_link_policy(self):
+        value = self.catalog()
+        value["linkPolicy"] = dict(requireAddition=True, recommendAfterInstall=True)
+        validate(value)
+        value["linkPolicy"]["requireAddition"] = "true"
+        with self.assertRaises(Exception): validate(value)
+        catalog = json.loads((ROOT / "examples/official-catalog.json").read_text(encoding="utf-8"))
+        item = copy.deepcopy(catalog["packages"][0]); item["resourceType"] = "CARD_FRAME"
+        release = item["releases"][-1]; release.update(format="RESOURCE", apiVersion=30, abis=[], permissions=[], permissionPurposes={})
+        item["releases"] = [release]
+        validate(dict(schemaVersion=2, id="test.frames", name="名片边框", kind="RESOURCES", packages=[item], assets=catalog.get("assets", {})))
+
     def test_preview_dimensions_accept_any_aspect_and_require_complete_pair(self):
         value = self.catalog()
         for width,height in ((1,100000),(100000,1),(1080,2400),(2000,2000),(32768,8192)):

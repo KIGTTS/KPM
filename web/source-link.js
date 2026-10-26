@@ -1,13 +1,15 @@
 // Android browsers can fall back to the guide without showing an unknown-scheme page.
-export function sourceLink(sourceURL, packageId) {
+export function sourceLink(sourceURL, packageId, policy = {}) {
   const query = `url=${encodeURIComponent(sourceURL)}` + (packageId ? `&package=${encodeURIComponent(packageId)}` : '');
+  const path = packageId ? 'open' : 'add';
+  const mode = packageId ? `&addSource=${policy.requireAddition ? 'required' : 'optional'}` : '';
   const android = navigator.userAgentData?.platform === 'Android' || /Android/i.test(navigator.userAgent);
   // Edge handles the scheme through its own confirmation UI. Its intent handler
   // can choose the browser fallback even when the app is installed.
-  if (!android || /EdgA\//.test(navigator.userAgent)) return `kigtts://source/add?${query}`;
+  if (!android || /EdgA\//.test(navigator.userAgent)) return `kigtts://source/${path}?${query}${mode}`;
   const fallback = new URL(location.href);
   fallback.hash = 'add-guide';
-  return `intent://source/add?${query}#Intent;scheme=kigtts;package=com.kigtts.next;S.browser_fallback_url=${encodeURIComponent(fallback.href)};end`;
+  return `intent://source/${path}?${query}${mode}#Intent;scheme=kigtts;package=com.kigtts.next;S.browser_fallback_url=${encodeURIComponent(fallback.href)};end`;
 }
 
 // A launch is always user initiated; never retry or auto-download in a timer.

@@ -96,3 +96,16 @@ python tools/build.py --config examples/resource-source.json --output dist/resou
 图片预览、全屏图库及横向分类按钮支持鼠标按住左右拖动。拖动时内容跟随指针，全屏图库松开后吸附到相邻图片；普通点击保留原操作，拖动松开不会误触打开图片或切换分类。
 
 图片和图标加载时显示随主题变化的占位动效，完成解码后淡入；加载失败会结束占位并显示提示或替代图标。插件列表首次读取时显示骨架，条目进入视口时渐进出现；追加下一批保留已有条目，避免反复播放入场动效。系统减弱动效开启时使用静态占位并直接显示内容。
+
+
+### 详情直链与来源邀请（API30）
+
+资源（包括照片边框 FRAME、名片边框 CARD_FRAME）可通过源目录的包标识打开详情：
+
+```
+kigtts://source/open?url=<编码后的HTTPS目录地址>&package=<包ID>&addSource=optional
+```
+
+`optional` 允许未添加源的用户查看和安装；`required` 则先显示添加源确认页。
+旧的 `/source/add` 链接默认先添加源，仍然兼容。
+目录可以设置 `linkPolicy.requireAddition` 控制网页详情按钮，设置 `linkPolicy.recommendAfterInstall` 在成功添加内容后邀请用户添加来源；不会在打开详情时自动添加来源。

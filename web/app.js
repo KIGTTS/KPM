@@ -41,7 +41,7 @@ try {
   configureTheme(site.themeColor || DEFAULT_SEED);
   if (catalog.kind === 'RESOURCES') {
     document.getElementById('catalog-title').firstChild.textContent = '资源列表 ';
-    document.querySelector('.add-heading span:last-child').textContent = '添加这个源';
+    document.querySelector('.add-heading > span:last-child').textContent = '添加这个源';
     document.querySelector('.add-card').setAttribute('aria-label', '添加资源来源');
     document.querySelector('.scan-row img').alt = '手机扫码添加这个源';
     document.querySelector('.guide-steps li:last-child h3').textContent = '选择喜欢的内容';
@@ -70,7 +70,7 @@ try {
     try { await navigator.clipboard.writeText(sourceURL); toast('源地址已复制'); }
     catch { $('guide').showModal(); const selection = getSelection(); const range = document.createRange(); range.selectNodeContents($('manual-url')); selection.removeAllRanges(); selection.addRange(range); toast('请复制已选中的源地址'); }
   });
-  const resourceLabels = { QUICK_TEXT: '快捷文本', PHOTOS: '照片集', FILTER: '滤镜', VOICE: '语音包', FRAME: '照片边框', STICKERS: '贴纸包' };
+  const resourceLabels = { QUICK_TEXT: '快捷文本', PHOTOS: '照片集', FILTER: '滤镜', VOICE: '语音包', FRAME: '照片边框', CARD_FRAME: '名片边框', STICKERS: '贴纸包' };
   catalog.packages.forEach(item => { if (item.resourceType) item.category = resourceLabels[item.resourceType]; });
   let category = '', query = '', visibleLimit = 24;
   let loadObserver;

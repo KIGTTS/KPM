@@ -5,7 +5,10 @@
   "name": "KIGTTS 资源",
   "description": "为字幕与照片添加新的风格。",
   "homepage": "https://github.com/KIGTTS/KPM",
-  "updatedAt": "2026-10-25T00:00:00Z",
+  "updatedAt": "2026-10-26T00:00:00Z",
+  "linkPolicy": {
+    "recommendAfterInstall": true
+  },
   "icon": {
     "symbol": "collections_bookmark"
   },
@@ -81,11 +84,83 @@
       "thumbnails": [
         "soft-colors"
       ]
+    },
+    {
+      "id": "resources.card-borders",
+      "name": "名片边框",
+      "summary": "细线、花瓣与电路，为你的名片添一道轮廓。",
+      "resourceType": "CARD_FRAME",
+      "category": "外观",
+      "icon": {
+        "symbol": "id_card"
+      },
+      "license": "CC0-1.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "versionCode": 1,
+          "format": "RESOURCE",
+          "apiVersion": 30,
+          "minSdk": 26,
+          "sha256": "3f75412e907648a49497586c0f2b3080eb7ff9d07bf45bff0a5f0da1fc862db4",
+          "bytes": 2916,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "dependencies": {},
+          "mirrors": [
+            {
+              "name": "魔搭",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/resources.card-borders-1.0.0.kigresource?view=false"
+            }
+          ],
+          "notes": "首次发布。",
+          "permissions": [],
+          "permissionPurposes": {}
+        }
+      ],
+      "thumbnails": [
+        "card-borders"
+      ]
+    },
+    {
+      "id": "resources.word-stickers",
+      "name": "彩色字贴",
+      "summary": "写下文字，挑选颜色，做一张自己的字贴。",
+      "resourceType": "STICKERS",
+      "category": "外观",
+      "icon": {
+        "symbol": "text_fields"
+      },
+      "license": "CC0-1.0",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "versionCode": 1,
+          "format": "RESOURCE",
+          "apiVersion": 30,
+          "minSdk": 26,
+          "sha256": "51e864881f22b09800df1bbea0c4785b22e6badec93d2ce49893c48c71834bbd",
+          "bytes": 2548,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "dependencies": {},
+          "mirrors": [
+            {
+              "name": "魔搭",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/resources.word-stickers-1.0.0.kigresource?view=false"
+            }
+          ],
+          "notes": "首次发布。",
+          "permissions": [],
+          "permissionPurposes": {}
+        }
+      ],
+      "thumbnails": [
+        "word-stickers"
+      ]
     }
   ],
   "assets": {
     "classic-frames": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/artwork/classic-frames.svg",
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/d0ce408fbbbeac4858607640d351f04e16440ef5/artwork/classic-frames-b9403e8e4c41.svg",
       "sha256": "b9403e8e4c41a2361542d262800e26cd447278650e9bb1a8381e6ad6ce8b0ef4",
       "bytes": 1123,
       "width": 1200,
@@ -93,12 +168,28 @@
       "alt": "经典相框预览"
     },
     "soft-colors": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/artwork/soft-colors.svg",
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/d0ce408fbbbeac4858607640d351f04e16440ef5/artwork/soft-colors-508ed485e3db.svg",
       "sha256": "508ed485e3db657387800fc844a5e385fd21d3fa83c027c6325ab79e4ea9746b",
       "bytes": 749,
       "width": 480,
       "height": 900,
       "alt": "柔和色彩预览"
+    },
+    "card-borders": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/d0ce408fbbbeac4858607640d351f04e16440ef5/artwork/card-borders-72a22d8493de.svg",
+      "sha256": "72a22d8493defec406878cb5364dc80a7f85e402a1e2ff32ce1152984adc80cc",
+      "bytes": 2835,
+      "width": 1200,
+      "height": 800,
+      "alt": "名片边框预览"
+    },
+    "word-stickers": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/d0ce408fbbbeac4858607640d351f04e16440ef5/artwork/word-stickers-0fca0ceaaca6.svg",
+      "sha256": "0fca0ceaaca63486e58dc370b88dc6fde84309500b225e16e13e6e60176e1c7f",
+      "bytes": 654,
+      "width": 1200,
+      "height": 800,
+      "alt": "彩色字贴预览"
     }
   }
 }

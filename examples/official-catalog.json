@@ -1554,6 +1554,123 @@
       ],
       "releases": [
         {
+          "version": "0.9.24",
+          "versionCode": 28,
+          "format": "NATIVE",
+          "sha256": "de5e55be9c8280056c7fa5c27c5c145f72daecffa6a2aecbac5939c7c59d0001",
+          "bytes": 342953,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.24.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "按用户语言、地区及访问条件选择检索来源，界面任务先查相关截图；结合官方资料核对版本后执行。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "overlay",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "overlay": "添加你确认的 AI 助手悬浮入口，并显示任务提醒。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
+        {
+          "version": "0.9.23",
+          "versionCode": 27,
+          "format": "NATIVE",
+          "sha256": "d4dc016de177ac174356ccdb43d802e8ee68087f3549dbc0bd0953e05b44dfe0",
+          "bytes": 341491,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.23.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "执行前检索相关资料并核对版本；界面任务先查截图和示例，完成后检查实际页面。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "overlay",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "overlay": "添加你确认的 AI 助手悬浮入口，并显示任务提醒。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
+        {
+          "version": "0.9.22",
+          "versionCode": 26,
+          "format": "NATIVE",
+          "sha256": "ff383be56a766e6ae5fc46b03455665c8e31edab8754be89056094c61196e814",
+          "bytes": 338670,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.22.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "联网搜索与网页读取优先使用已配置的 DeepSeek 官方服务，浏览器工具支持 Search 与 Fetch；服务不可用时提示并切换备用来源。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "overlay",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "overlay": "添加你确认的 AI 助手悬浮入口，并显示任务提醒。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
+        {
           "version": "0.9.21",
           "versionCode": 25,
           "format": "NATIVE",
@@ -2127,6 +2244,33 @@
         "工具"
       ],
       "releases": [
+        {
+          "version": "0.16.0",
+          "versionCode": 22,
+          "format": "NATIVE",
+          "sha256": "57c6eeee60c064a09f5ebf1670d80776aa877a94bfff987a575e10f9b603eabc",
+          "bytes": 169200,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.16.0.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 30,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "新增名片边框与参数字贴，资源链接可直接查看和添加，安装后可选择订阅来源。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "更新你添加的目录，并下载所选内容和预览图片。",
+            "app-control": "检查已安装的插件，并在你确认后安装插件或添加资源。"
+          }
+        },
         {
           "version": "0.15.0",
           "versionCode": 21,

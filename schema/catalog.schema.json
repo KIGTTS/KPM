@@ -82,6 +82,22 @@
       ],
       "default": "PLUGINS",
       "description": "RESOURCE sources contain data imported into user libraries."
+    },
+    "linkPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requireAddition": {
+          "type": "boolean",
+          "default": false,
+          "description": "Package view links ask the user to add the source before opening details."
+        },
+        "recommendAfterInstall": {
+          "type": "boolean",
+          "default": false,
+          "description": "Offer to add this source after a verified successful installation or resource import."
+        }
+      }
     }
   },
   "$defs": {
@@ -200,7 +216,8 @@
             "FILTER",
             "VOICE",
             "FRAME",
-            "STICKERS"
+            "STICKERS",
+            "CARD_FRAME"
           ]
         }
       },
