@@ -8,6 +8,38 @@
     "image": "kpm-source"
   },
   "assets": {
+    "preview-tools.cloud-agent-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-preview-light-a3c2d3c4c322.png?view=false",
+      "sha256": "a3c2d3c4c322bf43aed2389432cb5877715f13c2d20e60a287aed85a2891b8d6",
+      "bytes": 147405,
+      "alt": "AI 助手 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.sensevoice-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-preview-dark-378dad138208.png?view=false",
+      "sha256": "378dad1382088e75e721bafa581efaeca111c41038a0cd9fc9940d46c1510fba",
+      "bytes": 58085,
+      "alt": "SenseVoice 语音识别 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-service.speech-recognition-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-cover-abacecbfa17b.svg?view=false",
+      "sha256": "abacecbfa17b86921a1d386e3ffb6b4c4155f3c7dd1899916216beb09df21c45",
+      "bytes": 130784,
+      "alt": "语音识别服务 · 花型封面",
+      "width": 1600,
+      "height": 800
+    },
+    "preview-display.led-preview-led": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-led-1c63f822b0ba.png?view=false",
+      "sha256": "1c63f822b0ba14b1ef1a05d7265003d22c51103e1675ae530387495380f84ca2",
+      "bytes": 1191673,
+      "alt": "LED 灯珠字幕 · LED 字幕效果",
+      "width": 1280,
+      "height": 720
+    },
     "preview-tools.package-store-preview-light": {
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-preview-light-adb5110f698c.png?view=false",
       "sha256": "adb5110f698cafe51d27e05df4883f1f1048cda59f77adafa27e0d2e003c2361",
@@ -24,107 +56,19 @@
       "width": 1600,
       "height": 800
     },
-    "preview-backup.kigusay-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-preview-dark-29e6fc979762.png?view=false",
-      "sha256": "29e6fc979762b1785b89153e4180f33919ed492da0f937f4e9d219ba4c413de6",
-      "bytes": 174471,
-      "alt": "娃语预设兼容 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
+    "preview-debug.ui-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-cover-8b35e8dbcd35.svg?view=false",
+      "sha256": "8b35e8dbcd35b7ceb23b588e921f59a975e6bdc8ec7474630d2b8ae413ec304e",
+      "bytes": 117050,
+      "alt": "界面调试插件 · 花型封面",
+      "width": 1600,
+      "height": 800
     },
     "preview-engine.piper-preview-light": {
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-preview-light-f88fc76d2114.png?view=false",
       "sha256": "f88fc76d2114a02b88cdf673a3d2f487af74314cca22682df4bac37d2d646b44",
       "bytes": 67595,
       "alt": "Piper 语音引擎 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-backup.kigusay-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-preview-light-0565eb22a285.png?view=false",
-      "sha256": "0565eb22a285a346777b9bbf0b658930da76aa6442074bcf01e803300da49eaa",
-      "bytes": 175737,
-      "alt": "娃语预设兼容 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.cloud-tts-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-cover-f9358c9e2056.svg?view=false",
-      "sha256": "f9358c9e205670544d309822eef11a8be9e000bd8a5bfccb2282d32d566cd7dd",
-      "bytes": 134505,
-      "alt": "云端语音合成 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-tools.cloud-agent-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-preview-dark-2061fce33cd1.png?view=false",
-      "sha256": "2061fce33cd1752b63693707b497c8c6477151befe65f78091ed5175ba07e42a",
-      "bytes": 146364,
-      "alt": "AI 助手 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.sensevoice-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-preview-dark-378dad138208.png?view=false",
-      "sha256": "378dad1382088e75e721bafa581efaeca111c41038a0cd9fc9940d46c1510fba",
-      "bytes": 58085,
-      "alt": "SenseVoice 语音识别 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-tools.package-store-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-preview-dark-ab090a41d56e.png?view=false",
-      "sha256": "ab090a41d56eeff48b683e9b4a2a3dfa1da969a1fa9dc3169914839754f54461",
-      "bytes": 157819,
-      "alt": "插件商店 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.piper-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-preview-dark-1cf29b3c752d.png?view=false",
-      "sha256": "1cf29b3c752d28203023fbbcd922a542bba36130b110ca979752ccb474fb4661",
-      "bytes": 67116,
-      "alt": "Piper 语音引擎 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-service.speech-recognition-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-preview-dark-2954604399ce.png?view=false",
-      "sha256": "2954604399ce4a51ddeb780fe4175cf73cfa632690380055f2965b2755a394c9",
-      "bytes": 149661,
-      "alt": "语音识别服务 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-runtime.lua-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-preview-light-6165640797c5.png?view=false",
-      "sha256": "6165640797c52e5773bb39928e235ecdec89eae6ae72f645bdd42f3bd739cfa9",
-      "bytes": 72290,
-      "alt": "插件编辑器 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-tools.cloud-agent-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-preview-light-a3c2d3c4c322.png?view=false",
-      "sha256": "a3c2d3c4c322bf43aed2389432cb5877715f13c2d20e60a287aed85a2891b8d6",
-      "bytes": 147405,
-      "alt": "AI 助手 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-runtime.lua-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-preview-dark-84942d213070.png?view=false",
-      "sha256": "84942d2130705c98aa63ed7c1b0445ac834f76cedac7bc49fedf33165b6dc368",
-      "bytes": 71830,
-      "alt": "插件编辑器 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.sensevoice-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-preview-light-bec7205346d6.png?view=false",
-      "sha256": "bec7205346d6bb2b20d3f449f0437310a5d21eb475eab711d3f138ab4c3fb11f",
-      "bytes": 58298,
-      "alt": "SenseVoice 语音识别 · 界面预览 · 浅色",
       "width": 1179,
       "height": 2556
     },
@@ -136,105 +80,11 @@
       "width": 1179,
       "height": 2556
     },
-    "preview-engine.cloud-tts-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-preview-light-0b15ae46bd23.png?view=false",
-      "sha256": "0b15ae46bd2395c08275a999981779224f3ec3512b457808b0196e9fb4baf6ef",
-      "bytes": 115160,
-      "alt": "云端语音合成 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-debug.ui-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-preview-dark-acfea6ef2d22.png?view=false",
-      "sha256": "acfea6ef2d222dc2f23a504075579fde979c17ede71653bac60edff005a316d2",
-      "bytes": 151991,
-      "alt": "界面调试插件 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-display.led-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-dark-f71c0effa16a.png?view=false",
-      "sha256": "f71c0effa16aee99b8223ac44e81a1e962e96d803b8b9546768215eb6d24d07f",
-      "bytes": 110927,
-      "alt": "LED 灯珠字幕 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.sensevoice-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-cover-f5750edcf178.svg?view=false",
-      "sha256": "f5750edcf1787ba8dee355af1cf03db5e4e8547f3e45f310a5212eb87dfcf32f",
-      "bytes": 124118,
-      "alt": "SenseVoice 语音识别 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "kpm-source": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-71aeb98df34a.svg?view=false",
-      "bytes": 1951,
-      "alt": "KPM 官方插件源",
-      "sha256": "71aeb98df34a3ec7b1c521a047495bf361ea95b0c6f36c2e3cf59e988a6f9add"
-    },
-    "preview-engine.cloud-asr-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-cover-77fcbaef3305.svg?view=false",
-      "sha256": "77fcbaef33057c26001f9e31f8bf9b98f4bbe9f189804ea98e1acbcd70964250",
-      "bytes": 120701,
-      "alt": "云端语音识别 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-runtime.lua-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-cover-4c90565a88b4.svg?view=false",
-      "sha256": "4c90565a88b4dd2a63f29dc768a72b8bc3f221752a36e6851127778bea5177c8",
-      "bytes": 129009,
-      "alt": "插件编辑器 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-display.led-preview-led": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-led-1c63f822b0ba.png?view=false",
-      "sha256": "1c63f822b0ba14b1ef1a05d7265003d22c51103e1675ae530387495380f84ca2",
-      "bytes": 1191673,
-      "alt": "LED 灯珠字幕 · LED 字幕效果",
-      "width": 1280,
-      "height": 720
-    },
-    "preview-engine.cloud-asr-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-preview-dark-7cd8647d53f6.png?view=false",
-      "sha256": "7cd8647d53f60567638797246032bdda60f0a4157b9947e822dbfd31a93ed585",
-      "bytes": 114811,
-      "alt": "云端语音识别 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-input.quick-gestures-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-preview-dark-654493b8e5d1.png?view=false",
-      "sha256": "654493b8e5d1d07b01e16ac511b71503d4d82cbcb49506292d40561bb6352f40",
-      "bytes": 156391,
-      "alt": "手势触发 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-service.speech-synthesis-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-cover-d0346ed07135.svg?view=false",
-      "sha256": "d0346ed07135416785af06a705c47be6085887ad7665374f17bccd2ada153fde",
-      "bytes": 120744,
-      "alt": "语音合成服务 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
     "preview-service.speech-synthesis-preview-light": {
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-preview-light-0fca10e22d19.png?view=false",
       "sha256": "0fca10e22d19b496ecaf41e3cbc6b32b358822dffe69961ab6a58b60024fb333",
       "bytes": 86079,
       "alt": "语音合成服务 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-service.speech-synthesis-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-preview-dark-8bfa64b29ea3.png?view=false",
-      "sha256": "8bfa64b29ea3c1017ab3e86615e602df21d656f482d3e590b97be6eb5a4f13e9",
-      "bytes": 85984,
-      "alt": "语音合成服务 · 界面预览 · 深色",
       "width": 1179,
       "height": 2556
     },
@@ -246,115 +96,19 @@
       "width": 1600,
       "height": 800
     },
-    "preview-service.speech-recognition-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-preview-light-70d018ab7d1e.png?view=false",
-      "sha256": "70d018ab7d1e6b84550b0e1c186b9316fb6dacc44c819ab58a74b87f3ab8d92a",
-      "bytes": 150010,
-      "alt": "语音识别服务 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-backup.kigusay-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-cover-26d67a030e4c.svg?view=false",
-      "sha256": "26d67a030e4c500a73ad6df9e400d4778094d5ee03eb845b077723bc03613e46",
-      "bytes": 137158,
-      "alt": "娃语预设兼容 · 花型封面",
+    "preview-engine.cloud-asr-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-cover-77fcbaef3305.svg?view=false",
+      "sha256": "77fcbaef33057c26001f9e31f8bf9b98f4bbe9f189804ea98e1acbcd70964250",
+      "bytes": 120701,
+      "alt": "云端语音识别 · 花型封面",
       "width": 1600,
       "height": 800
     },
-    "preview-engine.streaming-asr-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-cover-551f1a28eb7b.svg?view=false",
-      "sha256": "551f1a28eb7b19edc65c9809c09949ca7d1fbbbf99607ae3b2ddaa27f2568693",
-      "bytes": 136531,
-      "alt": "流式语音识别 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-debug.ui-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-preview-light-41dc920d1b0c.png?view=false",
-      "sha256": "41dc920d1b0c1752d8b261beff110ea82ccaf7f15e582c45dfe3f74ba91e2673",
-      "bytes": 154085,
-      "alt": "界面调试插件 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-tools.native-builder-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-cover-de1ba3d6b9dd.svg?view=false",
-      "sha256": "de1ba3d6b9dd1c910ed901eca50c1d93463903200d7ef5107404b6566fe4e43e",
-      "bytes": 122579,
-      "alt": "原生构建扩展 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-display.led-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-light-ef29b71596c4.png?view=false",
-      "sha256": "ef29b71596c48bf934898e09e9e5a23235202791aa35acda9c3476a298f9d8fe",
-      "bytes": 110802,
-      "alt": "LED 灯珠字幕 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.cloud-asr-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-preview-light-523a39b5dc55.png?view=false",
-      "sha256": "523a39b5dc55d639b09c30be358246910089d9603accccbb4680c8e6868f64c2",
-      "bytes": 114950,
-      "alt": "云端语音识别 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-input.quick-gestures-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-preview-light-c4b51af44024.png?view=false",
-      "sha256": "c4b51af44024f383f788133b8b5395a626ce2e8d7fc6de04d18b9a9f1e0a0d01",
-      "bytes": 156677,
-      "alt": "手势触发 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-display.led-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-cover-1dd145a59cd3.svg?view=false",
-      "sha256": "1dd145a59cd3dd45b6f0aa91b39473e4c89d4e9f8b5dba4d25202af5070d1301",
-      "bytes": 117239,
-      "alt": "LED 灯珠字幕 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-service.speech-recognition-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-cover-abacecbfa17b.svg?view=false",
-      "sha256": "abacecbfa17b86921a1d386e3ffb6b4c4155f3c7dd1899916216beb09df21c45",
-      "bytes": 130784,
-      "alt": "语音识别服务 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-debug.ui-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-cover-8b35e8dbcd35.svg?view=false",
-      "sha256": "8b35e8dbcd35b7ceb23b588e921f59a975e6bdc8ec7474630d2b8ae413ec304e",
-      "bytes": 117050,
-      "alt": "界面调试插件 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-tools.native-builder-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-preview-light-5f9d7ca8e639.png?view=false",
-      "sha256": "5f9d7ca8e639824f7ce46321ea960515764000ba648c368a285b9b6106d92f19",
-      "bytes": 85979,
-      "alt": "原生构建扩展 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.streaming-asr-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-preview-dark-06075f1db289.png?view=false",
-      "sha256": "06075f1db289a8634022dde8865faed7ca39dcce17449300a3e1fea21ddd36da",
-      "bytes": 63839,
-      "alt": "流式语音识别 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-tools.native-builder-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-preview-dark-b83067653403.png?view=false",
-      "sha256": "b830676534037dea30def8c74c9851438564865653de4de1d39630147e269ee1",
-      "bytes": 85272,
-      "alt": "原生构建扩展 · 界面预览 · 深色",
+    "preview-input.quick-gestures-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-preview-dark-654493b8e5d1.png?view=false",
+      "sha256": "654493b8e5d1d07b01e16ac511b71503d4d82cbcb49506292d40561bb6352f40",
+      "bytes": 156391,
+      "alt": "手势触发 · 界面预览 · 深色",
       "width": 1179,
       "height": 2556
     },
@@ -366,6 +120,228 @@
       "width": 1179,
       "height": 2556
     },
+    "preview-engine.cloud-asr-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-preview-light-523a39b5dc55.png?view=false",
+      "sha256": "523a39b5dc55d639b09c30be358246910089d9603accccbb4680c8e6868f64c2",
+      "bytes": 114950,
+      "alt": "云端语音识别 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.streaming-asr-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-cover-551f1a28eb7b.svg?view=false",
+      "sha256": "551f1a28eb7b19edc65c9809c09949ca7d1fbbbf99607ae3b2ddaa27f2568693",
+      "bytes": 136531,
+      "alt": "流式语音识别 · 花型封面",
+      "width": 1600,
+      "height": 800
+    },
+    "preview-engine.sensevoice-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-preview-light-bec7205346d6.png?view=false",
+      "sha256": "bec7205346d6bb2b20d3f449f0437310a5d21eb475eab711d3f138ab4c3fb11f",
+      "bytes": 58298,
+      "alt": "SenseVoice 语音识别 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-service.speech-synthesis-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-preview-dark-8bfa64b29ea3.png?view=false",
+      "sha256": "8bfa64b29ea3c1017ab3e86615e602df21d656f482d3e590b97be6eb5a4f13e9",
+      "bytes": 85984,
+      "alt": "语音合成服务 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-debug.ui-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-preview-light-41dc920d1b0c.png?view=false",
+      "sha256": "41dc920d1b0c1752d8b261beff110ea82ccaf7f15e582c45dfe3f74ba91e2673",
+      "bytes": 154085,
+      "alt": "界面调试插件 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.streaming-asr-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-preview-dark-06075f1db289.png?view=false",
+      "sha256": "06075f1db289a8634022dde8865faed7ca39dcce17449300a3e1fea21ddd36da",
+      "bytes": 63839,
+      "alt": "流式语音识别 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-backup.kigusay-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-cover-26d67a030e4c.svg?view=false",
+      "sha256": "26d67a030e4c500a73ad6df9e400d4778094d5ee03eb845b077723bc03613e46",
+      "bytes": 137158,
+      "alt": "娃语预设兼容 · 花型封面",
+      "width": 1600,
+      "height": 800
+    },
+    "preview-backup.kigusay-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-preview-light-0565eb22a285.png?view=false",
+      "sha256": "0565eb22a285a346777b9bbf0b658930da76aa6442074bcf01e803300da49eaa",
+      "bytes": 175737,
+      "alt": "娃语预设兼容 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.sensevoice-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-cover-f5750edcf178.svg?view=false",
+      "sha256": "f5750edcf1787ba8dee355af1cf03db5e4e8547f3e45f310a5212eb87dfcf32f",
+      "bytes": 124118,
+      "alt": "SenseVoice 语音识别 · 花型封面",
+      "width": 1600,
+      "height": 800
+    },
+    "preview-engine.cloud-asr-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-preview-dark-7cd8647d53f6.png?view=false",
+      "sha256": "7cd8647d53f60567638797246032bdda60f0a4157b9947e822dbfd31a93ed585",
+      "bytes": 114811,
+      "alt": "云端语音识别 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-service.speech-synthesis-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-cover-d0346ed07135.svg?view=false",
+      "sha256": "d0346ed07135416785af06a705c47be6085887ad7665374f17bccd2ada153fde",
+      "bytes": 120744,
+      "alt": "语音合成服务 · 花型封面",
+      "width": 1600,
+      "height": 800
+    },
+    "preview-display.led-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-cover-1dd145a59cd3.svg?view=false",
+      "sha256": "1dd145a59cd3dd45b6f0aa91b39473e4c89d4e9f8b5dba4d25202af5070d1301",
+      "bytes": 117239,
+      "alt": "LED 灯珠字幕 · 花型封面",
+      "width": 1600,
+      "height": 800
+    },
+    "preview-input.quick-gestures-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-preview-light-c4b51af44024.png?view=false",
+      "sha256": "c4b51af44024f383f788133b8b5395a626ce2e8d7fc6de04d18b9a9f1e0a0d01",
+      "bytes": 156677,
+      "alt": "手势触发 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-service.speech-recognition-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-preview-light-70d018ab7d1e.png?view=false",
+      "sha256": "70d018ab7d1e6b84550b0e1c186b9316fb6dacc44c819ab58a74b87f3ab8d92a",
+      "bytes": 150010,
+      "alt": "语音识别服务 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-display.led-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-light-ef29b71596c4.png?view=false",
+      "sha256": "ef29b71596c48bf934898e09e9e5a23235202791aa35acda9c3476a298f9d8fe",
+      "bytes": 110802,
+      "alt": "LED 灯珠字幕 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.cloud-tts-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-cover-f9358c9e2056.svg?view=false",
+      "sha256": "f9358c9e205670544d309822eef11a8be9e000bd8a5bfccb2282d32d566cd7dd",
+      "bytes": 134505,
+      "alt": "云端语音合成 · 花型封面",
+      "width": 1600,
+      "height": 800
+    },
+    "preview-service.speech-recognition-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-preview-dark-2954604399ce.png?view=false",
+      "sha256": "2954604399ce4a51ddeb780fe4175cf73cfa632690380055f2965b2755a394c9",
+      "bytes": 149661,
+      "alt": "语音识别服务 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-runtime.lua-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-cover-4c90565a88b4.svg?view=false",
+      "sha256": "4c90565a88b4dd2a63f29dc768a72b8bc3f221752a36e6851127778bea5177c8",
+      "bytes": 129009,
+      "alt": "插件编辑器 · 花型封面",
+      "width": 1600,
+      "height": 800
+    },
+    "preview-tools.cloud-agent-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-preview-dark-2061fce33cd1.png?view=false",
+      "sha256": "2061fce33cd1752b63693707b497c8c6477151befe65f78091ed5175ba07e42a",
+      "bytes": 146364,
+      "alt": "AI 助手 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.piper-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-preview-dark-1cf29b3c752d.png?view=false",
+      "sha256": "1cf29b3c752d28203023fbbcd922a542bba36130b110ca979752ccb474fb4661",
+      "bytes": 67116,
+      "alt": "Piper 语音引擎 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-tools.native-builder-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-preview-dark-b83067653403.png?view=false",
+      "sha256": "b830676534037dea30def8c74c9851438564865653de4de1d39630147e269ee1",
+      "bytes": 85272,
+      "alt": "原生构建扩展 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-debug.ui-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-preview-dark-acfea6ef2d22.png?view=false",
+      "sha256": "acfea6ef2d222dc2f23a504075579fde979c17ede71653bac60edff005a316d2",
+      "bytes": 151991,
+      "alt": "界面调试插件 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-backup.kigusay-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-preview-dark-29e6fc979762.png?view=false",
+      "sha256": "29e6fc979762b1785b89153e4180f33919ed492da0f937f4e9d219ba4c413de6",
+      "bytes": 174471,
+      "alt": "娃语预设兼容 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.cloud-tts-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-preview-light-0b15ae46bd23.png?view=false",
+      "sha256": "0b15ae46bd2395c08275a999981779224f3ec3512b457808b0196e9fb4baf6ef",
+      "bytes": 115160,
+      "alt": "云端语音合成 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-runtime.lua-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-preview-dark-84942d213070.png?view=false",
+      "sha256": "84942d2130705c98aa63ed7c1b0445ac834f76cedac7bc49fedf33165b6dc368",
+      "bytes": 71830,
+      "alt": "插件编辑器 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-runtime.lua-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-preview-light-6165640797c5.png?view=false",
+      "sha256": "6165640797c52e5773bb39928e235ecdec89eae6ae72f645bdd42f3bd739cfa9",
+      "bytes": 72290,
+      "alt": "插件编辑器 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-tools.native-builder-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-cover-de1ba3d6b9dd.svg?view=false",
+      "sha256": "de1ba3d6b9dd1c910ed901eca50c1d93463903200d7ef5107404b6566fe4e43e",
+      "bytes": 122579,
+      "alt": "原生构建扩展 · 花型封面",
+      "width": 1600,
+      "height": 800
+    },
+    "kpm-source": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-71aeb98df34a.svg?view=false",
+      "sha256": "71aeb98df34a3ec7b1c521a047495bf361ea95b0c6f36c2e3cf59e988a6f9add",
+      "alt": "KPM 官方插件源",
+      "bytes": 1951
+    },
     "preview-tools.package-store-cover": {
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-cover-3b0115f8d8b4.svg?view=false",
       "sha256": "3b0115f8d8b4d1434175d2b4f6766b9d762986efe522952b2032d87e606585b5",
@@ -374,6 +350,22 @@
       "width": 1600,
       "height": 800
     },
+    "preview-display.led-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-dark-f71c0effa16a.png?view=false",
+      "sha256": "f71c0effa16aee99b8223ac44e81a1e962e96d803b8b9546768215eb6d24d07f",
+      "bytes": 110927,
+      "alt": "LED 灯珠字幕 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-tools.native-builder-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-preview-light-5f9d7ca8e639.png?view=false",
+      "sha256": "5f9d7ca8e639824f7ce46321ea960515764000ba648c368a285b9b6106d92f19",
+      "bytes": 85979,
+      "alt": "原生构建扩展 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
     "preview-engine.piper-cover": {
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-cover-c3ff9d0c6ff0.svg?view=false",
       "sha256": "c3ff9d0c6ff00ea90e9fe39e014ce0bc73aa820c1c68b02954fe4a4c16b12693",
@@ -381,10 +373,18 @@
       "alt": "Piper 语音引擎 · 花型封面",
       "width": 1600,
       "height": 800
+    },
+    "preview-tools.package-store-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-preview-dark-ab090a41d56e.png?view=false",
+      "sha256": "ab090a41d56eeff48b683e9b4a2a3dfa1da969a1fa9dc3169914839754f54461",
+      "bytes": 157819,
+      "alt": "插件商店 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
     }
   },
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-26T07:43:15.469719+00:00",
+  "updatedAt": "2026-10-29T07:47:26.0143786+00:00",
   "packages": [
     {
       "id": "backup.kigusay",
@@ -2361,6 +2361,33 @@
         "工具"
       ],
       "releases": [
+        {
+          "version": "0.16.8",
+          "versionCode": 30,
+          "format": "NATIVE",
+          "sha256": "19f80144a1dd576283ee92558cb46733533a730d6bc5c0349f78f08e3aa5ca07",
+          "bytes": 175261,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.16.8.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 33,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "下载完成后直接确认安装或添加，取消后可再次操作；安装成功会清理下载缓存。新增字体资源，列表采用相邻圆角，单色图标跟随主题色。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "更新你添加的目录，并下载所选内容和预览图片。",
+            "app-control": "检查已安装的插件，并在你确认后安装插件或添加资源。"
+          }
+        },
         {
           "version": "0.16.0",
           "versionCode": 22,
