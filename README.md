@@ -109,3 +109,7 @@ kigtts://source/open?url=<编码后的HTTPS目录地址>&package=<包ID>&addSour
 `optional` 允许未添加源的用户查看和安装；`required` 则先显示添加源确认页。
 旧的 `/source/add` 链接默认先添加源，仍然兼容。
 目录可以设置 `linkPolicy.requireAddition` 控制网页详情按钮，设置 `linkPolicy.recommendAfterInstall` 在成功添加内容后邀请用户添加来源；不会在打开详情时自动添加来源。
+
+### 随主题色显示的 SVG 图标
+
+源和包均可注册 `"icon": {"image": "glyph", "monochrome": true}`，其中 `glyph` 为 assets 中已校验的受限 SVG。该 SVG 的透明度决定形状，前景由当前主题提供；请将留白写进 viewBox，不绘制底板。省略 monochrome 时保留原图颜色，透明白色旧 SVG 仍兼容自动染色。位图和详情预览图保持原色。宿主接口对应 API33 的 PluginResource.monochrome。

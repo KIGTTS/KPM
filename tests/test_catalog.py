@@ -12,6 +12,33 @@ from build_fixture import cached_source
 
 
 class CatalogTest(unittest.TestCase):
+    def test_monochrome_icon_registration_requires_a_real_image_reference(self):
+        value = self.catalog()
+        value.update(icon=dict(image="glyph", monochrome=True), assets={"glyph": dict(
+            url="https://example.com/glyph", sha256="a" * 64, bytes=256)})
+        validate(value)
+        for invalid in (dict(monochrome=True), dict(symbol="extension", monochrome=True),
+                        dict(image="glyph", monochrome="true")):
+            value["icon"] = invalid
+            with self.assertRaises(Exception): validate(value)
+
+    def test_registered_monochrome_svg_is_themed_even_when_paths_are_black(self):
+        import hashlib
+        config = json.loads((ROOT / "source.json").read_text(encoding="utf-8"))
+        with cached_source(ROOT) as root, TemporaryDirectory() as folder:
+            path = root / config["catalogPath"]
+            value = json.loads(path.read_text(encoding="utf-8"))
+            svg = b'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg>'
+            digest = hashlib.sha256(svg).hexdigest()
+            value["assets"]["themed"] = dict(url="https://example.com/art", sha256=digest, bytes=len(svg))
+            value["icon"] = dict(image="themed", monochrome=True)
+            path.write_text(json.dumps(value), encoding="utf-8")
+            (root / ".cache" / digest).write_bytes(svg)
+            build(config, Path(folder), offline=True)
+            site = json.loads((Path(folder) / "site.json").read_text(encoding="utf-8"))
+            self.assertIn("themed", site["monochromeArt"])
+            self.assertTrue(site["art"]["themed"].endswith(".svg"))
+
     def catalog(self):
         return dict(schemaVersion=1, id="test.source", name="测试", packages=[])
 

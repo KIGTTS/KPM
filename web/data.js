@@ -21,7 +21,7 @@ export function symbol(name) {
 export function icon(value, site) {
   const path = site.art?.[value?.image];
   if (path) {
-    if (site.monochromeArt?.includes(value.image)) {
+    if ((value.monochrome === true && path.endsWith('.svg')) || site.monochromeArt?.includes(value.image)) {
       const mask = node('span', 'symbol artwork-mask');
       mask.setAttribute('aria-hidden', 'true');
       return loadMask(mask, path);

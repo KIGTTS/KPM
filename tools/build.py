@@ -140,6 +140,8 @@ def build(config, output, offline=False):
     (output / ".nojekyll").write_text("", encoding="utf-8")
     (output / "index.json").write_bytes(raw)
     art = {}; monochrome_art = []
+    themed_icons = {value["icon"]["image"] for value in [catalog, *catalog["packages"]]
+                    if value.get("icon", {}).get("monochrome") is True and value["icon"].get("image")}
     cache = ROOT / ".cache"
     cache.mkdir(exist_ok=True)
     for asset_id, image in catalog.get("assets", {}).items():
@@ -153,7 +155,7 @@ def build(config, output, offline=False):
         suffix = bitmap_suffix(data)
         if suffix == ".svg":
             from artwork import white_line_svg
-            if white_line_svg(data): monochrome_art.append(asset_id)
+            if asset_id in themed_icons or white_line_svg(data): monochrome_art.append(asset_id)
         target.write_bytes(data)
         path = "art/" + image["sha256"] + suffix
         (output / "art").mkdir(exist_ok=True)
