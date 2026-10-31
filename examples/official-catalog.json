@@ -384,7 +384,7 @@
     }
   },
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-10-30T15:10:35.4241936+00:00",
+  "updatedAt": "2026-10-31T14:44:51.8075306+00:00",
   "packages": [
     {
       "id": "backup.kigusay",
@@ -672,6 +672,37 @@
       ],
       "releases": [
         {
+          "version": "0.1.2",
+          "versionCode": 3,
+          "format": "NATIVE",
+          "sha256": "50b4c54e9c1a3d6129318d0618eaf3a9cc42515b4ac2a6ec42384c7984749b72",
+          "bytes": 535595,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.cloud-asr-0.1.2.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 28,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "补齐权限用途说明。",
+          "dependencies": {
+            "service.speech-recognition": "^0.8.1"
+          },
+          "permissions": [
+            "asr-batch",
+            "asr-segmented",
+            "network"
+          ],
+          "permissionPurposes": {
+            "asr-batch": "将你提交的整段录音转为文字。",
+            "asr-segmented": "逐段处理连续聆听的录音，返回字幕。",
+            "network": "将待识别的录音及账户凭据发送给你配置的云服务，获取文字结果。"
+          }
+        },
+        {
           "version": "0.1.1",
           "versionCode": 2,
           "format": "NATIVE",
@@ -748,6 +779,37 @@
       ],
       "releases": [
         {
+          "version": "0.1.2",
+          "versionCode": 3,
+          "format": "NATIVE",
+          "sha256": "c62a65625f67caa745e2a4386eaa9aa2e335f9dea21c5b23901bf0f0f6919e5b",
+          "bytes": 569689,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.cloud-tts-0.1.2.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 28,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "补齐权限用途说明。",
+          "dependencies": {
+            "service.speech-synthesis": "^0.8.3"
+          },
+          "permissions": [
+            "tts",
+            "network",
+            "voice-packs"
+          ],
+          "permissionPurposes": {
+            "tts": "使用你选择的云端声音，将文字合成为朗读音频。",
+            "network": "将待朗读的文字、声音选项及账户凭据发送给你配置的云服务，获取合成音频。",
+            "voice-packs": "将你选中的预设声音或克隆声音添加到语音包列表，并管理这些声音。"
+          }
+        },
+        {
           "version": "0.1.1",
           "versionCode": 2,
           "format": "NATIVE",
@@ -823,6 +885,37 @@
         "语音合成"
       ],
       "releases": [
+        {
+          "version": "0.8.3",
+          "versionCode": 11,
+          "format": "NATIVE",
+          "sha256": "34634654463adfa23d2e925d16c06ab2ce3f4378244526f1ebe99ed96db9e2e2",
+          "bytes": 24861077,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.piper-0.8.3.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 21,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a"
+          ],
+          "notes": "补齐权限用途说明。",
+          "dependencies": {
+            "service.speech-synthesis": "^0.8.1"
+          },
+          "permissions": [
+            "tts",
+            "voice-packs"
+          ],
+          "permissionPurposes": {
+            "tts": "使用已导入的语音模型，在设备上将文字合成为朗读音频。",
+            "voice-packs": "导入、选择和移除 Piper 语音包，提供可用于朗读的声音。"
+          }
+        },
         {
           "version": "0.8.2",
           "versionCode": 10,
@@ -929,6 +1022,77 @@
         "语音识别"
       ],
       "releases": [
+        {
+          "version": "0.8.4",
+          "versionCode": 12,
+          "format": "NATIVE",
+          "sha256": "6bb63ddfd5fc85cd2b6d5e2a7d977c54fdb61afdf0fd395abddc52bc83673ef1",
+          "bytes": 58406972,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.sensevoice-0.8.4.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 28,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86",
+            "x86_64"
+          ],
+          "notes": "识别设置采用分组卡片和语言单选列表，补齐权限用途说明。",
+          "dependencies": {
+            "service.speech-recognition": "^0.8.1"
+          },
+          "permissions": [
+            "asr-batch",
+            "asr-segmented",
+            "network",
+            "resources"
+          ],
+          "permissionPurposes": {
+            "asr-batch": "使用已导入的 SenseVoice 模型，在设备上将整段录音转为文字。",
+            "asr-segmented": "在连续聆听时分段识别录音，逐句显示字幕。",
+            "network": "从你填写的下载地址获取 SenseVoice 识别包。",
+            "resources": "导入和管理 SenseVoice 模型及词表。"
+          }
+        },
+        {
+          "version": "0.8.3",
+          "versionCode": 11,
+          "format": "NATIVE",
+          "sha256": "7d60d4f5e69eb9e9f2d48d30f7b3c00b6ba4f9225b69acd9547dcf162e50b4dc",
+          "bytes": 58406686,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.sensevoice-0.8.3.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 28,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86",
+            "x86_64"
+          ],
+          "notes": "语言、资源导入和检查集中到设置卡片，语言改为单选列表。",
+          "dependencies": {
+            "service.speech-recognition": "^0.8.1"
+          },
+          "permissions": [
+            "asr-batch",
+            "asr-segmented",
+            "network",
+            "resources"
+          ],
+          "permissionPurposes": {}
+        },
         {
           "version": "0.8.2",
           "versionCode": 10,
@@ -1050,6 +1214,82 @@
         "语音识别"
       ],
       "releases": [
+        {
+          "version": "0.8.5",
+          "versionCode": 13,
+          "format": "NATIVE",
+          "sha256": "4ea7769cc236951ce97f2406f836a5464915bc9fa0f725e59f00736b7794d65a",
+          "bytes": 59544022,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.5.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 28,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86",
+            "x86_64"
+          ],
+          "notes": "识别包导入、下载、推理设置与管理操作放回页面分组，顶栏更清爽。",
+          "dependencies": {
+            "service.speech-recognition": "^0.8.1"
+          },
+          "permissions": [
+            "asr-batch",
+            "asr-incremental",
+            "network",
+            "resources"
+          ],
+          "permissionPurposes": {
+            "asr-batch": "使用已导入的模型，在设备上将录音转为文字。",
+            "asr-incremental": "在你说话时持续识别录音，实时更新字幕。",
+            "network": "从你填写的下载地址获取流式识别包。",
+            "resources": "导入和管理流式识别模型及词表。"
+          }
+        },
+        {
+          "version": "0.8.3",
+          "versionCode": 11,
+          "format": "NATIVE",
+          "sha256": "ddf742fe9516278b5332c6577bdffc1b8088cdd5a0aea50d624730da19a5180b",
+          "bytes": 59543672,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.3.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 28,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86",
+            "x86_64"
+          ],
+          "notes": "补齐权限用途说明。",
+          "dependencies": {
+            "service.speech-recognition": "^0.8.1"
+          },
+          "permissions": [
+            "asr-batch",
+            "asr-incremental",
+            "network",
+            "resources"
+          ],
+          "permissionPurposes": {
+            "asr-batch": "使用已导入的模型，在设备上将录音转为文字。",
+            "asr-incremental": "在你说话时持续识别录音，实时更新字幕。",
+            "network": "从你填写的下载地址获取流式识别包。",
+            "resources": "导入和管理流式识别模型及词表。"
+          }
+        },
         {
           "version": "0.8.2",
           "versionCode": 10,
@@ -1360,6 +1600,39 @@
       ],
       "releases": [
         {
+          "version": "0.8.2",
+          "versionCode": 11,
+          "format": "NATIVE",
+          "sha256": "5dcd55cdd1de59573880877bd25cc94f7fbe6849d8db96601cb52c8935e7b90b",
+          "bytes": 34216,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-recognition-0.8.2.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 28,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "补齐权限用途说明。",
+          "dependencies": {},
+          "permissions": [
+            "asr-service",
+            "asr-batch",
+            "asr-segmented",
+            "asr-incremental",
+            "resources"
+          ],
+          "permissionPurposes": {
+            "asr-service": "调用你选择的识别引擎，将聆听字幕和语音输入的录音转为文字。",
+            "asr-batch": "识别你提交的整段录音，并显示文字结果。",
+            "asr-segmented": "分段识别连续聆听的录音，逐句显示字幕。",
+            "asr-incremental": "在你说话时持续识别录音，实时更新字幕。",
+            "resources": "导入和管理你选择的识别包。"
+          }
+        },
+        {
           "version": "0.8.1",
           "versionCode": 10,
           "format": "NATIVE",
@@ -1435,6 +1708,33 @@
         "语音合成"
       ],
       "releases": [
+        {
+          "version": "0.8.5",
+          "versionCode": 16,
+          "format": "NATIVE",
+          "sha256": "35d8e71cd478ec9f4c68efce544732da73491c1bb4d1490fadca0f855946ed5a",
+          "bytes": 95609,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/service.speech-synthesis-0.8.5.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 28,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "补齐权限用途说明。",
+          "dependencies": {},
+          "permissions": [
+            "tts",
+            "speech-service"
+          ],
+          "permissionPurposes": {
+            "tts": "把你选择的文字合成为语音，供朗读和试听。",
+            "speech-service": "调用你选择的语音引擎，获取声音列表并合成朗读音频。"
+          }
+        },
         {
           "version": "0.8.3",
           "versionCode": 14,
@@ -1864,6 +2164,43 @@
           }
         },
         {
+          "version": "0.9.19",
+          "versionCode": 23,
+          "format": "NATIVE",
+          "sha256": "7483e820776891ee291c218149092d8a525ac5e7b8022a0ca4368b48da34d674",
+          "bytes": 285483,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.19.kigplugin?view=false",
+              "name": "魔搭官方源"
+            }
+          ],
+          "apiVersion": 26,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "支持可点击选项消息，修复新版会话兼容性。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "notifications",
+            "app-control",
+            "quick-text-read",
+            "quick-text-write",
+            "stickers-read",
+            "stickers-write"
+          ],
+          "permissionPurposes": {
+            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
+            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
+            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
+            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
+            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
+            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
+            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
+          }
+        },
+        {
           "version": "0.9.17",
           "versionCode": 21,
           "format": "NATIVE",
@@ -2117,15 +2454,15 @@
           }
         },
         {
-          "version": "0.9.3",
-          "versionCode": 7,
+          "version": "0.9.4",
+          "versionCode": 8,
           "format": "NATIVE",
-          "sha256": "c9a85deebc9f0790057fa5d9c66995356b8d0dc0d064319d96676281b3cdc754",
-          "bytes": 202735,
+          "sha256": "4c22842a9143cc87f9b95304c34f88fdf3432b669c485ca1c421bd3450755be9",
+          "bytes": 203228,
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.3.kigplugin?view=false",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.4.kigplugin?view=false",
               "name": "魔搭官方源"
             }
           ],
@@ -2152,15 +2489,15 @@
           }
         },
         {
-          "version": "0.9.4",
-          "versionCode": 8,
+          "version": "0.9.3",
+          "versionCode": 7,
           "format": "NATIVE",
-          "sha256": "4c22842a9143cc87f9b95304c34f88fdf3432b669c485ca1c421bd3450755be9",
-          "bytes": 203228,
+          "sha256": "c9a85deebc9f0790057fa5d9c66995356b8d0dc0d064319d96676281b3cdc754",
+          "bytes": 202735,
           "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
           "mirrors": [
             {
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.4.kigplugin?view=false",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.3.kigplugin?view=false",
               "name": "魔搭官方源"
             }
           ],
@@ -2255,43 +2592,6 @@
             "stickers-read": "读取用户指定的拍立得、贴纸或图片用于对话和制作。",
             "stickers-write": "制作、整理用户授权的贴纸与拍立得。"
           }
-        },
-        {
-          "version": "0.9.19",
-          "versionCode": 23,
-          "format": "NATIVE",
-          "sha256": "7483e820776891ee291c218149092d8a525ac5e7b8022a0ca4368b48da34d674",
-          "bytes": 285483,
-          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
-          "mirrors": [
-            {
-              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.cloud-agent-0.9.19.kigplugin?view=false",
-              "name": "魔搭官方源"
-            }
-          ],
-          "apiVersion": 26,
-          "minSdk": 26,
-          "abis": [],
-          "notes": "支持可点击选项消息，修复新版会话兼容性。",
-          "dependencies": {},
-          "permissions": [
-            "network",
-            "notifications",
-            "app-control",
-            "quick-text-read",
-            "quick-text-write",
-            "stickers-read",
-            "stickers-write"
-          ],
-          "permissionPurposes": {
-            "app-control": "按你的要求调整软件设置、发送字幕，或调试已授权的 Lua 插件。",
-            "quick-text-read": "读取你选择的快捷文本、分组和网页文件，以便整理或编辑。",
-            "quick-text-write": "按你的要求创建、修改、导入和导出快捷文本及网页。",
-            "stickers-read": "读取你选择的照片和贴纸，用于对话或创作。",
-            "stickers-write": "按你的要求制作、修改和整理照片与贴纸。",
-            "notifications": "在任务执行、完成或等待确认时提醒你，并提供返回会话或停止任务的按钮。",
-            "network": "连接你设置的 AI 服务，发送对话和所选图片；按任务搜索资料、查找并下载图片及网页素材。"
-          }
         }
       ],
       "thumbnails": [
@@ -2315,6 +2615,33 @@
         "开发工具"
       ],
       "releases": [
+        {
+          "version": "0.8.1",
+          "versionCode": 2,
+          "format": "NATIVE",
+          "sha256": "40dc5774243e600fbd77890636fb7b73dd7f81bee662c3713fc691369364d84b",
+          "bytes": 57986,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.native-builder-0.8.1.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 14,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "补齐权限用途说明。",
+          "dependencies": {},
+          "permissions": [
+            "resources",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "resources": "导入项目、编译工具和依赖，保存编译结果。",
+            "app-control": "按你的操作管理原生插件项目并导出构建结果。"
+          }
+        },
         {
           "version": "0.8.0",
           "versionCode": 1,
