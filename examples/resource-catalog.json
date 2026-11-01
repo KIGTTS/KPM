@@ -5,7 +5,7 @@
   "name": "KIGTTS 资源",
   "description": "为字幕与照片添加新的风格。",
   "homepage": "https://github.com/KIGTTS/KPM",
-  "updatedAt": "2026-10-26T00:00:00Z",
+  "updatedAt": "2026-11-01T02:06:21+00:00",
   "linkPolicy": {
     "recommendAfterInstall": true
   },
@@ -156,6 +156,80 @@
       "thumbnails": [
         "word-stickers"
       ]
+    },
+    {
+      "id": "resources.info-stickers",
+      "name": "照片信息贴纸",
+      "summary": "14 种时刻、日历、星期、地点和天气样式，读取相片信息，也能自己改。",
+      "resourceType": "STICKERS",
+      "category": "外观",
+      "icon": {
+        "symbol": "calendar_month"
+      },
+      "license": "CC0-1.0; SIL OFL-1.1 (fonts)",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "versionCode": 1,
+          "format": "RESOURCE",
+          "apiVersion": 34,
+          "minSdk": 26,
+          "sha256": "ebd9949cca20a5fafa057f8c75a2453189a990214788f2218b0f9a26f19d114f",
+          "bytes": 3466984,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "dependencies": {},
+          "mirrors": [
+            {
+              "name": "魔搭",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/resources.info-stickers-1.0.0.kigresource?view=false"
+            }
+          ],
+          "notes": "首次发布。",
+          "permissions": [],
+          "permissionPurposes": {}
+        }
+      ],
+      "description": "添加贴纸时默认使用相片的拍摄日期、时间、地点与天气；缺失的信息显示未知。选中后点齿轮，可修改文字和颜色。\n\n包含 14 种原创透明矢量版式。嵌入的常用字字体子集按 SIL OFL 1.1 提供，布局与图形按 CC0 1.0 提供。",
+      "thumbnails": [
+        "info-stickers"
+      ]
+    },
+    {
+      "id": "resources.remi-stickers",
+      "name": "偶域 Remi",
+      "summary": "打招呼、比心、钓鱼和晕乎乎……22 张 Remi 表情，保留 1024 像素原图。",
+      "resourceType": "STICKERS",
+      "category": "外观",
+      "icon": {
+        "symbol": "sentiment_very_satisfied"
+      },
+      "license": "原作者保留权利",
+      "releases": [
+        {
+          "version": "1.0.0",
+          "versionCode": 1,
+          "format": "RESOURCE",
+          "apiVersion": 29,
+          "minSdk": 26,
+          "sha256": "3331f081682f105389d9c85e7eacaaa8809416a69326121892341afca1b0c5ae",
+          "bytes": 18183862,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "dependencies": {},
+          "mirrors": [
+            {
+              "name": "魔搭",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/master/resources.remi-stickers-1.0.0.kigresource?view=false"
+            }
+          ],
+          "notes": "首次发布。",
+          "permissions": [],
+          "permissionPurposes": {}
+        }
+      ],
+      "description": "来自[Remi 表情包](https://jafq11jkbyg.feishu.cn/docx/DPIxd0bRRoLxrixSuDccNvUYnbd)，文档署名“开源人形”。\n\n收录 22 张 1024×1024 PNG，保留原图像素与透明度；原本有背景的款式保留背景。\n\n角色与图像权利归原作者，使用范围以原作者说明为准。本包不额外授予商用或改作授权，其他资源的 CC0 与字体 OFL 不适用于本包。",
+      "thumbnails": [
+        "remi-stickers"
+      ]
     }
   ],
   "assets": {
@@ -190,6 +264,22 @@
       "width": 1200,
       "height": 800,
       "alt": "彩色字贴预览"
+    },
+    "info-stickers": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/96cbc552748d1ca7cda2916011d4fe7894917bd4/artwork/info-stickers-7038d10d3397.png",
+      "sha256": "7038d10d3397084c5dc4d866e78ffa814c633726befd9c36b9d39183d3f5b1a1",
+      "bytes": 203696,
+      "width": 1600,
+      "height": 1800,
+      "alt": "照片信息贴纸预览"
+    },
+    "remi-stickers": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/c88ae0913e8775dbecea075e4cf84de803f2eb2c/artwork/remi-stickers-82d43cceb9ec.png",
+      "sha256": "82d43cceb9ec6530fe3616b11cdfa0c6d7b68e75f45caa89d36ddd098a1bc699",
+      "bytes": 1027366,
+      "width": 1200,
+      "height": 1000,
+      "alt": "偶域 Remi预览"
     }
   }
 }
