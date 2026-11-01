@@ -5,7 +5,7 @@
   "name": "KIGTTS 资源",
   "description": "为字幕与照片添加新的风格。",
   "homepage": "https://github.com/KIGTTS/KPM",
-  "updatedAt": "2026-11-01T02:06:21+00:00",
+  "updatedAt": "2026-11-01T02:37:09+00:00",
   "linkPolicy": {
     "recommendAfterInstall": true
   },
@@ -201,7 +201,7 @@
       "resourceType": "STICKERS",
       "category": "外观",
       "icon": {
-        "symbol": "sentiment_very_satisfied"
+        "image": "remi-stickers-icon"
       },
       "license": "原作者保留权利",
       "releases": [
@@ -272,6 +272,14 @@
       "width": 1600,
       "height": 1800,
       "alt": "照片信息贴纸预览"
+    },
+    "remi-stickers-icon": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/02ada11b5eed663e1416113e2f971bb116059a2d/artwork/remi-stickers-icon-115e4f59359d.png",
+      "sha256": "115e4f59359dd44655e196774feeea10a42720ac19bbd85500ab6b65d16c44e7",
+      "bytes": 730128,
+      "width": 1024,
+      "height": 1024,
+      "alt": "偶域 Remi · 打招呼"
     },
     "remi-stickers": {
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Resources/resolve/c88ae0913e8775dbecea075e4cf84de803f2eb2c/artwork/remi-stickers-82d43cceb9ec.png",
