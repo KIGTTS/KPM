@@ -64,7 +64,10 @@ def validate(catalog):
             raise ValueError("Duplicate package ID")
         ids.add(item["id"])
         icon(item.get("icon", {}))
-        if any(asset not in assets for asset in item.get("thumbnails", [])):
+        thumbnail_ids = list(item.get("thumbnails", []))
+        for translation in item.get("localizations", {}).values():
+            thumbnail_ids.extend(translation.get("thumbnails", []))
+        if any(asset not in assets for asset in thumbnail_ids):
             raise ValueError("Thumbnail references an unregistered asset")
         if len({x["version"] for x in item["releases"]}) != len(item["releases"]) or len({x["versionCode"] for x in item["releases"]}) != len(item["releases"]):
             raise ValueError("Duplicate package version")

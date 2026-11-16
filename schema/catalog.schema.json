@@ -98,6 +98,36 @@
           "description": "Offer to add this source after a verified successful installation or resource import."
         }
       }
+    },
+    "localizations": {
+      "type": "object",
+      "maxProperties": 12,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z]{2,8}(?:-[A-Za-z0-9]{1,8}){0,5}$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "minProperties": 1,
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32000
+          },
+          "readme": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32000
+          }
+        }
+      }
     }
   },
   "$defs": {
@@ -220,6 +250,46 @@
             "CARD_FRAME",
             "FONT"
           ]
+        },
+        "localizations": {
+          "type": "object",
+          "maxProperties": 12,
+          "propertyNames": {
+            "type": "string",
+            "pattern": "^[A-Za-z]{2,8}(?:-[A-Za-z0-9]{1,8}){0,5}$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 600
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 32000
+              },
+              "thumbnails": {
+                "type": "array",
+                "maxItems": 8,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "maxLength": 64
+                },
+                "default": []
+              }
+            }
+          }
         }
       },
       "allOf": [

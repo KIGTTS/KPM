@@ -2,6 +2,7 @@ import { node, symbol } from './data.js';
 import { openPreview } from './preview-viewer.js';
 import { loadingImage } from './media-loading.js';
 import { mouseDragScroll } from './drag-scroll.js';
+import { t } from './i18n.js';
 
 const reduced = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 export function previewButton(label, previous = false) {
@@ -17,11 +18,11 @@ export function createPreviewGallery(item, site) {
   }));
   if (!entries.length) return null;
   const gallery = node('section', 'preview-gallery'), track = node('div', 'gallery-track');
-  gallery.setAttribute('aria-label', `${item.name}图片预览`);
-  track.tabIndex = 0; track.setAttribute('aria-label', '滚动查看图片');
+  gallery.setAttribute('aria-label', t('gallery', {name:item.name}));
+  track.tabIndex = 0; track.setAttribute('aria-label', t('scrollImages'));
   const cards = entries.map((entry, index) => {
     const figure = node('figure', 'preview-figure'), button = node('button', 'preview-image'), image = node('img');
-    button.type = 'button'; button.setAttribute('aria-label', `放大预览：${entry.alt}`);
+    button.type = 'button'; button.setAttribute('aria-label', t('enlarge', {name:entry.alt}));
     image.src = entry.src; image.alt = entry.alt; image.loading = 'lazy'; image.decoding = 'async';
     if (entry.width && entry.height) {
       image.width = entry.width; image.height = entry.height;
@@ -34,7 +35,7 @@ export function createPreviewGallery(item, site) {
     figure.append(button); track.append(figure);
     return figure;
   });
-  const previous = previewButton('上一张图片', true), next = previewButton('下一张图片');
+  const previous = previewButton(t('previous'), true), next = previewButton(t('next'));
   gallery.append(track, previous, next);
   const update = () => {
     previous.disabled = track.scrollLeft < 2;

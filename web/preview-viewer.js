@@ -1,18 +1,19 @@
 import { node, symbol } from './data.js';
 import { loadingImage } from './media-loading.js';
 import { mouseDragScroll } from './drag-scroll.js';
+import { t } from './i18n.js';
 
 let active;
 export function openPreview(entries, initial, opener) {
   if (active) return;
   const viewer = node('dialog', 'image-viewer'), heading = node('header', 'viewer-heading');
-  viewer.setAttribute('aria-label', '图片预览');
+  viewer.setAttribute('aria-label', t('preview'));
   const counter = node('span', 'viewer-counter'), close = node('button', 'viewer-close');
   counter.setAttribute('aria-live', 'polite'); close.type = 'button';
-  close.setAttribute('aria-label', '关闭图片预览'); close.title = '关闭图片预览'; close.append(symbol('close'));
+  close.setAttribute('aria-label', t('closePreview')); close.title = t('closePreview'); close.append(symbol('close'));
   heading.append(counter, close);
   const stage = node('div', 'viewer-stage'), track = node('div', 'viewer-track');
-  track.tabIndex = 0; track.setAttribute('aria-label', '左右滑动查看图片');
+  track.tabIndex = 0; track.setAttribute('aria-label', t('swipeImages'));
   entries.forEach(entry => {
     const slide = node('div', 'viewer-slide'), image = node('img');
     image.src = entry.src; image.alt = entry.alt; image.draggable = false;
@@ -23,7 +24,7 @@ export function openPreview(entries, initial, opener) {
     button.type = 'button'; button.setAttribute('aria-label', label); button.title = label;
     button.append(symbol('arrow_forward')); return button;
   };
-  const previous = arrow('上一张图片', true), next = arrow('下一张图片', false);
+  const previous = arrow(t('previous'), true), next = arrow(t('next'), false);
   stage.append(track, previous, next); viewer.append(heading, stage); document.body.append(viewer);
   let index = initial, closing = false, wheelAt = 0, wheelTotal = 0;
   const overflow = document.body.style.overflow;

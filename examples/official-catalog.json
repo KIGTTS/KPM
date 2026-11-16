@@ -8,289 +8,11 @@
     "image": "kpm-source"
   },
   "assets": {
-    "preview-service.speech-recognition-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-cover-abacecbfa17b.svg?view=false",
-      "sha256": "abacecbfa17b86921a1d386e3ffb6b4c4155f3c7dd1899916216beb09df21c45",
-      "bytes": 130784,
-      "alt": "语音识别服务 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-runtime.lua-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-preview-light-6165640797c5.png?view=false",
-      "sha256": "6165640797c52e5773bb39928e235ecdec89eae6ae72f645bdd42f3bd739cfa9",
-      "bytes": 72290,
-      "alt": "插件编辑器 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-debug.ui-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-preview-dark-acfea6ef2d22.png?view=false",
-      "sha256": "acfea6ef2d222dc2f23a504075579fde979c17ede71653bac60edff005a316d2",
-      "bytes": 151991,
-      "alt": "界面调试插件 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "kpm-source": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-71aeb98df34a.svg?view=false",
-      "bytes": 1951,
-      "sha256": "71aeb98df34a3ec7b1c521a047495bf361ea95b0c6f36c2e3cf59e988a6f9add",
-      "alt": "KPM 官方插件源"
-    },
-    "preview-display.led-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-cover-1dd145a59cd3.svg?view=false",
-      "sha256": "1dd145a59cd3dd45b6f0aa91b39473e4c89d4e9f8b5dba4d25202af5070d1301",
-      "bytes": 117239,
-      "alt": "LED 灯珠字幕 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-input.quick-gestures-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-cover-70cf7c9a28c9.svg?view=false",
-      "sha256": "70cf7c9a28c9eee940259c94fd1ecafe0284ea2264607f3c3f62f72dede27c75",
-      "bytes": 123679,
-      "alt": "手势触发 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
     "preview-engine.cloud-tts-preview-dark": {
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-preview-dark-ca8f3744b72f.png?view=false",
       "sha256": "ca8f3744b72f7484b5adb45233158a1edf9322fe2b038da34dbdc7338167f66f",
       "bytes": 114807,
       "alt": "云端语音合成 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-input.quick-gestures-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-preview-dark-654493b8e5d1.png?view=false",
-      "sha256": "654493b8e5d1d07b01e16ac511b71503d4d82cbcb49506292d40561bb6352f40",
-      "bytes": 156391,
-      "alt": "手势触发 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-debug.ui-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-preview-light-41dc920d1b0c.png?view=false",
-      "sha256": "41dc920d1b0c1752d8b261beff110ea82ccaf7f15e582c45dfe3f74ba91e2673",
-      "bytes": 154085,
-      "alt": "界面调试插件 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.cloud-tts-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-cover-f9358c9e2056.svg?view=false",
-      "sha256": "f9358c9e205670544d309822eef11a8be9e000bd8a5bfccb2282d32d566cd7dd",
-      "bytes": 134505,
-      "alt": "云端语音合成 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-engine.piper-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-cover-c3ff9d0c6ff0.svg?view=false",
-      "sha256": "c3ff9d0c6ff00ea90e9fe39e014ce0bc73aa820c1c68b02954fe4a4c16b12693",
-      "bytes": 127203,
-      "alt": "Piper 语音引擎 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-tools.cloud-agent-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-preview-light-a3c2d3c4c322.png?view=false",
-      "sha256": "a3c2d3c4c322bf43aed2389432cb5877715f13c2d20e60a287aed85a2891b8d6",
-      "bytes": 147405,
-      "alt": "AI 助手 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.streaming-asr-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-preview-dark-06075f1db289.png?view=false",
-      "sha256": "06075f1db289a8634022dde8865faed7ca39dcce17449300a3e1fea21ddd36da",
-      "bytes": 63839,
-      "alt": "流式语音识别 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-tools.cloud-agent-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-preview-dark-2061fce33cd1.png?view=false",
-      "sha256": "2061fce33cd1752b63693707b497c8c6477151befe65f78091ed5175ba07e42a",
-      "bytes": 146364,
-      "alt": "AI 助手 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.piper-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-preview-dark-1cf29b3c752d.png?view=false",
-      "sha256": "1cf29b3c752d28203023fbbcd922a542bba36130b110ca979752ccb474fb4661",
-      "bytes": 67116,
-      "alt": "Piper 语音引擎 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-tools.native-builder-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-preview-light-5f9d7ca8e639.png?view=false",
-      "sha256": "5f9d7ca8e639824f7ce46321ea960515764000ba648c368a285b9b6106d92f19",
-      "bytes": 85979,
-      "alt": "原生构建扩展 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-tools.package-store-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-cover-3b0115f8d8b4.svg?view=false",
-      "sha256": "3b0115f8d8b4d1434175d2b4f6766b9d762986efe522952b2032d87e606585b5",
-      "bytes": 121473,
-      "alt": "插件商店 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-tools.native-builder-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-cover-de1ba3d6b9dd.svg?view=false",
-      "sha256": "de1ba3d6b9dd1c910ed901eca50c1d93463903200d7ef5107404b6566fe4e43e",
-      "bytes": 122579,
-      "alt": "原生构建扩展 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-service.speech-synthesis-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-preview-light-0fca10e22d19.png?view=false",
-      "sha256": "0fca10e22d19b496ecaf41e3cbc6b32b358822dffe69961ab6a58b60024fb333",
-      "bytes": 86079,
-      "alt": "语音合成服务 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-display.led-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-dark-f71c0effa16a.png?view=false",
-      "sha256": "f71c0effa16aee99b8223ac44e81a1e962e96d803b8b9546768215eb6d24d07f",
-      "bytes": 110927,
-      "alt": "LED 灯珠字幕 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-service.speech-synthesis-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-cover-d0346ed07135.svg?view=false",
-      "sha256": "d0346ed07135416785af06a705c47be6085887ad7665374f17bccd2ada153fde",
-      "bytes": 120744,
-      "alt": "语音合成服务 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-tools.package-store-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-preview-dark-ab090a41d56e.png?view=false",
-      "sha256": "ab090a41d56eeff48b683e9b4a2a3dfa1da969a1fa9dc3169914839754f54461",
-      "bytes": 157819,
-      "alt": "插件商店 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-service.speech-recognition-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-preview-dark-2954604399ce.png?view=false",
-      "sha256": "2954604399ce4a51ddeb780fe4175cf73cfa632690380055f2965b2755a394c9",
-      "bytes": 149661,
-      "alt": "语音识别服务 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-runtime.lua-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-preview-dark-84942d213070.png?view=false",
-      "sha256": "84942d2130705c98aa63ed7c1b0445ac834f76cedac7bc49fedf33165b6dc368",
-      "bytes": 71830,
-      "alt": "插件编辑器 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-backup.kigusay-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-cover-26d67a030e4c.svg?view=false",
-      "sha256": "26d67a030e4c500a73ad6df9e400d4778094d5ee03eb845b077723bc03613e46",
-      "bytes": 137158,
-      "alt": "娃语预设兼容 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-tools.package-store-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-preview-light-adb5110f698c.png?view=false",
-      "sha256": "adb5110f698cafe51d27e05df4883f1f1048cda59f77adafa27e0d2e003c2361",
-      "bytes": 156612,
-      "alt": "插件商店 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-display.led-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-light-ef29b71596c4.png?view=false",
-      "sha256": "ef29b71596c48bf934898e09e9e5a23235202791aa35acda9c3476a298f9d8fe",
-      "bytes": 110802,
-      "alt": "LED 灯珠字幕 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-backup.kigusay-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-preview-dark-29e6fc979762.png?view=false",
-      "sha256": "29e6fc979762b1785b89153e4180f33919ed492da0f937f4e9d219ba4c413de6",
-      "bytes": 174471,
-      "alt": "娃语预设兼容 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.streaming-asr-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-cover-551f1a28eb7b.svg?view=false",
-      "sha256": "551f1a28eb7b19edc65c9809c09949ca7d1fbbbf99607ae3b2ddaa27f2568693",
-      "bytes": 136531,
-      "alt": "流式语音识别 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-backup.kigusay-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-preview-light-0565eb22a285.png?view=false",
-      "sha256": "0565eb22a285a346777b9bbf0b658930da76aa6442074bcf01e803300da49eaa",
-      "bytes": 175737,
-      "alt": "娃语预设兼容 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-service.speech-recognition-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-preview-light-70d018ab7d1e.png?view=false",
-      "sha256": "70d018ab7d1e6b84550b0e1c186b9316fb6dacc44c819ab58a74b87f3ab8d92a",
-      "bytes": 150010,
-      "alt": "语音识别服务 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-runtime.lua-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-cover-4c90565a88b4.svg?view=false",
-      "sha256": "4c90565a88b4dd2a63f29dc768a72b8bc3f221752a36e6851127778bea5177c8",
-      "bytes": 129009,
-      "alt": "插件编辑器 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-tools.native-builder-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-preview-dark-b83067653403.png?view=false",
-      "sha256": "b830676534037dea30def8c74c9851438564865653de4de1d39630147e269ee1",
-      "bytes": 85272,
-      "alt": "原生构建扩展 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.sensevoice-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-cover-f5750edcf178.svg?view=false",
-      "sha256": "f5750edcf1787ba8dee355af1cf03db5e4e8547f3e45f310a5212eb87dfcf32f",
-      "bytes": 124118,
-      "alt": "SenseVoice 语音识别 · 花型封面",
-      "width": 1600,
-      "height": 800
-    },
-    "preview-input.quick-gestures-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-preview-light-c4b51af44024.png?view=false",
-      "sha256": "c4b51af44024f383f788133b8b5395a626ce2e8d7fc6de04d18b9a9f1e0a0d01",
-      "bytes": 156677,
-      "alt": "手势触发 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
-    },
-    "preview-engine.sensevoice-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-preview-dark-378dad138208.png?view=false",
-      "sha256": "378dad1382088e75e721bafa581efaeca111c41038a0cd9fc9940d46c1510fba",
-      "bytes": 58085,
-      "alt": "SenseVoice 语音识别 · 界面预览 · 深色",
       "width": 1179,
       "height": 2556
     },
@@ -302,6 +24,142 @@
       "width": 1179,
       "height": 2556
     },
+    "preview-tools.native-builder-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-preview-light-5f9d7ca8e639.png?view=false",
+      "sha256": "5f9d7ca8e639824f7ce46321ea960515764000ba648c368a285b9b6106d92f19",
+      "bytes": 85979,
+      "alt": "原生构建扩展 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-tools.cloud-agent-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-preview-light-a3c2d3c4c322.png?view=false",
+      "sha256": "a3c2d3c4c322bf43aed2389432cb5877715f13c2d20e60a287aed85a2891b8d6",
+      "bytes": 147405,
+      "alt": "AI 助手 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-backup.kigusay-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-cover-a07429700308.svg?view=false",
+      "sha256": "a0742970030895268a3858645c1692caa22d080e8f51f547d42647ce7b097373",
+      "bytes": 131133,
+      "alt": "娃语预设兼容",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-tools.package-store-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-cover-9501203cd06d.svg?view=false",
+      "sha256": "9501203cd06d0fe4498e993e12522c55aa4973dc59d2069629f838932f9fbaaa",
+      "bytes": 115465,
+      "alt": "插件商店",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-input.quick-gestures-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-cover-055cd29c6924.svg?view=false",
+      "sha256": "055cd29c6924e65512d1d4e7867d4bce24e9c62d618c3e5da4e0e5260b61fe17",
+      "bytes": 117713,
+      "alt": "手势触发",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-tools.cloud-agent-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-preview-dark-2061fce33cd1.png?view=false",
+      "sha256": "2061fce33cd1752b63693707b497c8c6477151befe65f78091ed5175ba07e42a",
+      "bytes": 146364,
+      "alt": "AI 助手 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-service.speech-synthesis-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-cover-135a2b254c3a.svg?view=false",
+      "sha256": "135a2b254c3ad6b4c9a4d6f89782b9c71d3508d2a03ab20b2015ff154393f339",
+      "bytes": 114754,
+      "alt": "语音合成服务",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-debug.ui-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-cover-412b371c986c.svg?view=false",
+      "sha256": "412b371c986ce9b69fc83765571cc9e9a8f7a2b4a476aa9cf5c490aed32597a3",
+      "bytes": 110988,
+      "alt": "界面调试插件",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-backup.kigusay-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-preview-light-0565eb22a285.png?view=false",
+      "sha256": "0565eb22a285a346777b9bbf0b658930da76aa6442074bcf01e803300da49eaa",
+      "bytes": 175737,
+      "alt": "娃语预设兼容 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-service.speech-recognition-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-preview-dark-2954604399ce.png?view=false",
+      "sha256": "2954604399ce4a51ddeb780fe4175cf73cfa632690380055f2965b2755a394c9",
+      "bytes": 149661,
+      "alt": "语音识别服务 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.streaming-asr-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-cover-a2f81d6ab6d0.svg?view=false",
+      "sha256": "a2f81d6ab6d03f2a175588174ae7bacf1c172585b3804f04893e48c13d6cfb01",
+      "bytes": 132389,
+      "alt": "流式语音识别",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-runtime.lua-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-cover-62f6c70ad7af.svg?view=false",
+      "sha256": "62f6c70ad7af9b32c1c9150d17cadfab221b8544840c195df3d3c6e5a2d3028f",
+      "bytes": 122944,
+      "alt": "插件编辑器",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.cloud-asr-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-cover-cee777464520.svg?view=false",
+      "sha256": "cee777464520b92a98008a900fc3920f9436746230ee519103329589c020c65e",
+      "bytes": 114674,
+      "alt": "云端语音识别",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-tools.native-builder-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-preview-dark-b83067653403.png?view=false",
+      "sha256": "b830676534037dea30def8c74c9851438564865653de4de1d39630147e269ee1",
+      "bytes": 85272,
+      "alt": "原生构建扩展 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.sensevoice-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-cover-d4f0d3d47ebb.svg?view=false",
+      "sha256": "d4f0d3d47ebbe44498b3f459561fe841d4130f74ac49fea012f2151d8a49f440",
+      "bytes": 107624,
+      "alt": "SenseVoice 语音识别",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-input.quick-gestures-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-preview-light-c4b51af44024.png?view=false",
+      "sha256": "c4b51af44024f383f788133b8b5395a626ce2e8d7fc6de04d18b9a9f1e0a0d01",
+      "bytes": 156677,
+      "alt": "手势触发 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-debug.ui-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-preview-dark-acfea6ef2d22.png?view=false",
+      "sha256": "acfea6ef2d222dc2f23a504075579fde979c17ede71653bac60edff005a316d2",
+      "bytes": 151991,
+      "alt": "界面调试插件 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
     "preview-display.led-preview-led": {
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-led-1c63f822b0ba.png?view=false",
       "sha256": "1c63f822b0ba14b1ef1a05d7265003d22c51103e1675ae530387495380f84ca2",
@@ -310,11 +168,67 @@
       "width": 1280,
       "height": 720
     },
-    "preview-engine.cloud-tts-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-preview-light-0b15ae46bd23.png?view=false",
-      "sha256": "0b15ae46bd2395c08275a999981779224f3ec3512b457808b0196e9fb4baf6ef",
-      "bytes": 115160,
-      "alt": "云端语音合成 · 界面预览 · 浅色",
+    "preview-engine.piper-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-cover-11b425fb3397.svg?view=false",
+      "sha256": "11b425fb33979bf55b60f3b99110529a6e3a633c7a27c4fc7888562bbde302dc",
+      "bytes": 116851,
+      "alt": "Piper 语音引擎",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.streaming-asr-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-preview-light-d5c1d303404d.png?view=false",
+      "sha256": "d5c1d303404d8f284796bed1b9cbafba2948ce74470a388ebb1085685e8ef6e5",
+      "bytes": 64169,
+      "alt": "流式语音识别 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-input.quick-gestures-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-preview-dark-654493b8e5d1.png?view=false",
+      "sha256": "654493b8e5d1d07b01e16ac511b71503d4d82cbcb49506292d40561bb6352f40",
+      "bytes": 156391,
+      "alt": "手势触发 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.cloud-asr-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-preview-dark-7cd8647d53f6.png?view=false",
+      "sha256": "7cd8647d53f60567638797246032bdda60f0a4157b9947e822dbfd31a93ed585",
+      "bytes": 114811,
+      "alt": "云端语音识别 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.sensevoice-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-preview-dark-378dad138208.png?view=false",
+      "sha256": "378dad1382088e75e721bafa581efaeca111c41038a0cd9fc9940d46c1510fba",
+      "bytes": 58085,
+      "alt": "SenseVoice 语音识别 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.streaming-asr-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-preview-dark-06075f1db289.png?view=false",
+      "sha256": "06075f1db289a8634022dde8865faed7ca39dcce17449300a3e1fea21ddd36da",
+      "bytes": 63839,
+      "alt": "流式语音识别 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-display.led-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-light-ef29b71596c4.png?view=false",
+      "sha256": "ef29b71596c48bf934898e09e9e5a23235202791aa35acda9c3476a298f9d8fe",
+      "bytes": 110802,
+      "alt": "LED 灯珠字幕 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-runtime.lua-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-preview-light-6165640797c5.png?view=false",
+      "sha256": "6165640797c52e5773bb39928e235ecdec89eae6ae72f645bdd42f3bd739cfa9",
+      "bytes": 72290,
+      "alt": "插件编辑器 · 界面预览 · 浅色",
       "width": 1179,
       "height": 2556
     },
@@ -334,6 +248,124 @@
       "width": 1179,
       "height": 2556
     },
+    "preview-engine.piper-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-preview-dark-1cf29b3c752d.png?view=false",
+      "sha256": "1cf29b3c752d28203023fbbcd922a542bba36130b110ca979752ccb474fb4661",
+      "bytes": 67116,
+      "alt": "Piper 语音引擎 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-display.led-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-preview-dark-f71c0effa16a.png?view=false",
+      "sha256": "f71c0effa16aee99b8223ac44e81a1e962e96d803b8b9546768215eb6d24d07f",
+      "bytes": 110927,
+      "alt": "LED 灯珠字幕 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-engine.cloud-tts-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-preview-light-0b15ae46bd23.png?view=false",
+      "sha256": "0b15ae46bd2395c08275a999981779224f3ec3512b457808b0196e9fb4baf6ef",
+      "bytes": 115160,
+      "alt": "云端语音合成 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-service.speech-synthesis-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-preview-light-0fca10e22d19.png?view=false",
+      "sha256": "0fca10e22d19b496ecaf41e3cbc6b32b358822dffe69961ab6a58b60024fb333",
+      "bytes": 86079,
+      "alt": "语音合成服务 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-display.led-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-cover-118449451930.svg?view=false",
+      "sha256": "118449451930552e4c567ce8da2e7c8ac616f7e99a1172c82979b0dd1e354f1f",
+      "bytes": 110457,
+      "alt": "LED 灯珠字幕",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-service.speech-recognition-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-preview-light-70d018ab7d1e.png?view=false",
+      "sha256": "70d018ab7d1e6b84550b0e1c186b9316fb6dacc44c819ab58a74b87f3ab8d92a",
+      "bytes": 150010,
+      "alt": "语音识别服务 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-service.speech-recognition-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-cover-747ce117afb6.svg?view=false",
+      "sha256": "747ce117afb6c37feded9c126904b1df0e2d489985a073ded774d37310b8c674",
+      "bytes": 124760,
+      "alt": "语音识别服务",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.cloud-tts-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-cover-ee036a171faf.svg?view=false",
+      "sha256": "ee036a171fafc5bb7455323514ed79b2930df4a42fab89e0490287ecaaa615c0",
+      "bytes": 128501,
+      "alt": "云端语音合成",
+      "width": 900,
+      "height": 1600
+    },
+    "kpm-source": {
+      "sha256": "71aeb98df34a3ec7b1c521a047495bf361ea95b0c6f36c2e3cf59e988a6f9add",
+      "alt": "KPM 官方插件源",
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/kpm-source-71aeb98df34a.svg?view=false",
+      "bytes": 1951
+    },
+    "preview-tools.package-store-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-preview-light-adb5110f698c.png?view=false",
+      "sha256": "adb5110f698cafe51d27e05df4883f1f1048cda59f77adafa27e0d2e003c2361",
+      "bytes": 156612,
+      "alt": "插件商店 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-tools.cloud-agent-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-cover-6643d53dd48f.svg?view=false",
+      "sha256": "6643d53dd48fb1501053c3f7aafd1bc07b923c1c267866ce738695fc51f407c3",
+      "bytes": 112838,
+      "alt": "AI 助手",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-runtime.lua-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-preview-dark-84942d213070.png?view=false",
+      "sha256": "84942d2130705c98aa63ed7c1b0445ac834f76cedac7bc49fedf33165b6dc368",
+      "bytes": 71830,
+      "alt": "插件编辑器 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-tools.package-store-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-preview-dark-ab090a41d56e.png?view=false",
+      "sha256": "ab090a41d56eeff48b683e9b4a2a3dfa1da969a1fa9dc3169914839754f54461",
+      "bytes": 157819,
+      "alt": "插件商店 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-backup.kigusay-preview-dark": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-preview-dark-29e6fc979762.png?view=false",
+      "sha256": "29e6fc979762b1785b89153e4180f33919ed492da0f937f4e9d219ba4c413de6",
+      "bytes": 174471,
+      "alt": "娃语预设兼容 · 界面预览 · 深色",
+      "width": 1179,
+      "height": 2556
+    },
+    "preview-debug.ui-preview-light": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-preview-light-41dc920d1b0c.png?view=false",
+      "sha256": "41dc920d1b0c1752d8b261beff110ea82ccaf7f15e582c45dfe3f74ba91e2673",
+      "bytes": 154085,
+      "alt": "界面调试插件 · 界面预览 · 浅色",
+      "width": 1179,
+      "height": 2556
+    },
     "preview-engine.sensevoice-preview-light": {
       "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-preview-light-bec7205346d6.png?view=false",
       "sha256": "bec7205346d6bb2b20d3f449f0437310a5d21eb475eab711d3f138ab4c3fb11f",
@@ -342,49 +374,281 @@
       "width": 1179,
       "height": 2556
     },
-    "preview-debug.ui-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-cover-8b35e8dbcd35.svg?view=false",
-      "sha256": "8b35e8dbcd35b7ceb23b588e921f59a975e6bdc8ec7474630d2b8ae413ec304e",
-      "bytes": 117050,
-      "alt": "界面调试插件 · 花型封面",
-      "width": 1600,
-      "height": 800
+    "preview-tools.native-builder-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-cover-7e8f93be10ed.svg?view=false",
+      "sha256": "7e8f93be10ed171350f60179e7d523fc152861899bdc981ba3e36a9394d4d9a2",
+      "bytes": 116617,
+      "alt": "原生构建扩展",
+      "width": 900,
+      "height": 1600
     },
-    "preview-engine.cloud-asr-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-cover-77fcbaef3305.svg?view=false",
-      "sha256": "77fcbaef33057c26001f9e31f8bf9b98f4bbe9f189804ea98e1acbcd70964250",
-      "bytes": 120701,
-      "alt": "云端语音识别 · 花型封面",
-      "width": 1600,
-      "height": 800
+    "preview-backup.kigusay-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-cover-en-ac3900d0b386.svg?view=false",
+      "sha256": "ac3900d0b3863d92c8191dc6557324e6846fa395bed4948e0cce8a9442246c78",
+      "bytes": 107707,
+      "alt": "Kigusay preset compatibility",
+      "width": 900,
+      "height": 1600
     },
-    "preview-tools.cloud-agent-cover": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-cover-5fec7ee7bac9.svg?view=false",
-      "sha256": "5fec7ee7bac901b346ed29ae1a3e70eb3f28f2965387580efe5864d563e9da86",
-      "bytes": 119180,
-      "alt": "AI 助手 · 花型封面",
-      "width": 1600,
-      "height": 800
+    "preview-backup.kigusay-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/backup.kigusay-cover-ko-3a1d5d72550a.svg?view=false",
+      "sha256": "3a1d5d72550a954a7ea817e2cb12c645f94235160660b7580447439a25d0aaf2",
+      "bytes": 101169,
+      "alt": "Kigusay 프리셋 호환",
+      "width": 900,
+      "height": 1600
     },
-    "preview-engine.streaming-asr-preview-light": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-preview-light-d5c1d303404d.png?view=false",
-      "sha256": "d5c1d303404d8f284796bed1b9cbafba2948ce74470a388ebb1085685e8ef6e5",
-      "bytes": 64169,
-      "alt": "流式语音识别 · 界面预览 · 浅色",
-      "width": 1179,
-      "height": 2556
+    "preview-debug.ui-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-cover-en-0e5be02012e7.svg?view=false",
+      "sha256": "0e5be02012e725dd926225021383663a9ce099a80045aea94d742ba482f45f36",
+      "bytes": 115877,
+      "alt": "Interface debugger",
+      "width": 900,
+      "height": 1600
     },
-    "preview-engine.cloud-asr-preview-dark": {
-      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-preview-dark-7cd8647d53f6.png?view=false",
-      "sha256": "7cd8647d53f60567638797246032bdda60f0a4157b9947e822dbfd31a93ed585",
-      "bytes": 114811,
-      "alt": "云端语音识别 · 界面预览 · 深色",
-      "width": 1179,
-      "height": 2556
+    "preview-debug.ui-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/debug.ui-cover-ko-e972cb8c7f5a.svg?view=false",
+      "sha256": "e972cb8c7f5a14b87da350d0e8513878cccd1fd5339c040f410ed4e9c2b9940f",
+      "bytes": 101077,
+      "alt": "인터페이스 디버거",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-display.led-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-cover-en-64b3940a937e.svg?view=false",
+      "sha256": "64b3940a937ea872ed067e58e173659dff16df868a8461f4174edcee229af2b2",
+      "bytes": 89400,
+      "alt": "LED captions",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-display.led-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/display.led-cover-ko-f7df4801e65a.svg?view=false",
+      "sha256": "f7df4801e65ab5ccfaf86a5647ec73ef688468d31e01f752561f5072b380b300",
+      "bytes": 84248,
+      "alt": "LED 자막",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.cloud-asr-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-cover-en-f8c86d13d7a8.svg?view=false",
+      "sha256": "f8c86d13d7a890e11196b835fff2fe921f8a0766264e5ed1eb3aa3ddcaf3e158",
+      "bytes": 99850,
+      "alt": "Cloud speech recognition",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.cloud-asr-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-asr-cover-ko-d05435db99f5.svg?view=false",
+      "sha256": "d05435db99f53cd9cb8c738b4776ee38056df6132b5a69f6fd3bad445ddf70d9",
+      "bytes": 89032,
+      "alt": "클라우드 음성 인식",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.cloud-tts-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-cover-en-f46b01616735.svg?view=false",
+      "sha256": "f46b01616735e82f1de0008148fe1e12d411f4f5f6735fa19b694625a9f10cc6",
+      "bytes": 104971,
+      "alt": "Cloud text to speech",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.cloud-tts-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.cloud-tts-cover-ko-5ce34c966a29.svg?view=false",
+      "sha256": "5ce34c966a2975dadf80c1acb9d6735b317baf2450e091cf16b6b3a4ccb2c0de",
+      "bytes": 105879,
+      "alt": "클라우드 읽어 주기",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.piper-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-cover-en-b052817916f0.svg?view=false",
+      "sha256": "b052817916f05d001f88b57766c49dc428a097dab84023005a448bd494784d54",
+      "bytes": 101297,
+      "alt": "Piper speech engine",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.piper-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.piper-cover-ko-66cae8a49848.svg?view=false",
+      "sha256": "66cae8a4984812de04838ad5b395b9956fc17ca04f542d452b04350582002c10",
+      "bytes": 92393,
+      "alt": "Piper 음성 엔진",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.sensevoice-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-cover-en-5344d8736fb7.svg?view=false",
+      "sha256": "5344d8736fb7e02d289f24131bc737a35918c63da0aef6c138ec14e147da4d66",
+      "bytes": 103499,
+      "alt": "SenseVoice recognition",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.sensevoice-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.sensevoice-cover-ko-f00c9c59a2c8.svg?view=false",
+      "sha256": "f00c9c59a2c85f1393cf3eb82b78fdb4c367e92bdc83010f1d4da68208db2928",
+      "bytes": 89799,
+      "alt": "SenseVoice 음성 인식",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.streaming-asr-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-cover-en-86716ea6ffb1.svg?view=false",
+      "sha256": "86716ea6ffb16835ecba1f80b48eb684c2e1062acbc85e3bea9c5f2c53f878d1",
+      "bytes": 128513,
+      "alt": "Streaming speech recognition",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.streaming-asr-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.streaming-asr-cover-ko-2ea964923418.svg?view=false",
+      "sha256": "2ea96492341866eb8e256bd55c0bd520ecf29158be410490f72280d7d25d276a",
+      "bytes": 102960,
+      "alt": "스트리밍 음성 인식",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.zipvoice-clone-cover": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.zipvoice-clone-cover-51aded36ca37.svg?view=false",
+      "sha256": "51aded36ca37a988aa04dafa7c943ccd311f24bd2c78126673c59e975a67615e",
+      "bytes": 124853,
+      "alt": "语音克隆引擎",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.zipvoice-clone-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.zipvoice-clone-cover-en-3705459ce1cf.svg?view=false",
+      "sha256": "3705459ce1cf490c10b7d186314f94b2bc5f63796de836e9d48000ba32be2d2e",
+      "bytes": 123889,
+      "alt": "Voice cloning engine",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-engine.zipvoice-clone-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/engine.zipvoice-clone-cover-ko-3d7009790b6e.svg?view=false",
+      "sha256": "3d7009790b6e056428356df0726a7286f5899e433826434d527d905533a1ff2b",
+      "bytes": 94016,
+      "alt": "음성 복제 엔진",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-input.quick-gestures-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-cover-en-d46db72a2626.svg?view=false",
+      "sha256": "d46db72a2626baef1ae45d93596929ff5b6d6053096d1276dcfc6c265231cb8c",
+      "bytes": 105561,
+      "alt": "Gesture shortcuts",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-input.quick-gestures-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/input.quick-gestures-cover-ko-1d763ff8a357.svg?view=false",
+      "sha256": "1d763ff8a357ef8a8cd2061d54a1237e031cc8e091964e56876e933d98e2ff37",
+      "bytes": 95546,
+      "alt": "제스처 바로가기",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-runtime.lua-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-cover-en-29f65a5daed4.svg?view=false",
+      "sha256": "29f65a5daed40f5d8a59022b6f0e652a91b983f3d3ad5c405d45b6ff3df7bfc6",
+      "bytes": 103480,
+      "alt": "Plugin editor",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-runtime.lua-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/runtime.lua-cover-ko-60a6a722adb0.svg?view=false",
+      "sha256": "60a6a722adb07dc584cc57261c397d910f34c52fc170ab4f9c904c61716057c0",
+      "bytes": 92502,
+      "alt": "플러그인 편집기",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-service.speech-recognition-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-cover-en-e932c073c137.svg?view=false",
+      "sha256": "e932c073c137ce12db23668bd1b81678f1880db2f3ef13ff3096d1cef3008593",
+      "bytes": 98594,
+      "alt": "Speech recognition service",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-service.speech-recognition-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-recognition-cover-ko-b8d3136dcae6.svg?view=false",
+      "sha256": "b8d3136dcae6c9bdd669ac034542ccd4d451cde7300e5d9c6af92e01817821bb",
+      "bytes": 96402,
+      "alt": "음성 인식 서비스",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-service.speech-synthesis-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-cover-en-48f1473cfda6.svg?view=false",
+      "sha256": "48f1473cfda60bc8b08c23ea958d6ce9fee1c4bb2e0c869dd08251c852c35ea0",
+      "bytes": 94202,
+      "alt": "Text-to-speech service",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-service.speech-synthesis-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/service.speech-synthesis-cover-ko-47cb974792b6.svg?view=false",
+      "sha256": "47cb974792b6b3587404476ce55787baa30fcf733393b8e0f64f1e67b124ae0c",
+      "bytes": 89314,
+      "alt": "읽어 주기 서비스",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-tools.cloud-agent-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-cover-en-fe77ef64e405.svg?view=false",
+      "sha256": "fe77ef64e405b47e1a88ddb0b09810896be63283cbf694aea71a88636d9bbcfe",
+      "bytes": 106693,
+      "alt": "AI assistant",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-tools.cloud-agent-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.cloud-agent-cover-ko-fb4b23d2aa89.svg?view=false",
+      "sha256": "fb4b23d2aa893350ccd49bf89836f74ef75e1928dbc2817f605b26b1c040927c",
+      "bytes": 95913,
+      "alt": "AI 도우미",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-tools.native-builder-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-cover-en-1fd04aa166b8.svg?view=false",
+      "sha256": "1fd04aa166b8db325d0e2086228b19cb5fe935a5118186cf6febfd002c6ca574",
+      "bytes": 101414,
+      "alt": "Native build tools",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-tools.native-builder-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.native-builder-cover-ko-3241ab1da2b1.svg?view=false",
+      "sha256": "3241ab1da2b188529c2fd6fea2a1ec6dcc7aa49d0d23805ef2daaa166a207882",
+      "bytes": 90115,
+      "alt": "네이티브 빌드 도구",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-tools.package-store-cover-en": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-cover-en-1f004224c11b.svg?view=false",
+      "sha256": "1f004224c11bc4b4f5a70882028399264c82d92c78e82a303715be5e928d3b5a",
+      "bytes": 94443,
+      "alt": "Plugin store",
+      "width": 900,
+      "height": 1600
+    },
+    "preview-tools.package-store-cover-ko": {
+      "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/artwork/tools.package-store-cover-ko-09b7d5ce24cb.svg?view=false",
+      "sha256": "09b7d5ce24cbfe93969c1d47fc646cca565ae20af88cef01bc784f24f1df7cc3",
+      "bytes": 100466,
+      "alt": "플러그인 스토어",
+      "width": 900,
+      "height": 1600
     }
   },
   "readme": "## KPM 官方插件源\n\n在这里浏览语音、AI与创作工具，按自己的需要丰富KIGTTS。\n\n- 找到适合日常交流的朗读和聆听工具。\n- 让AI协助整理内容与动手创作。\n- 使用插件编辑器制作并分享自己的小工具。",
-  "updatedAt": "2026-11-03T16:29:42.1246354+00:00",
+  "updatedAt": "2026-11-16T15:21:47Z",
   "packages": [
     {
       "id": "backup.kigusay",
@@ -461,7 +725,27 @@
         "preview-backup.kigusay-cover",
         "preview-backup.kigusay-preview-light",
         "preview-backup.kigusay-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Kigusay preset compatibility",
+          "summary": "Bring familiar phrases with you",
+          "thumbnails": [
+            "preview-backup.kigusay-cover-en",
+            "preview-backup.kigusay-preview-light",
+            "preview-backup.kigusay-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "Kigusay 프리셋 호환",
+          "summary": "익숙한 문구를 새 앱에서도 사용하세요",
+          "thumbnails": [
+            "preview-backup.kigusay-cover-ko",
+            "preview-backup.kigusay-preview-light",
+            "preview-backup.kigusay-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "debug.ui",
@@ -504,7 +788,27 @@
         "preview-debug.ui-cover",
         "preview-debug.ui-preview-light",
         "preview-debug.ui-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Interface debugger",
+          "summary": "Inspect layouts and interface details",
+          "thumbnails": [
+            "preview-debug.ui-cover-en",
+            "preview-debug.ui-preview-light",
+            "preview-debug.ui-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "인터페이스 디버거",
+          "summary": "레이아웃과 화면 구성을 자세히 살펴보세요",
+          "thumbnails": [
+            "preview-debug.ui-cover-ko",
+            "preview-debug.ui-preview-light",
+            "preview-debug.ui-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "display.led",
@@ -654,7 +958,29 @@
         "preview-display.led-preview-led",
         "preview-display.led-preview-light",
         "preview-display.led-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "LED captions",
+          "summary": "Make every word shine",
+          "thumbnails": [
+            "preview-display.led-cover-en",
+            "preview-display.led-preview-led",
+            "preview-display.led-preview-light",
+            "preview-display.led-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "LED 자막",
+          "summary": "한 마디 한 마디를 빛나게 표시하세요",
+          "thumbnails": [
+            "preview-display.led-cover-ko",
+            "preview-display.led-preview-led",
+            "preview-display.led-preview-light",
+            "preview-display.led-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "engine.cloud-asr",
@@ -761,7 +1087,27 @@
         "preview-engine.cloud-asr-cover",
         "preview-engine.cloud-asr-preview-light",
         "preview-engine.cloud-asr-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Cloud speech recognition",
+          "summary": "Turn speech into captions",
+          "thumbnails": [
+            "preview-engine.cloud-asr-cover-en",
+            "preview-engine.cloud-asr-preview-light",
+            "preview-engine.cloud-asr-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "클라우드 음성 인식",
+          "summary": "말소리를 자막으로 바꾸세요",
+          "thumbnails": [
+            "preview-engine.cloud-asr-cover-ko",
+            "preview-engine.cloud-asr-preview-light",
+            "preview-engine.cloud-asr-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "engine.cloud-tts",
@@ -868,7 +1214,27 @@
         "preview-engine.cloud-tts-cover",
         "preview-engine.cloud-tts-preview-light",
         "preview-engine.cloud-tts-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Cloud text to speech",
+          "summary": "Find a voice for what you want to say",
+          "thumbnails": [
+            "preview-engine.cloud-tts-cover-en",
+            "preview-engine.cloud-tts-preview-light",
+            "preview-engine.cloud-tts-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "클라우드 읽어 주기",
+          "summary": "전하고 싶은 말을 읽어 줄 목소리를 찾아보세요",
+          "thumbnails": [
+            "preview-engine.cloud-tts-cover-ko",
+            "preview-engine.cloud-tts-preview-light",
+            "preview-engine.cloud-tts-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "engine.piper",
@@ -1005,7 +1371,27 @@
         "preview-engine.piper-cover",
         "preview-engine.piper-preview-light",
         "preview-engine.piper-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Piper speech engine",
+          "summary": "Pick a voice that fits your mood",
+          "thumbnails": [
+            "preview-engine.piper-cover-en",
+            "preview-engine.piper-preview-light",
+            "preview-engine.piper-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "Piper 음성 엔진",
+          "summary": "기분에 어울리는 목소리를 골라 보세요",
+          "thumbnails": [
+            "preview-engine.piper-cover-ko",
+            "preview-engine.piper-preview-light",
+            "preview-engine.piper-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "engine.sensevoice",
@@ -1197,23 +1583,81 @@
         "preview-engine.sensevoice-cover",
         "preview-engine.sensevoice-preview-light",
         "preview-engine.sensevoice-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "SenseVoice recognition",
+          "summary": "Capture what you hear as text",
+          "thumbnails": [
+            "preview-engine.sensevoice-cover-en",
+            "preview-engine.sensevoice-preview-light",
+            "preview-engine.sensevoice-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "SenseVoice 음성 인식",
+          "summary": "들리는 말을 텍스트로 남기세요",
+          "thumbnails": [
+            "preview-engine.sensevoice-cover-ko",
+            "preview-engine.sensevoice-preview-light",
+            "preview-engine.sensevoice-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "engine.streaming-asr",
       "name": "流式语音识别",
-      "summary": "边说边转成文字，适合连续聆听与长时间语音输入。",
+      "summary": "内置中文轻量模型，安装后即可离线流式识别",
       "category": "音频",
       "license": "MIT",
       "homepage": "https://github.com/KIGTTS/plugin-streaming-asr",
       "icon": {
         "symbol": "graphic_eq"
       },
-      "description": "## 流式语音识别\n\n让说话过程中的文字逐步呈现，可搭配语音识别服务用于聆听字幕与连续语音输入。",
+      "description": "## 流式语音识别\n\n边说边显示字幕。内置中文轻量模型，无需额外下载，可离线使用。更新时保留原先选中的模型；英文和中英双语可按需添加。",
       "tags": [
         "语音识别"
       ],
       "releases": [
+        {
+          "version": "0.8.6",
+          "versionCode": 14,
+          "format": "NATIVE",
+          "sha256": "13cf8c8932cbd1e5a367252db02b30478eb629c492a8ee4dba820fa1195a3213",
+          "bytes": 80407902,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.streaming-asr-0.8.6.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 28,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a",
+            "armeabi-v7a",
+            "x86",
+            "x86_64"
+          ],
+          "notes": "内置中文轻量 INT8 模型。已选识别包不变。",
+          "dependencies": {
+            "service.speech-recognition": "^0.8.1"
+          },
+          "permissions": [
+            "asr-batch",
+            "asr-incremental",
+            "network",
+            "resources"
+          ],
+          "permissionPurposes": {
+            "asr-batch": "使用内置或自行导入的模型，在设备上将录音转为文字。",
+            "asr-incremental": "在你说话时持续识别录音，实时更新字幕。",
+            "network": "从你填写的下载地址获取流式识别包。",
+            "resources": "导入和管理流式识别模型及词表。"
+          }
+        },
         {
           "version": "0.8.5",
           "versionCode": 13,
@@ -1394,7 +1838,99 @@
         "preview-engine.streaming-asr-cover",
         "preview-engine.streaming-asr-preview-light",
         "preview-engine.streaming-asr-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Streaming speech recognition",
+          "summary": "Offline live captions with built-in Chinese recognition",
+          "thumbnails": [
+            "preview-engine.streaming-asr-cover-en",
+            "preview-engine.streaming-asr-preview-light",
+            "preview-engine.streaming-asr-preview-dark"
+          ],
+          "description": "Includes a lightweight Chinese model. Install the plugin and use it offline without downloading model files. Your existing model selection is kept when updating."
+        },
+        "ko": {
+          "name": "스트리밍 음성 인식",
+          "summary": "중국어 모델로 오프라인 실시간 자막을 만드세요",
+          "thumbnails": [
+            "preview-engine.streaming-asr-cover-ko",
+            "preview-engine.streaming-asr-preview-light",
+            "preview-engine.streaming-asr-preview-dark"
+          ],
+          "description": "경량 중국어 모델이 포함되어 있습니다. 플러그인을 설치하면 모델을 별도로 다운로드하지 않고 오프라인에서 사용할 수 있습니다. 업데이트해도 기존에 선택한 모델은 유지됩니다."
+        }
+      }
+    },
+    {
+      "id": "engine.zipvoice-clone",
+      "name": "语音克隆引擎",
+      "summary": "用参考录音制作语音包，在设备上离线合成朗读音频",
+      "category": "音频",
+      "license": "MIT",
+      "homepage": "https://github.com/KIGTTS/plugin-zipvoice-clone",
+      "icon": {
+        "symbol": "record_voice_over"
+      },
+      "description": "## 语音克隆引擎\n\n内置 ZipVoice Distill INT8 与 Vocos，支持导入本地语音包，单独设置实时与后台合成质量。\n\n**模型仅限非商业用途**：ZipVoice 模型采用 CC BY-NC 4.0，代码为 MIT。请仅使用有权使用的参考声音。",
+      "tags": [
+        "朗读",
+        "语音克隆"
+      ],
+      "releases": [
+        {
+          "version": "0.3.6",
+          "versionCode": 17,
+          "format": "NATIVE",
+          "sha256": "66e89a59ec8ef44b175fb9380acd0d42728a8cd9e7bf744f8e843140e60c9157",
+          "bytes": 162903592,
+          "expectedPublisher": "d52d1d3706a8858d33a9d4521e348e160f74bd4bf92209775bb0dda2c8c53e05",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/engine.zipvoice-clone-0.3.6.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 35,
+          "minSdk": 26,
+          "abis": [
+            "arm64-v8a"
+          ],
+          "notes": "内置 ZipVoice CPU 模型，支持独立的实时与后台合成设置以及语音首尾静音裁剪。模型仅限非商业使用。",
+          "dependencies": {
+            "service.speech-synthesis": "^0.8.1"
+          },
+          "permissions": [
+            "tts",
+            "voice-packs"
+          ],
+          "permissionPurposes": {
+            "tts": "使用内置模型和参考声音，在手机上离线合成朗读音频。",
+            "voice-packs": "导入、选择、管理、导出和分享用户的语音包。"
+          }
+        }
+      ],
+      "thumbnails": [
+        "preview-engine.zipvoice-clone-cover"
+      ],
+      "localizations": {
+        "en": {
+          "name": "Voice cloning engine",
+          "summary": "Create a voice pack from a reference recording",
+          "thumbnails": [
+            "preview-engine.zipvoice-clone-cover-en"
+          ],
+          "description": "ZipVoice Distill with local voice packs and separate quality settings for live reading and background synthesis. The included ZipVoice weights are CC BY-NC 4.0 and are for non-commercial use only."
+        },
+        "ko": {
+          "name": "음성 복제 엔진",
+          "summary": "참고 녹음으로 음성 팩을 만드세요",
+          "thumbnails": [
+            "preview-engine.zipvoice-clone-cover-ko"
+          ],
+          "description": "로컬 음성 팩과 실시간 읽기·백그라운드 합성의 개별 품질 설정을 지원하는 ZipVoice Distill 엔진입니다. 내장 ZipVoice 모델은 CC BY-NC 4.0에 따라 비상업적 용도로만 사용할 수 있습니다."
+        }
+      }
     },
     {
       "id": "input.quick-gestures",
@@ -1492,7 +2028,27 @@
         "preview-input.quick-gestures-cover",
         "preview-input.quick-gestures-preview-light",
         "preview-input.quick-gestures-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Gesture shortcuts",
+          "summary": "Draw a gesture to say a phrase",
+          "thumbnails": [
+            "preview-input.quick-gestures-cover-en",
+            "preview-input.quick-gestures-preview-light",
+            "preview-input.quick-gestures-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "제스처 바로가기",
+          "summary": "제스처를 그려 필요한 문구를 사용하세요",
+          "thumbnails": [
+            "preview-input.quick-gestures-cover-ko",
+            "preview-input.quick-gestures-preview-light",
+            "preview-input.quick-gestures-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "runtime.lua",
@@ -1582,7 +2138,27 @@
         "preview-runtime.lua-cover",
         "preview-runtime.lua-preview-light",
         "preview-runtime.lua-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Plugin editor",
+          "summary": "Turn small ideas into handy tools",
+          "thumbnails": [
+            "preview-runtime.lua-cover-en",
+            "preview-runtime.lua-preview-light",
+            "preview-runtime.lua-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "플러그인 편집기",
+          "summary": "작은 아이디어를 편리한 도구로 만들어 보세요",
+          "thumbnails": [
+            "preview-runtime.lua-cover-ko",
+            "preview-runtime.lua-preview-light",
+            "preview-runtime.lua-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "service.speech-recognition",
@@ -1691,7 +2267,27 @@
         "preview-service.speech-recognition-cover",
         "preview-service.speech-recognition-preview-light",
         "preview-service.speech-recognition-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Speech recognition service",
+          "summary": "Make what you hear visible",
+          "thumbnails": [
+            "preview-service.speech-recognition-cover-en",
+            "preview-service.speech-recognition-preview-light",
+            "preview-service.speech-recognition-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "음성 인식 서비스",
+          "summary": "들리는 말을 화면에서 확인하세요",
+          "thumbnails": [
+            "preview-service.speech-recognition-cover-ko",
+            "preview-service.speech-recognition-preview-light",
+            "preview-service.speech-recognition-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "service.speech-synthesis",
@@ -1836,7 +2432,27 @@
         "preview-service.speech-synthesis-cover",
         "preview-service.speech-synthesis-preview-light",
         "preview-service.speech-synthesis-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Text-to-speech service",
+          "summary": "Give your words a voice",
+          "thumbnails": [
+            "preview-service.speech-synthesis-cover-en",
+            "preview-service.speech-synthesis-preview-light",
+            "preview-service.speech-synthesis-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "읽어 주기 서비스",
+          "summary": "텍스트를 목소리로 전하세요",
+          "thumbnails": [
+            "preview-service.speech-synthesis-cover-ko",
+            "preview-service.speech-synthesis-preview-light",
+            "preview-service.speech-synthesis-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "tools.cloud-agent",
@@ -2598,7 +3214,27 @@
         "preview-tools.cloud-agent-cover",
         "preview-tools.cloud-agent-preview-light",
         "preview-tools.cloud-agent-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "AI assistant",
+          "summary": "Find answers and create together",
+          "thumbnails": [
+            "preview-tools.cloud-agent-cover-en",
+            "preview-tools.cloud-agent-preview-light",
+            "preview-tools.cloud-agent-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "AI 도우미",
+          "summary": "함께 답을 찾고 새로운 것을 만들어 보세요",
+          "thumbnails": [
+            "preview-tools.cloud-agent-cover-ko",
+            "preview-tools.cloud-agent-preview-light",
+            "preview-tools.cloud-agent-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "tools.native-builder",
@@ -2671,7 +3307,27 @@
         "preview-tools.native-builder-cover",
         "preview-tools.native-builder-preview-light",
         "preview-tools.native-builder-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Native build tools",
+          "summary": "Give small tools room to grow",
+          "thumbnails": [
+            "preview-tools.native-builder-cover-en",
+            "preview-tools.native-builder-preview-light",
+            "preview-tools.native-builder-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "네이티브 빌드 도구",
+          "summary": "작은 도구에 더 많은 기능을 더하세요",
+          "thumbnails": [
+            "preview-tools.native-builder-cover-ko",
+            "preview-tools.native-builder-preview-light",
+            "preview-tools.native-builder-preview-dark"
+          ]
+        }
+      }
     },
     {
       "id": "tools.package-store",
@@ -2688,6 +3344,64 @@
         "工具"
       ],
       "releases": [
+        {
+          "version": "0.16.12",
+          "versionCode": 34,
+          "format": "NATIVE",
+          "sha256": "47673c5c1035f0384dd3fd8f4da699e3093110dbe7eb83b1793d9c6c222c0d70",
+          "bytes": 175976,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.16.12.kigplugin?view=false"
+            },
+            {
+              "name": "GitHub",
+              "url": "https://github.com/KIGTTS/plugin-package-store/releases/download/v0.16.12/tools.package-store-0.16.12.kigplugin"
+            }
+          ],
+          "apiVersion": 33,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "暂时隐藏云分享插件。来源与已有插件数据保留。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "更新你添加的目录，并下载所选内容和预览图片。",
+            "app-control": "检查已安装的插件，并在你确认后安装插件或添加资源。"
+          }
+        },
+        {
+          "version": "0.16.10",
+          "versionCode": 32,
+          "format": "NATIVE",
+          "sha256": "9698592280f74f553e35c678b8877b58482053c37c9ad6a3edddbe4416977cf0",
+          "bytes": 175671,
+          "expectedPublisher": "b5927c76c21539ef99352707c215b3ce48f3fed937a6f995d39a3c677a052ab5",
+          "mirrors": [
+            {
+              "name": "魔搭官方源",
+              "url": "https://modelscope.cn/datasets/LHTSTUDIO/KIGTTS-Official-Plugins/resolve/master/tools.package-store-0.16.10.kigplugin?view=false"
+            }
+          ],
+          "apiVersion": 33,
+          "minSdk": 26,
+          "abis": [],
+          "notes": "适配新版内置朗读设置，安装语音引擎时不再重复安装朗读服务。",
+          "dependencies": {},
+          "permissions": [
+            "network",
+            "app-control"
+          ],
+          "permissionPurposes": {
+            "network": "更新你添加的目录，并下载所选内容和预览图片。",
+            "app-control": "检查已安装的插件，并在你确认后安装插件或添加资源。"
+          }
+        },
         {
           "version": "0.16.9",
           "versionCode": 31,
@@ -3176,7 +3890,39 @@
         "preview-tools.package-store-cover",
         "preview-tools.package-store-preview-light",
         "preview-tools.package-store-preview-dark"
-      ]
+      ],
+      "localizations": {
+        "en": {
+          "name": "Plugin store",
+          "summary": "Add new features to KIGTTS",
+          "thumbnails": [
+            "preview-tools.package-store-cover-en",
+            "preview-tools.package-store-preview-light",
+            "preview-tools.package-store-preview-dark"
+          ]
+        },
+        "ko": {
+          "name": "플러그인 스토어",
+          "summary": "KIGTTS에 새로운 기능을 추가하세요",
+          "thumbnails": [
+            "preview-tools.package-store-cover-ko",
+            "preview-tools.package-store-preview-light",
+            "preview-tools.package-store-preview-dark"
+          ]
+        }
+      }
     }
-  ]
+  ],
+  "localizations": {
+    "en": {
+      "name": "KIGTTS official plugin source",
+      "description": "Add speech, captions and creative tools to KIGTTS.",
+      "readme": "## Official KPM source\n\nBrowse speech, AI and creative tools for KIGTTS. Install plugins through the KIGTTS plugin store."
+    },
+    "ko": {
+      "name": "KIGTTS 공식 플러그인 소스",
+      "description": "KIGTTS에 읽어 주기, 자막 및 창작 도구를 추가하세요.",
+      "readme": "## KPM 공식 소스\n\nKIGTTS에서 사용할 음성, AI 및 창작 도구를 찾아보세요. KIGTTS 플러그인 스토어에서 설치할 수 있습니다."
+    }
+  }
 }

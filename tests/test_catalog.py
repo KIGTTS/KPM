@@ -51,6 +51,17 @@ class CatalogTest(unittest.TestCase):
         catalog["icon"]["image"] = "missing"
         with self.assertRaises(ValueError): validate(catalog)
 
+    def test_localized_preview_must_use_registered_artwork(self):
+        value = json.loads((ROOT / "examples/official-catalog.json").read_text(encoding="utf-8"))
+        package = value["packages"][0]
+        value["localizations"] = {"en": {"name": "Official source"}}
+        valid_art = next(iter(value["assets"]))
+        package["localizations"] = {"en": {"name": "Example", "thumbnails": [valid_art]}}
+        validate(value)
+        package["localizations"]["ko"] = {"thumbnails": ["unregistered-cover"]}
+        with self.assertRaises(ValueError):
+            validate(value)
+
     def test_resource_source_requires_data_format_and_explicit_kind(self):
         catalog = json.loads((ROOT / "examples/official-catalog.json").read_text(encoding="utf-8"))
         item = copy.deepcopy(catalog["packages"][0]); item["resourceType"] = "FRAME"

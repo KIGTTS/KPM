@@ -6,11 +6,14 @@ import { configureTheme, DEFAULT_SEED } from './theme.js';
 import { hydrateMedia } from './media-loading.js';
 import { catalogMotion } from './catalog-motion.js';
 import { mouseDragScroll } from './drag-scroll.js';
+import { categoryName, locale, localized, setupLanguage, t } from './i18n.js';
 
 const $ = id => document.getElementById(id);
 const listMotion = catalogMotion($('packages'));
 mouseDragScroll($('categories'));
 let toastTimer;
+let redrawLanguage = () => {};
+setupLanguage(() => redrawLanguage());
 function toast(message) {
   clearTimeout(toastTimer); $('toast').textContent = message; $('toast').classList.add('visible');
   toastTimer = setTimeout(() => $('toast').classList.remove('visible'), 2400);
@@ -36,52 +39,61 @@ $('theme').addEventListener('click', () => {
 
 try {
   const response = await fetch('site.json', { cache: 'no-cache' });
-  if (!response.ok) throw new Error('目录暂不可用');
+  if (!response.ok) throw new Error('Catalog response unavailable');
   const site = await response.json(), catalog = site.catalog;
   configureTheme(site.themeColor || DEFAULT_SEED);
-  if (catalog.kind === 'RESOURCES') {
-    document.getElementById('catalog-title').firstChild.textContent = '资源列表 ';
-    document.querySelector('.add-heading > span:last-child').textContent = '添加这个源';
-    document.querySelector('.add-card').setAttribute('aria-label', '添加资源来源');
-    document.querySelector('.scan-row img').alt = '手机扫码添加这个源';
-    document.querySelector('.guide-steps li:last-child h3').textContent = '选择喜欢的内容';
-    document.querySelector('.guide-steps li:last-child p').textContent = '在商店的资源页面浏览并添加。';
-    $('search').placeholder = '搜索资源'; $('search').setAttribute('aria-label', '搜索资源');
-    $('categories').setAttribute('aria-label', '资源分类');
+  function renderSource() {
+    if (catalog.kind === 'RESOURCES') {
+      $('catalog-label').textContent = t('resourceCatalog');
+      document.querySelector('.add-heading > span:last-child').textContent = t('resourceHeading');
+      document.querySelector('.add-card').setAttribute('aria-label', t('resourceAdd'));
+      document.querySelector('.scan-row img').alt = t('resourceScan');
+      document.querySelector('.guide-steps li:last-child h3').textContent = t('resourceGuide');
+      document.querySelector('.guide-steps li:last-child p').textContent = t('resourceGuideBody');
+      $('search').placeholder = t('resourceSearch'); $('search').setAttribute('aria-label', t('resourceSearch'));
+      $('categories').setAttribute('aria-label', t('resourceCategories'));
+    }
+    const source = localized(catalog);
+    document.title = `${source.name} · KPM`;
+    $('source-name').textContent = source.name;
+    $('source-icon').replaceChildren(icon(source.icon || { symbol: 'inventory_2' }, site));
+    $('source-description').replaceChildren(markdown(source.description, site));
+    $('source-readme').replaceChildren(...(source.readme ? [markdown(source.readme, site)] : []));
+    const updated = new Date(source.updatedAt);
+    $('publisher').textContent = site.publisher || source.name;
+    if (!Number.isNaN(updated.getTime())) $('publisher').textContent += ' · ' + t('updated', {date:updated.toLocaleDateString(locale)});
   }
-  document.title = `${catalog.name} · KPM`;
-  $('source-name').textContent = catalog.name;
-  $('source-icon').replaceChildren(icon(catalog.icon || { symbol: 'inventory_2' }, site));
-  $('source-description').replaceChildren(markdown(catalog.description, site));
-  $('source-readme').replaceChildren(...(catalog.readme ? [markdown(catalog.readme, site)] : []));
-  const updated = new Date(catalog.updatedAt);
-  $('publisher').textContent = site.publisher || catalog.name;
-  if (!Number.isNaN(updated.getTime())) $('publisher').textContent += ` · 更新于 ${updated.toLocaleDateString('zh-CN')}`;
   $('count').textContent = catalog.packages.length;
   const sourceURL = safeURL(site.sourceUrl);
-  if (!sourceURL.startsWith('https://')) throw new Error('源地址需为 HTTPS');
+  if (!sourceURL.startsWith('https://')) throw new Error('Source address must use HTTPS');
   const addURL = sourceLink(sourceURL);
   $('source-url').textContent = sourceURL; $('manual-url').textContent = sourceURL;
+  $('source-url').removeAttribute('data-i18n');
   $('add-source').href = addURL;
   $('add-source').removeAttribute('aria-disabled');
   $('source-code').href = safeURL(site.repository) || 'https://github.com/KIGTTS/KPM';
   $('download-app').href = safeURL(site.downloadURL) || 'https://github.com/KIGTTS/KIGTTSNEXT';
   $('copy-source').addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText(sourceURL); toast('源地址已复制'); }
-    catch { $('guide').showModal(); const selection = getSelection(); const range = document.createRange(); range.selectNodeContents($('manual-url')); selection.removeAllRanges(); selection.addRange(range); toast('请复制已选中的源地址'); }
+    try { await navigator.clipboard.writeText(sourceURL); toast(t('copied')); }
+    catch { $('guide').showModal(); const selection = getSelection(); const range = document.createRange(); range.selectNodeContents($('manual-url')); selection.removeAllRanges(); selection.addRange(range); toast(t('copyManual')); }
   });
   const resourceLabels = { QUICK_TEXT: '快捷文本', PHOTOS: '照片集', FILTER: '滤镜', VOICE: '语音包', FRAME: '照片边框', CARD_FRAME: '名片边框', FONT: '字体', STICKERS: '贴纸包' };
   catalog.packages.forEach(item => { if (item.resourceType) item.category = resourceLabels[item.resourceType]; });
   let category = '', query = '', visibleLimit = 24;
-  let loadObserver;
+  let loadObserver, activeDetail;
   function render(append = false) {
-    const entries = [...catalog.packages].filter(item => (!category || item.category === category) && `${item.name} ${item.summary} ${(item.tags || []).join(' ')}`.toLowerCase().includes(query)).sort((a, b) => (a.category || '').localeCompare(b.category || '', 'zh') || a.name.localeCompare(b.name, 'zh') || a.id.localeCompare(b.id));
-    const cards = entries.slice(append ? visibleLimit - 24 : 0, visibleLimit).map(item => {
-      const card = node('button', 'package-card'); card.type = 'button'; card.setAttribute('aria-label', `查看 ${item.name}`);
+    const entries = catalog.packages.filter(item => !category || (item.category || '扩展') === category)
+      .map(item => ({item, shown: localized(item)}))
+      .filter(({item, shown}) => `${item.name} ${shown.name} ${item.summary} ${shown.summary} ${(item.tags || []).join(' ')}`.toLowerCase().includes(query))
+      .sort((a, b) => categoryName(a.item.category).localeCompare(categoryName(b.item.category), locale) ||
+        a.shown.name.localeCompare(b.shown.name, locale) || a.item.id.localeCompare(b.item.id));
+    const cards = entries.slice(append ? visibleLimit - 24 : 0, visibleLimit).map(({item, shown}) => {
+      const card = node('button', 'package-card'); card.type = 'button'; card.setAttribute('aria-label', t('view', {name:shown.name}));
       const top = node('div', 'package-top'), avatar = node('span', 'package-icon'); avatar.append(icon(item.icon, site));
       top.append(avatar, node('span', 'version', `v${latest(item)?.version || '—'}`));
-      const bottom = node('div', 'package-bottom'); bottom.append(node('span', '', item.category || '扩展'), symbol('arrow_forward'));
-      card.append(top, node('h3', '', item.name), node('p', 'package-summary', item.summary || ''), bottom); card.addEventListener('click', () => showDetail(item, site, sourceURL));
+      const bottom = node('div', 'package-bottom'); bottom.append(node('span', '', categoryName(item.category)), symbol('arrow_forward'));
+      card.append(top, node('h3', '', shown.name), node('p', 'package-summary', shown.summary || ''), bottom);
+      card.addEventListener('click', () => { activeDetail = item; showDetail(shown, site, sourceURL); });
       return card;
     });
     if (loadObserver) loadObserver.disconnect();
@@ -100,24 +112,35 @@ try {
       if (visibleLimit < entries.length) loadObserver.observe(sentinel);
     } else {
       listMotion.clear();
-      $('packages').replaceChildren(node('p', 'empty', catalog.packages.length ? '没有匹配的内容，试试其它关键词。' : '这个源还没有内容，稍后再来看看。'));
+      $('packages').replaceChildren(node('p', 'empty', t(catalog.packages.length ? 'noMatches' : 'noContent')));
     }
     $('packages').setAttribute('aria-busy', 'false');
     $('count').textContent = query || category ? `${entries.length} / ${catalog.packages.length}` : catalog.packages.length;
   }
-  const categories = [['', '全部'], ...[...new Set(catalog.packages.map(x => x.category || '扩展'))].sort().map(x => [x, x])];
-  $('categories').replaceChildren(...categories.map(([value, title]) => {
-    const button = node('button', 'category', title); button.setAttribute('aria-pressed', !value);
-    button.addEventListener('click', () => { category = value; visibleLimit = 24; $('categories').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b === button)); render(); });
-    return button;
-  }));
+  function renderCategories() {
+    const values = [...new Set(catalog.packages.map(x => x.category || '扩展'))]
+      .sort((a,b) => categoryName(a).localeCompare(categoryName(b), locale));
+    $('categories').replaceChildren(...['', ...values].map(value => {
+      const button = node('button', 'category', value ? categoryName(value) : t('all'));
+      button.setAttribute('aria-pressed', value === category);
+      button.addEventListener('click', () => { category = value; visibleLimit = 24; $('categories').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b === button)); render(); });
+      return button;
+    }));
+  }
   $('search').addEventListener('input', event => { query = event.target.value.trim().toLowerCase(); visibleLimit = 24; render(); });
-  render();
+  redrawLanguage = () => {
+    renderSource(); renderCategories(); render();
+    if ($('detail').open && activeDetail) showDetail(localized(activeDetail), site, sourceURL);
+  };
+  redrawLanguage();
 } catch (error) {
   listMotion.clear(); $('packages').setAttribute('aria-busy', 'false');
-  $('source-name').textContent = '暂时无法读取插件源';
-  $('packages').replaceChildren(node('p', 'empty', '请检查网络连接，然后刷新页面重试。'));
-  $('source-description').textContent = '暂时无法加载插件目录。';
+  redrawLanguage = () => {
+    $('source-name').textContent = t('error');
+    $('packages').replaceChildren(node('p', 'empty', t('retry')));
+    $('source-description').textContent = t('errorBody');
+  };
+  redrawLanguage();
   $('add-source').removeAttribute('href'); $('add-source').setAttribute('aria-disabled', 'true');
   console.error('KPM catalog load failed', error);
 }

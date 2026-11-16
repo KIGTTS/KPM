@@ -113,3 +113,6 @@ kigtts://source/open?url=<编码后的HTTPS目录地址>&package=<包ID>&addSour
 ### 随主题色显示的 SVG 图标
 
 源和包均可注册 `"icon": {"image": "glyph", "monochrome": true}`，其中 `glyph` 为 assets 中已校验的受限 SVG。该 SVG 的透明度决定形状，前景由当前主题提供；请将留白写进 viewBox，不绘制底板。省略 monochrome 时保留原图颜色，透明白色旧 SVG 仍兼容自动染色。位图和详情预览图保持原色。宿主接口对应 API33 的 PluginResource.monochrome。
+# 本地化
+
+页面默认按浏览器语言选择简体中文、English 或 한국어，可在页首切换。源和插件可以在目录填写可选的 `localizations`，按 BCP 47 标签覆盖名称、介绍和预览图。各预览图都须登记在 `assets`，没有对应语言的内容则使用默认文本或图片。
