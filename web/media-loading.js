@@ -1,3 +1,4 @@
+import { t } from './i18n.js';
 // Share mask downloads; the same icon can appear in several cards and dialogs.
 const masks = new Map();
 const setState = (frame, state) => {
@@ -21,7 +22,7 @@ export function loadMask(target, source) {
   return target;
 }
 
-export function loadingImage(image, {errorText = '图片暂时无法加载', ratio} = {}) {
+export function loadingImage(image, {errorText = t('imageUnavailable'), ratio} = {}) {
   const frame = document.createElement('span'); frame.className = 'media-frame media-picture';
   frame.setAttribute('aria-busy', 'true');
   if (ratio) frame.style.aspectRatio = ratio;

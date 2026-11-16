@@ -1,3 +1,4 @@
+import { t } from './i18n.js';
 import { marked } from './vendor/marked.esm.js';
 import DOMPurify from './vendor/purify.es.js';
 import { loadMask, loadingImage } from './media-loading.js';
@@ -51,7 +52,7 @@ export function markdown(text, site) {
     const path = href.startsWith('asset:') ? site.art?.[href.slice(6)] : null;
     if (path) return `<img src="${escape(path)}" alt="${escape(text)}" loading="lazy">`;
     const link = safeURL(href);
-    return link ? `<a href="${escape(link)}" rel="noopener noreferrer">${escape(text || '查看图片')}</a>` : escape(text);
+    return link ? `<a href="${escape(link)}" rel="noopener noreferrer">${escape(text || t('viewImage'))}</a>` : escape(text);
   };
   renderer.link = ({ href, text }) => {
     const link = safeURL(href);

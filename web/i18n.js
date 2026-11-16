@@ -14,7 +14,7 @@ const messages = {
     noContent:'这个源还没有内容，稍后再来看看。', error:'暂时无法读取插件源', retry:'请检查网络连接，然后刷新页面重试。',
     errorBody:'暂时无法加载插件目录。', more:'更多信息', versions:'版本与更新', android:'Android {version} 及以上',
     native:'原生插件', lua:'Lua 插件', resource:'资源包', compatibility:'兼容性', noNotes:'暂无更新说明。',
-    dependencies:'所需插件', homepage:'项目主页 ↗', preview:'图片预览', gallery:'{name}图片预览', scrollImages:'滚动查看图片',
+    dependencies:'所需插件', homepage:'项目主页 ↗', preview:'图片预览', viewImage:'查看图片', imageUnavailable:'图片暂时无法加载', gallery:'{name}图片预览', scrollImages:'滚动查看图片',
     enlarge:'放大预览：{name}', previous:'上一张图片', next:'下一张图片', closePreview:'关闭图片预览', swipeImages:'左右滑动查看图片',
     resourceCatalog:'资源列表', resourceSearch:'搜索资源', resourceCategories:'资源分类', resourceAdd:'添加资源来源', resourceHeading:'添加这个源',
     resourceScan:'手机扫码添加这个源', resourceGuide:'选择喜欢的内容', resourceGuideBody:'在商店的资源页面浏览并添加。'
@@ -34,7 +34,7 @@ const messages = {
     noContent:'This source has no items yet.', error:'Unable to load this plugin source', retry:'Check your connection and refresh to retry.',
     errorBody:'The plugin catalog could not be loaded.', more:'More information', versions:'Versions and updates', android:'Android {version} or later',
     native:'Native plugin', lua:'Lua plugin', resource:'Resource pack', compatibility:'Compatibility', noNotes:'No release notes yet.',
-    dependencies:'Required plugins', homepage:'Project website ↗', preview:'Image preview', gallery:'{name} image previews', scrollImages:'Scroll through images',
+    dependencies:'Required plugins', homepage:'Project website ↗', preview:'Image preview', viewImage:'View image', imageUnavailable:'Image unavailable', gallery:'{name} image previews', scrollImages:'Scroll through images',
     enlarge:'Enlarge preview: {name}', previous:'Previous image', next:'Next image', closePreview:'Close image preview', swipeImages:'Swipe left or right to view images',
     resourceCatalog:'Resources', resourceSearch:'Search resources', resourceCategories:'Resource categories', resourceAdd:'Add resource source', resourceHeading:'Add this source',
     resourceScan:'Scan with your phone to add this source', resourceGuide:'Choose your resources', resourceGuideBody:'Browse and add items in the store’s Resources section.'
@@ -54,7 +54,7 @@ const messages = {
     noContent:'이 소스에는 아직 항목이 없습니다.', error:'플러그인 소스를 불러올 수 없습니다', retry:'네트워크를 확인한 뒤 페이지를 새로고침하세요.',
     errorBody:'플러그인 카탈로그를 불러오지 못했습니다.', more:'추가 정보', versions:'버전 및 업데이트', android:'Android {version} 이상',
     native:'네이티브 플러그인', lua:'Lua 플러그인', resource:'리소스 팩', compatibility:'호환성', noNotes:'업데이트 안내가 없습니다.',
-    dependencies:'필수 플러그인', homepage:'프로젝트 홈페이지 ↗', preview:'이미지 미리보기', gallery:'{name} 이미지 미리보기', scrollImages:'스크롤하여 이미지 보기',
+    dependencies:'필수 플러그인', homepage:'프로젝트 홈페이지 ↗', preview:'이미지 미리보기', viewImage:'이미지 보기', imageUnavailable:'이미지를 불러올 수 없습니다', gallery:'{name} 이미지 미리보기', scrollImages:'스크롤하여 이미지 보기',
     enlarge:'미리보기 확대: {name}', previous:'이전 이미지', next:'다음 이미지', closePreview:'이미지 미리보기 닫기', swipeImages:'좌우로 밀어 이미지 보기',
     resourceCatalog:'리소스 목록', resourceSearch:'리소스 검색', resourceCategories:'리소스 카테고리', resourceAdd:'리소스 소스 추가', resourceHeading:'이 소스 추가',
     resourceScan:'휴대전화로 스캔하여 이 소스 추가', resourceGuide:'원하는 리소스 선택', resourceGuideBody:'스토어의 리소스 화면에서 항목을 찾아 추가하세요.'
